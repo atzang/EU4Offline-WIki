@@ -1,0 +1,984 @@
+ <!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Mod文件结构 - 欧陆风云4百科，人人可以编辑的欧陆风云4中文百科全书</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"575a088adc29d3806d0d0457","wgCSPNonce":false,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Mod文件结构","wgTitle":"Mod文件结构","wgCurRevisionId":102290,"wgRevisionId":102290,"wgArticleId":5315,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["长期有效","需要翻译","模组制作"],"wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"Mod文件结构","wgRelevantArticleId":5315,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCargoDefaultQueryLimit":100
+,"wgCargoMapClusteringMinimum":80,"wgCargoMonthNames":["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgCargoMonthNamesShort":["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgCargoWeekDays":["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],"wgCargoWeekDaysShort":["日","一","二","三","四","五","六"],"wgPageFormsTargetName":null,"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":false,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsCalendarValues":[],"wgPageFormsCalendarParams":[],"wgPageFormsCalendarHTML":null,"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsContLangYes":null,"wgPageFormsContLangNo":null,"wgPageFormsContLangMonths":[],"wgPageFormsHeightForMinimizingInstances":800,"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/extensions/PageForms","edgValues":
+null,"wgPageFormsEDSettings":null,"wgAmericanDates":false,"wgVisualEditor":{"pageLanguageCode":"zh","pageLanguageDir":"ltr","pageVariantFallbacks":["zh-hans","zh-hant","zh-cn","zh-tw","zh-hk","zh-sg","zh-mo","zh-my"]},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgSmjUseCdn":false,"wgSmjUseChem":true,"wgSmjDisplayMath":[],"wgSmjExtraInlineMath":[],"wgSmjScale":1,"wgSmjEnableMenu":true,"wgSmjDisplayAlign":"left","wgEditSubmitButtonLabelPublish":false};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.liberty.styles":"ready","jquery.makeCollapsible.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.SimpleMathJax","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","mmv.head","mmv.bootstrap.autostart","ext.HighlightjsIntegration","ext.relatedArticles.readMore.bootstrap","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader",
+"ext.gadget.UserLinkAvatar","ext.gadget.notifyConversion","ext.gadget.notifyAdsense","ext.gadget.Edittools-vector","skins.liberty.bootstrap","skins.liberty.layoutjs","skins.liberty.liverc","skins.liberty.loginjs"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="../liberty.css"/>
+<script async="" src="../liberty.js"></script>
+<style>.Liberty .nav-wrapper,
+		.Liberty .nav-wrapper .navbar .form-inline .btn:hover,
+		.Liberty .nav-wrapper .navbar .form-inline .btn:focus,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link.active::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:hover::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:focus::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:active::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-footer .label,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .contributioncredits-footer .label,
+		.Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:hover,
+		.Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:focus,
+		.Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:active,
+		.btn-primary,
+		.header-template, .section-template {
+			background-color: #103D8F;
+		}
+
+		.btn-primary,
+		.section-template-border {
+			border-color: #103D8F;
+		}
+
+		.Liberty .nav-wrapper .navbar .form-inline .btn:hover,
+		.Liberty .nav-wrapper .navbar .form-inline .btn:focus {
+			border-color: #002E7D;
+		}
+
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link.active::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:hover::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:focus::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:active::before {
+			border-bottom: 2px solid #103D8F;
+		}
+
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-footer .label:hover,
+		.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .nav-link:hover,
+		.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .nav-link:focus,
+		.dropdown-menu .dropdown-item:hover,
+		.btn-primary:hover,
+		.btn-primary:focus {
+			background-color: #002E7D;
+		}
+
+
+		.Liberty .content-wrapper #liberty-bottombtn,
+		.Liberty .content-wrapper #liberty-bottombtn:hover {
+			background-color: #103D8F;
+		}</style><style>@media (prefers-color-scheme: dark) { body, .Liberty, .dropdown-menu, .dropdown-item, .Liberty .nav-wrapper .navbar .form-inline .btn, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link.active, .Liberty .content-wrapper .liberty-content .liberty-content-main table.wikitable tr > th, .Liberty .content-wrapper .liberty-content .liberty-content-main table.wikitable tr > td, table.mw_metadata th, .Liberty .content-wrapper .liberty-content .liberty-content-main table.infobox th, #preferences fieldset:not(.prefsection), #preferences div.mw-prefs-buttons, .navbox, .navbox-subgroup, .navbox > tbody > tr:nth-child(even) > .navbox-list, .Liberty .nav-wrapper .navbar .form-inline .form-control {
+			background-color: #000;
+			color: #DDD;
+		}
+
+		.liberty-content-header, .liberty-footer, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-footer, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item, .Liberty .content-wrapper .liberty-content .liberty-content-header, .Liberty .content-wrapper .liberty-footer, .editOptions, html .wikiEditor-ui-toolbar, #pagehistory li.selected, .mw-datatable td, .Liberty .content-wrapper .liberty-content .liberty-content-main table.wikitable tr > td, table.mw_metadata td, .Liberty .content-wrapper .liberty-content .liberty-content-main table.wikitable, .Liberty .content-wrapper .liberty-content .liberty-content-main table.infobox, #preferences, .navbox-list, .dropdown-divider, .Liberty .content-wrapper .liberty-content .bottom-ads {
+			background-color: #1F2023;
+			color: #DDD;
+		}
+
+		.Liberty .content-wrapper .liberty-content .liberty-content-main, .mw-datatable th, .mw-datatable tr:hover td, textarea, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-content, div.mw-warning-with-logexcerpt, div.mw-lag-warn-high, div.mw-cascadeprotectedwarning, div#mw-protect-cascadeon, .mildtable th {
+			background-color: #000 !important;
+		}
+
+		.Liberty .content-wrapper .liberty-content .liberty-content-header .title>h1, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-content .live-recent-list .recent-item, caption { color: #DDD; }
+
+		.btn-secondary, .Liberty .content-wrapper .liberty-footer .catlinks, .rcpages-btn { background: transparent; color: #DDD; }
+
+
+		#pagehistory li { border: 0; }
+
+		.Liberty .content-wrapper .liberty-footer, .Liberty .content-wrapper .liberty-content .liberty-content-header, .Liberty .content-wrapper .liberty-content .liberty-content-main, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-footer, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-content, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item + .nav-item, .Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:hover, .Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:focus, .Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn, .dropdown-menu, .dropdown-divider, .Liberty .content-wrapper .liberty-content .liberty-content-main fieldset, hr, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-content .live-recent-list li, .mw-changeslist-legend, .Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools { border-color: #555; }
+
+		.flow-post, .Liberty .content-wrapper .liberty-content .liberty-content-main .toc .toctext { color: #DDD; }
+		.flow-topic-titlebar { color: #000; }
+		.flow-ui-navigationWidget { color: #FFF; }
+		.Liberty .content-wrapper .liberty-content .liberty-content-main .toccolours, .Liberty .content-wrapper .liberty-content .liberty-content-main .toc ul, .Liberty .content-wrapper .liberty-content .liberty-content-main .toc li { background-color: #000; }
+		.Liberty .content-wrapper .liberty-content .liberty-content-main .toc .toctitle { background-color: #1F2023; } }</style>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../liberty.css"/>
+<meta name="generator" content="MediaWiki 1.39.3"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="description" content="&amp;#160;此页面正在翻译中&#10;为了制作一个欧陆风云4的mod，你需要先创建一个文件夹，包含将要修改的目录，然后创建一个后缀名为.mod的文件。&#10;&#10;目录&#10;&#10;1 .mod 文件&#10;&#10;1.1 Steam标签&#10;&#10;&#10;2 附注&#10;3 mod文件夹&#10;4 文件夹中内容&#10;&#10;4.1 通用设定（common）&#10;&#10;4.1.1 顾问（advisortypes）&#10;4.1.2 AI态度（ai_attitudes）&#10;4.1.3 AI个性（ai_personalities）&#10;4.1.4 剧本书签（bookmarks）&#10;4.1.5 建筑（buildings）&#10;4.1.6 战争借口类型（cb_types）&#10;4.1.7 宗教信条（church_aspects）&#10;4.1.8 预设仆从国国名（client_states）&#10;4.1.9 殖民地区域（colonial_regions）&#10;4.1.10 国家属性（countries）&#10;4.1.11 国家颜色（country_colors）&#10;4.1.12 国家代码（country_tags）&#10;4.1.13 文化（cultures）&#10;4.1.14 自定义国家颜色（custom_country_colors）&#10;4.1.15 自定义国家理念（custom_ideas）&#10;4.1.16 修改机制代码&#10;4.1.17 自定义外交行为（diplomatic_actions）&#10;4.1.18 灾难（disasters）&#10;4.1.19 王朝颜色（dynasty_colors）&#10;4.1.20 阶层（estates）&#10;4.1.21 事件修正（event_modifiers）&#10;4.1.22 派系（factions）&#10;4.1.23 宗教热情（fervor）&#10;4.1.24 拜物教（fetishist_cults）&#10;4.1.25 政体名称（government_names）&#10;4.1.26 政府（governments）&#10;4.1.27 伟大工程（great_projects）&#10;4.1.28 神罗改革（hre_reforms）&#10;4.1.29 理念组（ideas）&#10;4.1.30 思潮（institutions）&#10;4.1.31 将领特质（leader_personalities）&#10;4.1.32 土著改革（native_advancement）&#10;4.1.33 土著民（natives）&#10;4.1.34 行为指令（on_actions）&#10;4.1.35 关系修正（opinion_modifiers）&#10;4.1.36 贿赂议会（parliament_bribes）&#10;4.1.37 议会议题（parliament_issues）&#10;4.1.38 人格神（personal_deities）&#10;4.1.39 政策（policies）&#10;4.1.40 力量投射（powerprojection）&#10;4.1.41 商品价格（prices）&#10;4.1.42 省份名称（province_names）&#10;4.1.43 叛军类型（rebel_types）&#10;4.1.44 地区颜色（region_colors）&#10;4.1.45 宗教与教派（religions）&#10;4.1.46 美洲原始宗教改革（religious_reforms）&#10;4.1.47 叛乱规则（revolt_triggers）&#10;4.1.48 统治者个性（ruler_personalities）&#10;4.1.49 效果脚本（scripted_effects）&#10;4.1.50 功能脚本（scripted_functions）&#10;4.1.51 条件脚本（scripted_triggers）&#10;4.1.52 静态修正（static_modifiers）&#10;4.1.53 科技（technologies）&#10;4.1.54 贸易公司（trade_companies）&#10;4.1.55 商品（tradegoods）&#10;4.1.56 贸易节点（tradenodes）&#10;4.1.57 可触发修正（triggered_modifiers）&#10;4.1.58 作战单位（units）&#10;4.1.59 战争目标类型（wargoal_types）&#10;4.1.60 成就（achievements.txt）&#10;4.1.61 消息提示（alerts.txt）&#10;4.1.62 系统定义（defines.lua）&#10;4.1.63 文化图形类型（graphicalculturetype.txt）&#10;4.1.64 历史幸运（historical_lucky.txt）&#10;4.1.65 科技组（technology.txt）&#10;&#10;&#10;4.2 决议（decisions）&#10;4.3 事件（events）&#10;4.4 gfx&#10;4.5 历史（history）&#10;&#10;4.5.1 历史顾问（advisors）&#10;4.5.2 国家历史（countries）&#10;4.5.3 历史外交情况（diplomacy）&#10;4.5.4 省份历史（provinces）&#10;4.5.5 历史战争（wars）&#10;&#10;&#10;4.6 界面（interface）&#10;4.7 本地化（localisation）&#10;4.8 地图（map）&#10;&#10;4.8.1 湖泊（lakes）&#10;4.8.2 随机地图（random）&#10;&#10;4.8.2.1 组成材料（tiles）&#10;&#10;&#10;4.8.3 地形（terrain）&#10;4.8.4 相邻省份（adjacencies.csv）&#10;4.8.5 地图饰品位置（ambient_object.txt）&#10;4.8.6 地区、区域和次大陆（area.txt/region.txt/superregion）&#10;4.8.7 气候（climate.txt）&#10;4.8.8 大陆（continent.txt）&#10;4.8.9 省份RGB值（definition.csv）&#10;4.8.10 高度地图（heightmap.bmp）&#10;4.8.11 小地图（minimap.base）&#10;4.8.12 城市位置（positions.txt）&#10;4.8.13 省份地图（provinces.bmp）&#10;4.8.14 区域（region.txt）&#10;4.8.15 河流地图（rivers.bmp）&#10;4.8.16 季节（seasons.txt）&#10;4.8.17 地形图（terrain.bmp）&#10;4.8.18 地形（terrain.txt）&#10;4.8.19 信风（trade_winds.txt）&#10;4.8.20 树木（trees.bmp）&#10;4.8.21 法线贴图（world_normal.bmp）&#10;4.8.22 运河（_canal_river.bmp）&#10;&#10;&#10;4.9 任务（missions）&#10;&#10;&#10;5 参考&#10;&#10;&#10;&#10;.mod 文件&#10;mod文件默认位置依不同的电脑平台而不同：&#10;&#10;Windows: Documents\Paradox Interactive\Europa Universalis IV\mod&#10;Linux: ~/.local/share/Paradox Interactive/Europa Universalis IV/mod&#10;Mac OS: ~/Documents/Paradox Interactive/Europa Universalis IV/mod&#10;.mod文件提供给启动器对应mod的文件位置以及其显示名称，在1.8版本后，还应添加其所支持的游戏版本。例如：&#10;&#10;name = &quot;My Mod version 3&quot;&#10;path = &quot;mod/mymod_v3&quot;&#10;supported_version = &quot;1.9&quot;&#10;&#10;所支持的版本必须与游戏版本相同才能被加载。&#10;当上传到steam创意工坊时，还需要包含一张图片和其标签以助于你的mod更容易被人所发现与了解，比如：&#10;&#10;name = &quot;My Mod version 3&quot;&#10;path = &quot;mod/mymod_v3&quot;&#10;supported_version = &quot;1.9&quot;&#10;picture = &quot;mymod_picture.jpg&quot;&#10;tags = {&#10; &quot;events&quot;&#10; &quot;historical&quot;&#10;}&#10;&#10;图片文件需要在mod文件夹“mymod_v3”中，而不是在Europe Universalis IV\mod中。&#10;&#10;Steam标签&#10;“tags”指的是steam系统所使用的标签。符合创意工坊分类标签的Mod，会自动出现在对应分类。&#10;目前支持的标签组合如下：&#10;&#10;&#10;Alternative History&#10;Balance&#10;Events&#10;Expansion&#10;Fixes&#10;Gameplay&#10;Graphics&#10;Guide&#10;Historical&#10;Loading Screen&#10;Map&#10;Military&#10;Missions And Decisions&#10;National Ideas&#10;New Nations&#10;Religion&#10;Sound&#10;Technologies&#10;Trade&#10;Translation&#10;Utilities&#10;&#10;如果mod文件中填写的标签不在列表之中，就会成为普通的自定义标签，列在分类标签的旁边。&#10;&#10;附注&#10;音频文件格式&#10;只有.ogg文件才能正确运行，.mp3文件虽然不会导致游戏崩溃，但并不会被播放。&#10;mod文件夹&#10;mod文件夹应与.mod文件在同一位置，并与游戏原目录有相同的结构（若未进行修改则可以省略）。游戏运行时会同时加载游戏根目录与mod下的文件，当两者文件名相同时会优先加载mod中的文件。&#10;如果想让游戏不加载某个游戏原目录里一个文件夹下的所有文件，比如你想重做游戏的所有任务，那么需要在.mod文件中添加replace_path = &quot;missions&quot;。&#10;&#10;name = &quot;coolmod&quot;&#10;path = &quot;mod/coolmod&quot;&#10;supported_version = &quot;1.9&quot;&#10;replace_path = &quot;missions&quot;&#10;&#10;注意：&#10;&#10;* 如果想用一个空文件夹代替某个游戏原文件夹，需要在该目录下放置一个挂名文件dummy.txt。否则空文件夹无法上传到steam。 [1]&#10;* 如果你希望代替某个子文件夹，例如common/bookmarks，请在mod文件夹的根目录中放置一个空白的checksum_manifest.txt文件，否则游戏在加载mod时会产生许多不必要的报错。&#10;&#10;文件夹中内容&#10;通用设定（common）&#10;顾问（advisortypes）&#10;定义顾问的能力、使用君主点数类型、修正。&#10;&#10;AI态度（ai_attitudes）&#10;定义AI国家对其他国家的态度，比如友善、敌意、保护等等，同时注明该态度的影响因素。&#10;&#10;AI个性（ai_personalities）&#10;定义AI国家的整体个性，比如倾向于内政、外交或军事等等。&#10;&#10;剧本书签（bookmarks）&#10;定义游戏剧本，以及该剧本所建议使用的国家。&#10;&#10;建筑（buildings）&#10;指定可以建造的建筑类型以及其花费、收益等。&#10;&#10;战争借口类型（cb_types）&#10;定義一個國家可以用來宣戰的宣戰理由 (CB)。&#10;要注意，戰爭目標並不是定義在此文件中，並且錯誤地定義其中任何一種都可能導致奇怪的錯誤。&#10;&#10;宗教信条（church_aspects）&#10;定义 新教的教會力量及增益，和 科普特正教國家的加成。&#10;&#10;预设仆从国国名（client_states）&#10;定义预设的仆从国国家名称。当一个国家外交科技达到23级时，即可创建一个仆从国。&#10;&#10;殖民地区域（colonial_regions）&#10;定义可能产生殖民领的区域。你需要在同一个殖民区域内拥有至少5个省份才能产生殖民领。&#10;&#10;国家属性（countries）&#10;包含一系列文本文件，定义了所有国家的部分属性，如它们的历史理念组、君主名字、将领名字、舰船名字、它们在地图上的颜色等等方面。&#10;&#10;国家颜色（country_colors）&#10;一般来说每个国家士兵制服的颜色会被游戏引擎定义为他们国旗的主要颜色. 但是,一些特定的国家有时需要对其重新定义。&#10;&#10;国家代码（country_tags）&#10;给每个单独的国家定义一个独特的、三个字母的代码,或者称之为 &quot;tag&quot;，并指向common\countries内的相关定义文件。在此文件中定义的每一个单独的国家代码在common\countries里必须有一个相对应的文件，否则游戏会在加载的时候崩溃。请检查并确保你将其拼写正确。&#10;&#10;文化（cultures）&#10;定义文化和文化组。&#10;&#10;自定义国家颜色（custom_country_colors）&#10;定义自定义国家可用的颜色。&#10;&#10;自定义国家理念（custom_ideas）&#10;定义被自定义国家使用的理念。（译者注：商业城邦、随机历史或随机新大陆国家也是会使用这些理念）&#10;&#10;修改机制代码&#10;定义在不同难度等级下，玩家和AI各自受到的增益和减损。（译者注：英文原文解释略简单，实际该文件中的代码有覆盖defines.lua当中代码的效果）&#10;&#10;自定义外交行为（diplomatic_actions）&#10;定义外交行动和完成这些行动所需要满足的要求。&#10;&#10;灾难（disasters）&#10;定义灾难的种类、触发条件和修正效果。&#10;&#10;王朝颜色（dynasty_colors）&#10;定义在王朝地图模式下各个王朝的颜色。&#10;&#10;阶层（estates）&#10;定义阶层，你可以与他们互动、给予他们省份。&#10;&#10;事件修正（event_modifiers）&#10;定义事件修正，这些修正由事件激活，给予一个国家/省份增益或减成。这些修正可以适用于省份或国家。修正的持续时间不在此处指定，而是在触发它的事件中指定。&#10;&#10;派系（factions）&#10;定义财阀共和制、革命共和制以及&amp;#160;大明的天朝政府中的派系。其他国家也可以在这里定义新派系，这需要许多其他文件协同工作。更多信息详见派系修改。&#10;&#10;宗教热情（fervor）&#10;定义狂热的作用和相关增益。&#10;&#10;拜物教（fetishist_cults）&#10;定义拜物教信仰的国家可以选择崇拜的偶像。&#10;&#10;政体名称（government_names）&#10;定义政体不同类型和等级下的显示名称。&#10;&#10;政府（governments）&#10;定义不同政府政府的类型，也制定了玩家与AI在何种情况下可以更改政府类型&#10;&#10;伟大工程（great_projects）&#10;定义伟大工程（运河）及相关的修正效果。&#10;&#10;神罗改革（hre_reforms）&#10;定义了神罗皇帝可以通过的改革。&#10;&#10;理念组（ideas）&#10;定义了游戏中可选的理念组 ，不同国家的理念、传统和野心。&#10;&#10;思潮（institutions）&#10;定义 思潮,，接纳思潮的加成，以及发源省份。&#10;&#10;将领特质（leader_personalities）&#10;定义陆军将领和海军将领在战斗后可能获得的特质及其相关效果。&#10;&#10;土著改革（native_advancement）&#10;定义 土著理念和其他属性。&#10;&#10;土著民（natives）&#10;Defines what type of natives live in different unoccupied provinces according to region, and their numbers,  aggressiveness, and  ferocity.&#10;&#10;行为指令（on_actions）&#10;These are triggers for events which fire when the game engine reaches certain conditions. These conditions do not seem to be documented well anywhere (though see this forum discussion) Some of these conditions are based on a game event like losing a siege, which can trigger event #9206, an event about tribal armies looting. Others are triggered via &quot;pulses&quot;, as in &quot;on_bi_yearly_pulse&quot; which has a chance to trigger one of several events every two years.&#10;&#10;关系修正（opinion_modifiers）&#10;定义各国对彼此观点的修正，以及修正持续的时间。&#10;&#10;贿赂议会（parliament_bribes）&#10;Defines the required bribes for Parliament to increase the chances of passing legislation.&#10;&#10;议会议题（parliament_issues）&#10;定义你可以在议会菜单中选择的议题。&#10;&#10;人格神（personal_deities）&#10;定义了 印度教与 诺斯信仰 中主神/神祇及其相关奖励。&#10;&#10;政策（policies）&#10;定义了 政策 及其条件、效果。&#10;&#10;力量投射（powerprojection）&#10;定义了固定和动态的力量投射  修正，它们的年度衰减和最大值。&#10;&#10;商品价格（prices）&#10;定义了商品的基础价格。&#10;&#10;省份名称（province_names）&#10;定义动态省份名称；可以在游戏开启前设置开关此功能。&#10;&#10;叛军类型（rebel_types）&#10;指定不同类型的叛军，他们的要求是什么，他们何时产生，他们的战斗力如何等。&#10;&#10;地区颜色（region_colors）&#10;制定“地区”地图模式中每个区域的颜色。&#10;&#10;宗教与教派（religions）&#10;定义游戏中的不同宗教及其相关异端、省份和国家修正、他们在战争中的称呼等。更多信息请参见宗教修改。&#10;&#10;美洲原始宗教改革（religious_reforms）&#10;Defines religious reforms for the  Nahuatl,  Inti, and  Mayan religions.&#10;&#10;叛乱规则（revolt_triggers）&#10;定义一个国家（TAG）是否会产生独立叛军（从一个国家分裂出来）。&#10;&#10;统治者个性（ruler_personalities）&#10;定义不同的统治者个性，统治者个性的效果修正，以及统治者获得某一个性的权重修正。&#10;&#10;效果脚本（scripted_effects）&#10;效果脚本。&#10;&#10;功能脚本（scripted_functions）&#10;功能脚本。&#10;&#10;条件脚本（scripted_triggers）&#10;条件脚本。&#10;&#10;静态修正（static_modifiers）&#10;定义游戏中大部分持续存在的变量的修正效果，例如  威望、 正统和 厌战度。&#10;&#10;科技（technologies）&#10;根据君主点数的使用情况，指定不同的科技等级。&#10;&#10;贸易公司（trade_companies）&#10;定義貿易公司所需省份，名稱和顏色。&#10;&#10;商品（tradegoods）&#10;定義貿易商品以及控制貿易產生的影響。&#10;&#10;贸易节点（tradenodes）&#10;定義哪些省份位於哪個貿易節點中，以及這些節點之間的連接方式。&#10;&#10;可触发修正（triggered_modifiers）&#10;定義諸如“征服麥加”修正之類的東西，只要滿足某些條件，這些修正便保持不變。&#10;&#10;作战单位（units）&#10;Defines the stats and tech group of land and naval units.&#10;&#10;战争目标类型（wargoal_types）&#10;為宣戰藉口（Casus Bellis）定義戰爭目標（即和平協議中可以採取的行動以及影響戰爭分數的因素）&#10;&#10;成就（achievements.txt）&#10;定義成就。&#10;&#10;消息提示（alerts.txt）&#10;This file holds your message settings.&#10;&#10;系统定义（defines.lua）&#10;一些雜項。搜索該文件對於查找許多設定可能很有用。&#10;&#10;文化图形类型（graphicalculturetype.txt）&#10;Defines graphical culture types.&#10;&#10;历史幸运（historical_lucky.txt）&#10;定義幸運國家。&#10;&#10;科技组（technology.txt）&#10;定義科技組。&#10;&#10;决议（decisions）&#10;這些.txt文件定義了一個國家可以做出的決議，包括其前提條件，影響以及決定AI是否選擇它的因素。&#10;&#10;事件（events）&#10;這些文件定義了玩家或AI國家可能發生的事件：觸發條件，觸發頻率以及事件的選項和效果。&#10;&#10;gfx&#10;包含游戏中使用的美术资源。与模组最密切相关的是flags和event_pictures文件夹。&#10;&#10;历史（history）&#10;历史顾问（advisors）&#10;定義史實的顧問(像是馬基維利，達文西，牛頓)。&#10;&#10;国家历史（countries）&#10;此處的文件定義了遊戲中每個國家的歷史。 文件名必須以國家的tag開頭。 它們至少必須包含首選的政體，科技組，宗教，文化和首選的首都。 可選地，他們可以指定歷任君主，政權更迭，改信其他宗教等。&#10;&#10;历史外交情况（diplomacy）&#10;定義歷史聯盟，王室聯姻，附庸等。&#10;&#10;省份历史（provinces）&#10;游戏中每个省的历史都在这里详细说明。谁拥有它，基税，谁发现它，宗教，贸易商品等。&#10;&#10;历史战争（wars）&#10;历史上的战争事件。&#10;&#10;界面（interface）&#10;这些 .gfx和 .gui文件定义了界面和菜单的结构以及美术资源的展示方式。&#10;&#10;本地化（localisation）&#10;包含.yml文件，這些文件指定在遊戲中顯示哪些文本，可以選擇將其翻譯成其他語言。&#10;&#10;地图（map）&#10;湖泊（lakes）&#10;它包括了湖泊的位置与海拔高度。&#10;&#10;随机地图（random）&#10;用于生成随机新世界 的文件。&#10;&#10;组成材料（tiles）&#10;Files and images relating to new random new world tiles&#10;&#10;地形（terrain）&#10;Contains small image files specifying how things like the fog of war, border lines and so on look.&#10;&#10;相邻省份（adjacencies.csv）&#10;定义哪些省份会经过狭窄的海峡连接到其他省份。除非被敌人所封锁，部队可以直接走过这些狭窄的海峡。&#10;&#10;地图饰品位置（ambient_object.txt）&#10;告诉游戏在地图上的何处展示特殊物体，例如熊、鹰、风车等。&#10;&#10;地区、区域和次大陆（area.txt/region.txt/superregion）&#10;定义省份属于哪个地区（area），地区属于哪个区域（region），以及区域属于哪个次大陆（superregion）。&#10;&#10;气候（climate.txt）&#10;定义省份的气候，例如哪些省份在冬季获得损耗修正。&#10;&#10;大陆（continent.txt）&#10;它定义了每一省份在哪一块大陆。&#10;&#10;省份RGB值（definition.csv）&#10;定义每个省份的省份ID，以及省份的RGB值。RGB值要和provinces.bmp内地块的RGB值相一致。&#10;&#10;高度地图（heightmap.bmp）&#10;Grayscale image telling the engine how high each bit of the map should be elevated. Light is high, dark is low. Altering this does NOT alter whether provinces have terrain penalties during combat; that is specified in terrain.bmp.&#10;&#10;小地图（minimap.base）&#10;小地图的背景。&#10;&#10;城市位置（positions.txt）&#10;一个省份中城市与兵模显示的位置。&#10;&#10;省份地图（provinces.bmp）&#10;所有省份（包括海洋省份和陆地省份）的布局。每个省份对应唯一的，在definition.csv中指定的rgb值。编辑时，请确认没有开启反锯齿或模糊画笔边缘。&#10;&#10;区域（region.txt）&#10;它定义了省份属于哪一个区域。&#10;&#10;河流地图（rivers.bmp）&#10;它规定了游戏中河流的位置。&#10;&#10;季节（seasons.txt）&#10;Defines the start and end of the seasons and how the color filter on the map changes.&#10;&#10;地形图（terrain.bmp）&#10;Specifies which areas of the map are mountainous, forest, etc. by color.&#10;&#10;地形（terrain.txt）&#10;定义与地形相关的修正，以及它们如何对应terrain.bmp中的颜色。&#10;&#10;信风（trade_winds.txt）&#10;Defines the trade winds for oceanic crossings&#10;&#10;树木（trees.bmp）&#10;不同种类树木的位置。&#10;&#10;法线贴图（world_normal.bmp）&#10;It&#039;s a normalmap for the engine to handle lighting and speculars and stuff.&#10;&#10;运河（_canal_river.bmp）&#10;展示运河的位置，运河名字在文件开头。&#10;&#10;任务（missions）&#10;定義玩家和AI可以嘗試的任務，包括要求，成功和失敗的條件以及獎勵。&#10;&#10;参考&#10;&lt;br /&gt;&#10;&#10;&#10;&#10;模组制作&amp;#160;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;"/>
+<meta name="keywords" content="欧陆风云4百科,Mod文件结构"/>
+<meta name="apple-mobile-web-app-capable" content="Yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="mobile-web-app-capable" content="Yes"/>
+<meta name="theme-color" content="#103D8F"/>
+<meta name="msapplication-navbutton-color" content="#103D8F"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="欧陆风云4百科 (zh)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://www.eu4cn.com/api.php?action=rsd"/>
+<link rel="alternate" hreflang="zh" href="/zh/Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"/>
+<link rel="alternate" hreflang="zh-Hans-CN" href="/zh-cn/Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"/>
+<link rel="alternate" hreflang="zh-Hant-HK" href="/zh-hk/Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"/>
+<link rel="alternate" hreflang="zh-Hant-TW" href="/zh-tw/Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"/>
+<link rel="alternate" hreflang="x-default" href="/wiki/Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"/>
+<link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="欧陆风云4百科的Atom feed" href="/index.php?title=Special:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114739240-1');
+</script>
+<meta property="og:title" content="Mod文件结构"/>
+<meta property="og:site_name" content="欧陆风云4百科"/>
+<meta property="og:url" content="https://www.eu4cn.com/wiki/Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"/>
+<meta property="og:image" content="https://www.eu4cn.com/images/logo/logo.png"/>
+<meta property="article:modified_time" content="2024-02-20T11:46:00Z"/>
+<meta property="article:published_time" content="2024-02-20T11:46:00Z"/>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","name":"Mod\u6587\u4ef6\u7ed3\u6784 - \u6b27\u9646\u98ce\u4e914\u767e\u79d1\uff0c\u4eba\u4eba\u53ef\u4ee5\u7f16\u8f91\u7684\u6b27\u9646\u98ce\u4e914\u4e2d\u6587\u767e\u79d1\u5168\u4e66","headline":"Mod\u6587\u4ef6\u7ed3\u6784 - \u6b27\u9646\u98ce\u4e914\u767e\u79d1\uff0c\u4eba\u4eba\u53ef\u4ee5\u7f16\u8f91\u7684\u6b27\u9646\u98ce\u4e914\u4e2d\u6587\u767e\u79d1\u5168\u4e66","mainEntityOfPage":"<span class=\"mw-page-title-main\">Mod\u6587\u4ef6\u7ed3\u6784<\/span>","identifier":"https:\/\/www.eu4cn.com\/wiki\/Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84","url":"https:\/\/www.eu4cn.com\/wiki\/Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84","dateModified":"2024-02-20T11:46:00Z","datePublished":"2024-02-20T11:46:00Z","image":{"@type":"ImageObject","url":"https:\/\/www.eu4cn.com\/images\/logo\/logo.png"},"author":{"@type":"Organization","name":"\u6b27\u9646\u98ce\u4e914\u767e\u79d1","url":"https:\/\/www.eu4cn.com","logo":{"@type":"ImageObject","url":"https:\/\/www.eu4cn.com\/images\/logo\/logo.png","caption":"\u6b27\u9646\u98ce\u4e914\u767e\u79d1"}},"publisher":{"@type":"Organization","name":"\u6b27\u9646\u98ce\u4e914\u767e\u79d1","url":"https:\/\/www.eu4cn.com","logo":{"@type":"ImageObject","url":"https:\/\/www.eu4cn.com\/images\/logo\/logo.png","caption":"\u6b27\u9646\u98ce\u4e914\u767e\u79d1"}},"potentialAction":{"@type":"SearchAction","target":"https:\/\/www.eu4cn.com\/index.php?title=Special:Search&search={search_term}","query-input":"required name=search_term"}}</script>
+<link rel="stylesheet" href="../all.css" />
+<link rel="stylesheet" href="../v4-shims.css" />
+
+</head>
+<body class="Liberty width-size mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Mod文件结构 rootpage-Mod文件结构 skin-liberty action-view skin--responsive">		<header>
+			<div class="nav-wrapper navbar-fixed-top">
+						<nav class="navbar navbar-dark yamm">
+			<a class="navbar-brand" href="/wiki/%E9%A6%96%E9%A1%B5"></a>
+			<ul class="nav navbar-nav">
+				<li class="dropdown nav-item">
+					<a class="nav-link navbar-right" href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div class="navbar-brand-subtitle">欧陆风云4</div>
+						<div class="navbar-family">ParaWikis</div>
+					</a>
+				<ul class="dropdown-menu" aria-labelledby="dLabel">
+					<li>
+		                  <div class="yamm-content">
+		                    <div class="row">
+						<br />
+<b>Notice</b>:  Undefined index: HTTP_ACCEPT_LANGUAGE in <b>/www/sites/eu4cn.com/index/skins/Liberty/LibertyTemplate.php</b> on line <b>186</b><br />
+ 							<ul class="col-sm-4 list-unstyled">
+							<li><p class="meganav-item"><strong>最新百科</strong></p></li>
+								<a href="//cs2.parawikis.com" class="dropdown-item meganav-item">都市天际线2百科</a>
+								<a href="//h3.parawikis.com" class="dropdown-item meganav-item">英雄无敌3百科</a>
+								<a href="//vic3.parawikis.com" class="dropdown-item meganav-item">维多利亚3百科</a>
+								<a href="//ce2.parawikis.com" class="dropdown-item meganav-item">奇妙探险队2百科</a>
+								<a href="//eos.parawikis.com" class="dropdown-item meganav-item">罪恶帝国百科</a>
+								<a href="//ir.parawikis.com" class="dropdown-item meganav-item">英白拉多：罗马百科</a>
+							</ul>
+							<ul class="col-sm-4 list-unstyled">
+								<li><p class="meganav-item"><strong>热门百科</strong></p></li>
+								<a href="//stellaris.parawikis.com" class="dropdown-item meganav-item">群星百科</a>
+								<a href="//www.eu4cn.com" class="dropdown-item meganav-item">欧陆风云4百科</a>
+								<a href="//ck2.parawikis.com" class="dropdown-item meganav-item">十字军之王2百科</a>
+								<a href="//ck3.parawikis.com" class="dropdown-item meganav-item">十字军之王3百科</a>
+								<a href="//hoi4.parawikis.com" class="dropdown-item meganav-item">钢铁雄心4百科</a>
+								<a href="//vic2.parawikis.com" class="dropdown-item meganav-item">维多利亚2百科</a>
+							</ul>
+							<ul class="col-sm-4 list-unstyled">
+								<li><p class="meganav-item"><strong>ParaWikis</strong></p></li>
+								<a href="//www.parawikis.com/wiki/ParaWikis:%E7%94%B3%E8%AF%B7%E5%BB%BA%E7%AB%99" class="dropdown-item meganav-item">申请建站</a>
+								<a href="//www.parawikis.com" class="dropdown-item meganav-item">ParaWikis</a>
+								<a href="//commons.parawikis.com" class="dropdown-item meganav-item">ParaCommons</a>
+							</ul>		                    </div>
+		                  </div>
+		                </li>
+				</ul>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="../wiki/Special:最近更改.html" class="nav-link" title="本wiki的最近更改列表[r]" accesskey="r"><span class="fas fa-sync"></span><span class="hide-title">最近更改</span></a>				</li>
+				<li class="nav-item">
+					<a href="/wiki/Special:%E9%9A%8F%E6%9C%BA%E9%A1%B5%E9%9D%A2" class="nav-link" title="加载一个随机页面[x]" accesskey="x"><span class="fa fa-random"></span><span class="hide-title">随机页面</span></a>				</li>
+				<li class="nav-item">
+					<a href="//shang.qq.com/wpa/qunwpa?idkey=3bb76f6a58594b18c2defdc03af7ec2703fb2e2cc8fef6dadd1dcb896c0ede1a" target="_blank" class="nav-link" title="加入QQ群">
+						<span class="fa fa-qq"></span><span class="hide-title">加入QQ群</span>
+					</a>
+				</li>
+				<li class="dropdown nav-item">
+					<a class="dropdown-toggle nav-link" href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<span class="fa fa-wrench"></span><span class="hide-title">工具</span>
+					</a>
+				<ul class="dropdown-menu" aria-labelledby="dLabel">
+					<li id="t-whatlinkshere" class="mw-list-item"><a href="../wiki/所有链接至本页面的wiki页面列表[j].html" title="所有链接至本页面的wiki页面列表[j]" accesskey="j" class="dropdown-item">链入页面</a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84" rel="nofollow" title="链自本页的页面的最近更改[k]" accesskey="k" class="dropdown-item">相关更改</a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:%E7%89%B9%E6%AE%8A%E9%A1%B5%E9%9D%A2" title="所有特殊页面的列表[q]" accesskey="q" class="dropdown-item">特殊页面</a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="本页面的可打印版本[p]" accesskey="p" class="dropdown-item">可打印版本</a></li><li id="t-permalink" class="mw-list-item"><a href="/index.php?title=Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84&amp;oldid=102290" title="此页面该修订版本的固定链接" class="dropdown-item">固定链接</a></li><li id="t-info" class="mw-list-item"><a href="/index.php?title=Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84&amp;action=info" title="关于此页面的更多信息" class="dropdown-item">页面信息</a></li><li id="t-cargopagevalueslink" class="mw-list-item"><a href="/index.php?title=Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84&amp;action=pagevalues" rel="cargo-pagevalues" class="dropdown-item">页面值</a></li>				</ul>
+				</li>
+				<li class="dropdown nav-item"><a class="nav-link dropdown-toggle dropdown-toggle-fix" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" title="帮助"><span class="fa fa-question"></span><span class="hide-title">帮助</span></a><div class="dropdown-menu" role="menu"><a class="dropdown-item" href="/wiki/Project:%E8%AF%91%E5%90%8D%E6%89%8B%E5%86%8C" title="譯名手冊"><span class="fa fa-book"></span>譯名手冊</a><a class="dropdown-item" href="/wiki/Project:%E5%AD%97%E8%AF%8D%E8%BD%AC%E6%8D%A2" title="字詞轉換"><span class="fa fa-language"></span>字詞轉換</a><a class="dropdown-item" href="/wiki/Project:%E7%BC%96%E8%BE%91%E6%8C%87%E5%8D%97" title="編輯指南"><span class="fa fa-graduation-cap"></span>編輯指南</a><a class="dropdown-item" href="/wiki/Project:%E7%BC%96%E8%BE%91%E8%A7%84%E8%8C%83" title="編輯規範"><span class="fa fa-lightbulb"></span>編輯規範</a><a class="dropdown-item" href="/wiki/Project:%E7%BB%83%E6%89%8B%E6%B2%99%E7%9B%92" title="Project:练手沙盒"><span class="fa fa-leaf"></span>練手沙盒</a></div></li><li class="dropdown nav-item"><a class="hidden-xs-down nav-link" data-toggle="" role="button" aria-haspopup="true" aria-expanded="true" title="ParaTranz" href="https://paratranz.cn/"><span class="fa fa-language"></span><span class="hide-title">ParaTranz</span></a></li><li class="dropdown nav-item"><a class="hidden-xs-down nav-link" data-toggle="" role="button" aria-haspopup="true" aria-expanded="true" title="52PCGame" href="http://bbs.52pcgame.net/"><span class="fa fa-comments"></span><span class="hide-title">52PCGame</span></a></li><li class="dropdown nav-item"><a class="hidden-xs-down nav-link" data-toggle="" role="button" aria-haspopup="true" aria-expanded="true" title="Project:捐款" href="/wiki/Project:%E6%8D%90%E6%AC%BE"><span class="fa fa-heart"></span><span class="hide-title">资助我们</span></a></li>			</ul>
+					<div class="navbar-login">
+							<a href="#" class="none-outline" data-toggle="modal" data-target="#login-modal">
+					<span class="fa fa-sign-in"></span>
+				</a>
+					</div>
+									<form action="/index.php" id="searchform" class="form-inline">
+			<input type="hidden" name="title" value="Special:搜索"/>
+			<div class="input-group">
+				<input type="search" name="search" placeholder="在欧陆风云4百科搜索" aria-label="在欧陆风云4百科搜索" autocapitalize="sentences" title="在欧陆风云4百科搜索[f]" accesskey="f" class="form-control" id="searchInput"/>				<span class="input-group-btn">
+					<button type="submit" name="go"
+						value="前往" id="searchGoButton"
+							class="btn btn-secondary" type="button"><span class="fa fa-eye"></span></button>
+					<button type="submit" name="fulltext"
+						value="搜索"
+						id="mw-searchButton" class="btn btn-secondary" type="button">
+						<span class="fa fa-search"></span></button>
+				</span>
+			</div>
+		</form>
+			</nav>
+				</div>
+		</header>
+		<section>
+			<div class="content-wrapper">
+							<aside>
+			<div class="liberty-sidebar">
+				<div class="live-recent-wrapper">
+					<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+												<div
+			class="live-recent"
+			data-article-ns="0|4|10|12|14"
+			data-talk-ns="1|5|7|9|11|13|15"
+		>
+			<div class="live-recent-header">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a href="javascript:" class="nav-link active" id="liberty-recent-tab1">
+						最近更改					</a>
+				</li>
+				<li class="nav-item">
+					<a href="javascript:" class="nav-link" id="liberty-recent-tab2">
+						最近讨论					</a>
+				</li>
+			</ul>
+			</div>
+			<div class="live-recent-content">
+				<ul class="live-recent-list" id="live-recent-list">
+					<li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li>				</ul>
+			</div>
+			<div class="live-recent-footer">
+				<a href="../wiki/Special:最近更改.html" title="Special:最近更改"><span class="label label-info">查看更多</span></a>			</div>
+		</div>
+						
+<!-- 侧栏 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1612414434963106"
+     data-ad-slot="1728061201"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Google tag (gtag.js) -->
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K4RD1C6KBW');
+</script>
+				</div>
+										</div>
+			</aside>
+								<div class="container-fluid liberty-content">
+					<div class="liberty-content-header">
+													<div class="alert alert-dismissible fade in alert-info liberty-notice" role="alert">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<div id="localNotice"><div class="sitenotice" lang="zh" dir="ltr"><div style="text-align:center; font-size:125%; line-height: 1; padding: 10px;"><b>欢迎访问欧陆风云4百科！<a href="../wiki/Special:用户登录.html" title="Special:用户登录"><span class="alert-link">注册一个账号</span></a>，一起参与编写吧！这里是<a href="/wiki/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E5%BD%93%E5%89%8D%E4%BB%BB%E5%8A%A1#页面" title="欧陆风云4百科:当前任务"><span class="alert-link">当前的工程</span></a>。</b></div>
+<div style="text-align: center;">如果您想帮助本站建设，欢迎点击<a href="../wiki/欧陆风云4百科:捐款.html" title="欧陆风云4百科:捐款"><b>这里</b></a>捐款！欢迎所有对百科感兴趣的同学加入QQ群：<b>497888338</b>。</div></div></div>							</div>
+															<div class="content-tools">
+				<div class="btn-group" role="group" aria-label="content-tools">
+					<div id="ca-view" class="selected mw-list-item"><a href="/wiki/Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84" class="btn btn-secondary tools-btn">阅读</a></div><div id="ca-viewsource" class="mw-list-item"><a href="/index.php?title=Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84&amp;action=edit" title="本页面受到保护。&#10;您可以查看其源代码[e]" accesskey="e" class="btn btn-secondary tools-btn">查看源代码</a></div><div id="ca-history" class="mw-list-item"><a href="/index.php?title=Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84&amp;action=history" title="本页面过去的版本[h]" accesskey="h" class="btn btn-secondary tools-btn">查看历史</a></div>					<a href="/wiki/Talk:Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84" class="btn btn-secondary tools-btn" title="关于内容页面的讨论[t]" accesskey="t" id="ca-talk">讨论</a>				</div>
+			</div>
+							<div class="title">
+						<h1>
+							<span class="mw-page-title-main">Mod文件结构</span>						</h1>
+						<div class="mw-indicators">
+<div id="mw-indicator-version" class="mw-indicator"><div class="mw-parser-output">本页面讲述的内容<b><span class="wiki-maincolor">长期有效</span></b>。</div></div>
+</div>
+						</div>
+						<div class="contentSub" >
+													</div>
+				</div>
+					<div class="liberty-content-main" id="content">
+											<div class="mw-body-content" id="mw-content-text">
+							<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="zh" dir="ltr"><div class="mw-parser-output"><div class="ambox2020 alert-danger" role="alert"><b><span class="fa fa-language"></span>&#160;此页面正在翻译中</b><div class="hidden-xs-down"></div></div>
+<p>为了制作一个欧陆风云4的mod，你需要先创建一个文件夹，包含将要修改的目录，然后创建一个后缀名为.mod的文件。
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="zh" dir="ltr"><h2 id="mw-toc-heading">目录</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#.mod_文件"><span class="tocnumber">1</span> <span class="toctext">.mod 文件</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Steam标签"><span class="tocnumber">1.1</span> <span class="toctext">Steam标签</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#附注"><span class="tocnumber">2</span> <span class="toctext">附注</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#mod文件夹"><span class="tocnumber">3</span> <span class="toctext">mod文件夹</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#文件夹中内容"><span class="tocnumber">4</span> <span class="toctext">文件夹中内容</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#通用设定（common）"><span class="tocnumber">4.1</span> <span class="toctext"><b>通用设定（common）</b></span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#顾问（advisortypes）"><span class="tocnumber">4.1.1</span> <span class="toctext">顾问（advisortypes）</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#AI态度（ai_attitudes）"><span class="tocnumber">4.1.2</span> <span class="toctext">AI态度（ai_attitudes）</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#AI个性（ai_personalities）"><span class="tocnumber">4.1.3</span> <span class="toctext">AI个性（ai_personalities）</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#剧本书签（bookmarks）"><span class="tocnumber">4.1.4</span> <span class="toctext">剧本书签（bookmarks）</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#建筑（buildings）"><span class="tocnumber">4.1.5</span> <span class="toctext">建筑（buildings）</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#战争借口类型（cb_types）"><span class="tocnumber">4.1.6</span> <span class="toctext">战争借口类型（cb_types）</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#宗教信条（church_aspects）"><span class="tocnumber">4.1.7</span> <span class="toctext">宗教信条（church_aspects）</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#预设仆从国国名（client_states）"><span class="tocnumber">4.1.8</span> <span class="toctext">预设仆从国国名（client_states）</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#殖民地区域（colonial_regions）"><span class="tocnumber">4.1.9</span> <span class="toctext">殖民地区域（colonial_regions）</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#国家属性（countries）"><span class="tocnumber">4.1.10</span> <span class="toctext">国家属性（countries）</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#国家颜色（country_colors）"><span class="tocnumber">4.1.11</span> <span class="toctext">国家颜色（country_colors）</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#国家代码（country_tags）"><span class="tocnumber">4.1.12</span> <span class="toctext">国家代码（country_tags）</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#文化（cultures）"><span class="tocnumber">4.1.13</span> <span class="toctext">文化（cultures）</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#自定义国家颜色（custom_country_colors）"><span class="tocnumber">4.1.14</span> <span class="toctext">自定义国家颜色（custom_country_colors）</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#自定义国家理念（custom_ideas）"><span class="tocnumber">4.1.15</span> <span class="toctext">自定义国家理念（custom_ideas）</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#修改机制代码"><span class="tocnumber">4.1.16</span> <span class="toctext">修改机制代码</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#自定义外交行为（diplomatic_actions）"><span class="tocnumber">4.1.17</span> <span class="toctext">自定义外交行为（diplomatic_actions）</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#灾难（disasters）"><span class="tocnumber">4.1.18</span> <span class="toctext">灾难（disasters）</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#王朝颜色（dynasty_colors）"><span class="tocnumber">4.1.19</span> <span class="toctext">王朝颜色（dynasty_colors）</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#阶层（estates）"><span class="tocnumber">4.1.20</span> <span class="toctext">阶层（estates）</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#事件修正（event_modifiers）"><span class="tocnumber">4.1.21</span> <span class="toctext">事件修正（event_modifiers）</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#派系（factions）"><span class="tocnumber">4.1.22</span> <span class="toctext">派系（factions）</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#宗教热情（fervor）"><span class="tocnumber">4.1.23</span> <span class="toctext">宗教热情（fervor）</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="#拜物教（fetishist_cults）"><span class="tocnumber">4.1.24</span> <span class="toctext">拜物教（fetishist_cults）</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#政体名称（government_names）"><span class="tocnumber">4.1.25</span> <span class="toctext">政体名称（government_names）</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#政府（governments）"><span class="tocnumber">4.1.26</span> <span class="toctext">政府（governments）</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="#伟大工程（great_projects）"><span class="tocnumber">4.1.27</span> <span class="toctext">伟大工程（great_projects）</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="#神罗改革（hre_reforms）"><span class="tocnumber">4.1.28</span> <span class="toctext">神罗改革（hre_reforms）</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#理念组（ideas）"><span class="tocnumber">4.1.29</span> <span class="toctext">理念组（ideas）</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#思潮（institutions）"><span class="tocnumber">4.1.30</span> <span class="toctext">思潮（institutions）</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="#将领特质（leader_personalities）"><span class="tocnumber">4.1.31</span> <span class="toctext">将领特质（leader_personalities）</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="#土著改革（native_advancement）"><span class="tocnumber">4.1.32</span> <span class="toctext">土著改革（native_advancement）</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#土著民（natives）"><span class="tocnumber">4.1.33</span> <span class="toctext">土著民（natives）</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#行为指令（on_actions）"><span class="tocnumber">4.1.34</span> <span class="toctext">行为指令（on_actions）</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="#关系修正（opinion_modifiers）"><span class="tocnumber">4.1.35</span> <span class="toctext">关系修正（opinion_modifiers）</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="#贿赂议会（parliament_bribes）"><span class="tocnumber">4.1.36</span> <span class="toctext">贿赂议会（parliament_bribes）</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="#议会议题（parliament_issues）"><span class="tocnumber">4.1.37</span> <span class="toctext">议会议题（parliament_issues）</span></a></li>
+<li class="toclevel-3 tocsection-44"><a href="#人格神（personal_deities）"><span class="tocnumber">4.1.38</span> <span class="toctext">人格神（personal_deities）</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="#政策（policies）"><span class="tocnumber">4.1.39</span> <span class="toctext">政策（policies）</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="#力量投射（powerprojection）"><span class="tocnumber">4.1.40</span> <span class="toctext">力量投射（powerprojection）</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="#商品价格（prices）"><span class="tocnumber">4.1.41</span> <span class="toctext">商品价格（prices）</span></a></li>
+<li class="toclevel-3 tocsection-48"><a href="#省份名称（province_names）"><span class="tocnumber">4.1.42</span> <span class="toctext">省份名称（province_names）</span></a></li>
+<li class="toclevel-3 tocsection-49"><a href="#叛军类型（rebel_types）"><span class="tocnumber">4.1.43</span> <span class="toctext">叛军类型（rebel_types）</span></a></li>
+<li class="toclevel-3 tocsection-50"><a href="#地区颜色（region_colors）"><span class="tocnumber">4.1.44</span> <span class="toctext">地区颜色（region_colors）</span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="#宗教与教派（religions）"><span class="tocnumber">4.1.45</span> <span class="toctext">宗教与教派（religions）</span></a></li>
+<li class="toclevel-3 tocsection-52"><a href="#美洲原始宗教改革（religious_reforms）"><span class="tocnumber">4.1.46</span> <span class="toctext">美洲原始宗教改革（religious_reforms）</span></a></li>
+<li class="toclevel-3 tocsection-53"><a href="#叛乱规则（revolt_triggers）"><span class="tocnumber">4.1.47</span> <span class="toctext">叛乱规则（revolt_triggers）</span></a></li>
+<li class="toclevel-3 tocsection-54"><a href="#统治者个性（ruler_personalities）"><span class="tocnumber">4.1.48</span> <span class="toctext">统治者个性（ruler_personalities）</span></a></li>
+<li class="toclevel-3 tocsection-55"><a href="#效果脚本（scripted_effects）"><span class="tocnumber">4.1.49</span> <span class="toctext">效果脚本（scripted_effects）</span></a></li>
+<li class="toclevel-3 tocsection-56"><a href="#功能脚本（scripted_functions）"><span class="tocnumber">4.1.50</span> <span class="toctext">功能脚本（scripted_functions）</span></a></li>
+<li class="toclevel-3 tocsection-57"><a href="#条件脚本（scripted_triggers）"><span class="tocnumber">4.1.51</span> <span class="toctext">条件脚本（scripted_triggers）</span></a></li>
+<li class="toclevel-3 tocsection-58"><a href="#静态修正（static_modifiers）"><span class="tocnumber">4.1.52</span> <span class="toctext">静态修正（static_modifiers）</span></a></li>
+<li class="toclevel-3 tocsection-59"><a href="#科技（technologies）"><span class="tocnumber">4.1.53</span> <span class="toctext">科技（technologies）</span></a></li>
+<li class="toclevel-3 tocsection-60"><a href="#贸易公司（trade_companies）"><span class="tocnumber">4.1.54</span> <span class="toctext">贸易公司（trade_companies）</span></a></li>
+<li class="toclevel-3 tocsection-61"><a href="#商品（tradegoods）"><span class="tocnumber">4.1.55</span> <span class="toctext">商品（tradegoods）</span></a></li>
+<li class="toclevel-3 tocsection-62"><a href="#贸易节点（tradenodes）"><span class="tocnumber">4.1.56</span> <span class="toctext">贸易节点（tradenodes）</span></a></li>
+<li class="toclevel-3 tocsection-63"><a href="#可触发修正（triggered_modifiers）"><span class="tocnumber">4.1.57</span> <span class="toctext">可触发修正（triggered_modifiers）</span></a></li>
+<li class="toclevel-3 tocsection-64"><a href="#作战单位（units）"><span class="tocnumber">4.1.58</span> <span class="toctext">作战单位（units）</span></a></li>
+<li class="toclevel-3 tocsection-65"><a href="#战争目标类型（wargoal_types）"><span class="tocnumber">4.1.59</span> <span class="toctext">战争目标类型（wargoal_types）</span></a></li>
+<li class="toclevel-3 tocsection-66"><a href="#成就（achievements.txt）"><span class="tocnumber">4.1.60</span> <span class="toctext">成就（achievements.txt）</span></a></li>
+<li class="toclevel-3 tocsection-67"><a href="#消息提示（alerts.txt）"><span class="tocnumber">4.1.61</span> <span class="toctext">消息提示（alerts.txt）</span></a></li>
+<li class="toclevel-3 tocsection-68"><a href="#系统定义（defines.lua）"><span class="tocnumber">4.1.62</span> <span class="toctext">系统定义（defines.lua）</span></a></li>
+<li class="toclevel-3 tocsection-69"><a href="#文化图形类型（graphicalculturetype.txt）"><span class="tocnumber">4.1.63</span> <span class="toctext">文化图形类型（graphicalculturetype.txt）</span></a></li>
+<li class="toclevel-3 tocsection-70"><a href="#历史幸运（historical_lucky.txt）"><span class="tocnumber">4.1.64</span> <span class="toctext">历史幸运（historical_lucky.txt）</span></a></li>
+<li class="toclevel-3 tocsection-71"><a href="#科技组（technology.txt）"><span class="tocnumber">4.1.65</span> <span class="toctext">科技组（technology.txt）</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-72"><a href="#决议（decisions）"><span class="tocnumber">4.2</span> <span class="toctext"><b>决议（decisions）</b></span></a></li>
+<li class="toclevel-2 tocsection-73"><a href="#事件（events）"><span class="tocnumber">4.3</span> <span class="toctext"><b>事件（events）</b></span></a></li>
+<li class="toclevel-2 tocsection-74"><a href="#gfx"><span class="tocnumber">4.4</span> <span class="toctext"><b>gfx</b></span></a></li>
+<li class="toclevel-2 tocsection-75"><a href="#历史（history）"><span class="tocnumber">4.5</span> <span class="toctext"><b>历史（history）</b></span></a>
+<ul>
+<li class="toclevel-3 tocsection-76"><a href="#历史顾问（advisors）"><span class="tocnumber">4.5.1</span> <span class="toctext">历史顾问（advisors）</span></a></li>
+<li class="toclevel-3 tocsection-77"><a href="#国家历史（countries）"><span class="tocnumber">4.5.2</span> <span class="toctext">国家历史（countries）</span></a></li>
+<li class="toclevel-3 tocsection-78"><a href="#历史外交情况（diplomacy）"><span class="tocnumber">4.5.3</span> <span class="toctext">历史外交情况（diplomacy）</span></a></li>
+<li class="toclevel-3 tocsection-79"><a href="#省份历史（provinces）"><span class="tocnumber">4.5.4</span> <span class="toctext">省份历史（provinces）</span></a></li>
+<li class="toclevel-3 tocsection-80"><a href="#历史战争（wars）"><span class="tocnumber">4.5.5</span> <span class="toctext">历史战争（wars）</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-81"><a href="#界面（interface）"><span class="tocnumber">4.6</span> <span class="toctext"><b>界面（interface）</b></span></a></li>
+<li class="toclevel-2 tocsection-82"><a href="#本地化（localisation）"><span class="tocnumber">4.7</span> <span class="toctext"><b>本地化（localisation）</b></span></a></li>
+<li class="toclevel-2 tocsection-83"><a href="#地图（map）"><span class="tocnumber">4.8</span> <span class="toctext"><b>地图（map）</b></span></a>
+<ul>
+<li class="toclevel-3 tocsection-84"><a href="#湖泊（lakes）"><span class="tocnumber">4.8.1</span> <span class="toctext">湖泊（lakes）</span></a></li>
+<li class="toclevel-3 tocsection-85"><a href="#随机地图（random）"><span class="tocnumber">4.8.2</span> <span class="toctext">随机地图（random）</span></a>
+<ul>
+<li class="toclevel-4 tocsection-86"><a href="#组成材料（tiles）"><span class="tocnumber">4.8.2.1</span> <span class="toctext">组成材料（tiles）</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-87"><a href="#地形（terrain）"><span class="tocnumber">4.8.3</span> <span class="toctext">地形（terrain）</span></a></li>
+<li class="toclevel-3 tocsection-88"><a href="#相邻省份（adjacencies.csv）"><span class="tocnumber">4.8.4</span> <span class="toctext">相邻省份（adjacencies.csv）</span></a></li>
+<li class="toclevel-3 tocsection-89"><a href="#地图饰品位置（ambient_object.txt）"><span class="tocnumber">4.8.5</span> <span class="toctext">地图饰品位置（ambient_object.txt）</span></a></li>
+<li class="toclevel-3 tocsection-90"><a href="#地区、区域和次大陆（area.txt/region.txt/superregion）"><span class="tocnumber">4.8.6</span> <span class="toctext">地区、区域和次大陆（area.txt/region.txt/superregion）</span></a></li>
+<li class="toclevel-3 tocsection-91"><a href="#气候（climate.txt）"><span class="tocnumber">4.8.7</span> <span class="toctext">气候（climate.txt）</span></a></li>
+<li class="toclevel-3 tocsection-92"><a href="#大陆（continent.txt）"><span class="tocnumber">4.8.8</span> <span class="toctext">大陆（continent.txt）</span></a></li>
+<li class="toclevel-3 tocsection-93"><a href="#省份RGB值（definition.csv）"><span class="tocnumber">4.8.9</span> <span class="toctext">省份RGB值（definition.csv）</span></a></li>
+<li class="toclevel-3 tocsection-94"><a href="#高度地图（heightmap.bmp）"><span class="tocnumber">4.8.10</span> <span class="toctext">高度地图（heightmap.bmp）</span></a></li>
+<li class="toclevel-3 tocsection-95"><a href="#小地图（minimap.base）"><span class="tocnumber">4.8.11</span> <span class="toctext">小地图（minimap.base）</span></a></li>
+<li class="toclevel-3 tocsection-96"><a href="#城市位置（positions.txt）"><span class="tocnumber">4.8.12</span> <span class="toctext">城市位置（positions.txt）</span></a></li>
+<li class="toclevel-3 tocsection-97"><a href="#省份地图（provinces.bmp）"><span class="tocnumber">4.8.13</span> <span class="toctext">省份地图（provinces.bmp）</span></a></li>
+<li class="toclevel-3 tocsection-98"><a href="#区域（region.txt）"><span class="tocnumber">4.8.14</span> <span class="toctext">区域（region.txt）</span></a></li>
+<li class="toclevel-3 tocsection-99"><a href="#河流地图（rivers.bmp）"><span class="tocnumber">4.8.15</span> <span class="toctext">河流地图（rivers.bmp）</span></a></li>
+<li class="toclevel-3 tocsection-100"><a href="#季节（seasons.txt）"><span class="tocnumber">4.8.16</span> <span class="toctext">季节（seasons.txt）</span></a></li>
+<li class="toclevel-3 tocsection-101"><a href="#地形图（terrain.bmp）"><span class="tocnumber">4.8.17</span> <span class="toctext">地形图（terrain.bmp）</span></a></li>
+<li class="toclevel-3 tocsection-102"><a href="#地形（terrain.txt）"><span class="tocnumber">4.8.18</span> <span class="toctext">地形（terrain.txt）</span></a></li>
+<li class="toclevel-3 tocsection-103"><a href="#信风（trade_winds.txt）"><span class="tocnumber">4.8.19</span> <span class="toctext">信风（trade_winds.txt）</span></a></li>
+<li class="toclevel-3 tocsection-104"><a href="#树木（trees.bmp）"><span class="tocnumber">4.8.20</span> <span class="toctext">树木（trees.bmp）</span></a></li>
+<li class="toclevel-3 tocsection-105"><a href="#法线贴图（world_normal.bmp）"><span class="tocnumber">4.8.21</span> <span class="toctext">法线贴图（world_normal.bmp）</span></a></li>
+<li class="toclevel-3 tocsection-106"><a href="#运河（_canal_river.bmp）"><span class="tocnumber">4.8.22</span> <span class="toctext">运河（_canal_river.bmp）</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-107"><a href="#任务（missions）"><span class="tocnumber">4.9</span> <span class="toctext"><b>任务（missions）</b></span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-108"><a href="#参考"><span class="tocnumber">5</span> <span class="toctext">参考</span></a></li>
+</ul>
+</div>
+
+<h2><span id=".mod_.E6.96.87.E4.BB.B6"></span><span class="mw-headline" id=".mod_文件">.mod 文件</span></h2>
+<p>mod文件默认位置依不同的电脑平台而不同：
+</p>
+<ul><li>Windows: <span class="inline-sup" style="background-color:#f9f9f9; color:DarkSlateGray; border:1px solid #dcdcdc; font-family: monospace,Courier;">Documents\Paradox Interactive\Europa Universalis IV\mod</span></li>
+<li>Linux: <span class="inline-sup" style="background-color:#f9f9f9; color:DarkSlateGray; border:1px solid #dcdcdc; font-family: monospace,Courier;">~/.local/share/Paradox Interactive/Europa Universalis IV/mod</span></li>
+<li>Mac OS: <span class="inline-sup" style="background-color:#f9f9f9; color:DarkSlateGray; border:1px solid #dcdcdc; font-family: monospace,Courier;">~/Documents/Paradox Interactive/Europa Universalis IV/mod</span></li></ul>
+<p>.mod文件提供给启动器对应mod的文件位置以及其显示名称，在1.8版本后，还应添加其所支持的游戏版本。例如：
+</p>
+<pre>name = "My Mod version 3"
+path = "mod/mymod_v3"
+supported_version = "1.9"
+</pre>
+<p>所支持的版本必须与游戏版本相同才能被加载。
+</p><p>当上传到steam创意工坊时，还需要包含一张图片和其标签以助于你的mod更容易被人所发现与了解，比如：
+</p>
+<pre>name = "My Mod version 3"
+path = "mod/mymod_v3"
+supported_version = "1.9"
+picture = "mymod_picture.jpg"
+tags = {
+ "events"
+ "historical"
+}
+</pre>
+<p>图片文件需要在mod文件夹“mymod_v3”中，而不是在Europe Universalis IV\mod中。
+</p>
+<h3><span id="Steam.E6.A0.87.E7.AD.BE"></span><span class="mw-headline" id="Steam标签">Steam标签</span></h3>
+<p>“tags”指的是steam系统所使用的标签。符合创意工坊分类标签的Mod，会自动出现在对应分类。
+</p><p>目前支持的标签组合如下：
+</p>
+<div style="columns:100px 3; column-gap: 10px;-webkit-columns:100px 3; -webkit-column-gap: 10px;-moz-columns:100px 3; -moz-column-gap: 10px;">
+<ul><li>Alternative History</li>
+<li>Balance</li>
+<li>Events</li>
+<li>Expansion</li>
+<li>Fixes</li>
+<li>Gameplay</li>
+<li>Graphics</li>
+<li>Guide</li>
+<li>Historical</li>
+<li>Loading Screen</li>
+<li>Map</li>
+<li>Military</li>
+<li>Missions And Decisions</li>
+<li>National Ideas</li>
+<li>New Nations</li>
+<li>Religion</li>
+<li>Sound</li>
+<li>Technologies</li>
+<li>Trade</li>
+<li>Translation</li>
+<li>Utilities</li></ul>
+</div>
+<p>如果mod文件中填写的标签不在列表之中，就会成为普通的自定义标签，列在分类标签的旁边。
+</p>
+<h2><span id=".E9.99.84.E6.B3.A8"></span><span class="mw-headline" id="附注">附注</span></h2>
+<ul><li><b>音频文件格式</b>
+<dl><dd>只有.ogg文件才能正确运行，.mp3文件虽然不会导致游戏崩溃，但并不会被播放<i>。</i></dd></dl></li></ul>
+<h2><span id="mod.E6.96.87.E4.BB.B6.E5.A4.B9"></span><span class="mw-headline" id="mod文件夹">mod文件夹</span></h2>
+<p>mod文件夹应与.mod文件在同一位置，并与游戏原目录有相同的结构（若未进行修改则可以省略）。游戏运行时会同时加载游戏根目录与mod下的文件，当两者文件名相同时会优先加载mod中的文件。
+</p><p>如果想让游戏不加载某个游戏原目录里一个文件夹下的所有文件，比如你想重做游戏的所有任务，那么需要在.mod文件中添加replace_path = "missions"。
+</p>
+<pre>name = "coolmod"
+path = "mod/coolmod"
+supported_version = "1.9"
+replace_path = "missions"
+</pre>
+<p>注意：
+</p>
+<pre>* 如果想用一个空文件夹代替某个游戏原文件夹，需要在该目录下放置一个挂名文件dummy.txt。否则空文件夹无法上传到steam。 <a rel="nofollow" class="external autonumber" href="http://forum.paradoxplaza.com/forum/showthread.php?725011-Mod-info-about-replacing-folders-files">[1]</a>
+* 如果你希望代替某个子文件夹，例如common/bookmarks，请在mod文件夹的根目录中放置一个空白的checksum_manifest.txt文件，否则游戏在加载mod时会产生许多不必要的报错。
+</pre>
+<h2><span id=".E6.96.87.E4.BB.B6.E5.A4.B9.E4.B8.AD.E5.86.85.E5.AE.B9"></span><span class="mw-headline" id="文件夹中内容">文件夹中内容</span></h2>
+<h3><span id=".E9.80.9A.E7.94.A8.E8.AE.BE.E5.AE.9A.EF.BC.88common.EF.BC.89"></span><span class="mw-headline" id="通用设定（common）"><b>通用设定（common）</b></span></h3>
+<h4><span id=".E9.A1.BE.E9.97.AE.EF.BC.88advisortypes.EF.BC.89"></span><span class="mw-headline" id="顾问（advisortypes）">顾问（advisortypes）</span></h4>
+<p>定义顾问的能力、使用君主点数类型、修正。
+</p>
+<h4><span id="AI.E6.80.81.E5.BA.A6.EF.BC.88ai_attitudes.EF.BC.89"></span><span class="mw-headline" id="AI态度（ai_attitudes）">AI态度（ai_attitudes）</span></h4>
+<p>定义AI国家对其他国家的态度，比如友善、敌意、保护等等，同时注明该态度的影响因素。
+</p>
+<h4><span id="AI.E4.B8.AA.E6.80.A7.EF.BC.88ai_personalities.EF.BC.89"></span><span class="mw-headline" id="AI个性（ai_personalities）">AI个性（ai_personalities）</span></h4>
+<p>定义AI国家的整体个性，比如倾向于内政、外交或军事等等。
+</p>
+<h4><span id=".E5.89.A7.E6.9C.AC.E4.B9.A6.E7.AD.BE.EF.BC.88bookmarks.EF.BC.89"></span><span class="mw-headline" id="剧本书签（bookmarks）">剧本书签（bookmarks）</span></h4>
+<p>定义游戏剧本，以及该剧本所建议使用的国家。
+</p>
+<h4><span id=".E5.BB.BA.E7.AD.91.EF.BC.88buildings.EF.BC.89"></span><span class="mw-headline" id="建筑（buildings）">建筑（buildings）</span></h4>
+<p>指定可以建造的建筑类型以及其花费、收益等。
+</p>
+<h4><span id=".E6.88.98.E4.BA.89.E5.80.9F.E5.8F.A3.E7.B1.BB.E5.9E.8B.EF.BC.88cb_types.EF.BC.89"></span><span class="mw-headline" id="战争借口类型（cb_types）">战争借口类型（cb_types）</span></h4>
+<p>定義一個國家可以用來宣戰的<a href="../wiki/宣战理由.html" title="宣战理由">宣戰理由</a> (CB)。
+要注意，戰爭目標<b>並不是</b>定義在此文件中，並且錯誤地定義其中任何一種都可能導致奇怪的錯誤。
+</p>
+<h4><span id=".E5.AE.97.E6.95.99.E4.BF.A1.E6.9D.A1.EF.BC.88church_aspects.EF.BC.89"></span><span class="mw-headline" id="宗教信条（church_aspects）">宗教信条（church_aspects）</span></h4>
+<p>定义<a href="../wiki/新教.html" title="新教"><img alt="新教" src="../images/thumb/0/0d/Protestant.png/28px-Protestant.png" decoding="async" width="28" height="28"  , /images/thumb/0/0d/Protestant.png/56px-Protestant.png 2x" data-file-width="64" data-file-height="64" /></a> <a href="../wiki/科普特正教.html" class="mw-redirect" title="新教">新教</a>的教會力量及增益，和<a href="/wiki/Coptic" title="科普特正教"><img alt="科普特正教" src="../images/thumb/7/74/Coptic.png/28px-Coptic.png" decoding="async" width="28" height="28"  , /images/thumb/7/74/Coptic.png/56px-Coptic.png 2x" data-file-width="64" data-file-height="64" /></a> <a href="/wiki/%E7%A7%91%E6%99%AE%E7%89%B9%E6%AD%A3%E6%95%99" class="mw-redirect" title="科普特正教">科普特正教</a>國家的加成。
+</p>
+<h4><span id=".E9.A2.84.E8.AE.BE.E4.BB.86.E4.BB.8E.E5.9B.BD.E5.9B.BD.E5.90.8D.EF.BC.88client_states.EF.BC.89"></span><span class="mw-headline" id="预设仆从国国名（client_states）">预设仆从国国名（client_states）</span></h4>
+<p>定义预设的<a href="../wiki/仆从国.html" title="仆从国">仆从国</a>国家名称。当一个国家外交科技达到23级时，即可创建一个仆从国。
+</p>
+<h4><span id=".E6.AE.96.E6.B0.91.E5.9C.B0.E5.8C.BA.E5.9F.9F.EF.BC.88colonial_regions.EF.BC.89"></span><span class="mw-headline" id="殖民地区域（colonial_regions）">殖民地区域（colonial_regions）</span></h4>
+<p>定义可能产生<a href="../wiki/殖民领.html" title="殖民领">殖民领</a>的区域。你需要在同一个殖民区域内拥有至少5个省份才能产生殖民领。
+</p>
+<h4><span id=".E5.9B.BD.E5.AE.B6.E5.B1.9E.E6.80.A7.EF.BC.88countries.EF.BC.89"></span><span class="mw-headline" id="国家属性（countries）">国家属性（countries）</span></h4>
+<p>包含一系列文本文件，定义了所有国家的部分属性，如它们的历史理念组、君主名字、将领名字、舰船名字、它们在地图上的颜色等等方面。
+</p>
+<h4><span id=".E5.9B.BD.E5.AE.B6.E9.A2.9C.E8.89.B2.EF.BC.88country_colors.EF.BC.89"></span><span class="mw-headline" id="国家颜色（country_colors）">国家颜色（country_colors）</span></h4>
+<p>一般来说每个国家士兵制服的颜色会被游戏引擎定义为他们国旗的主要颜色. 但是,一些特定的国家有时需要对其重新定义。
+</p>
+<h4><span id=".E5.9B.BD.E5.AE.B6.E4.BB.A3.E7.A0.81.EF.BC.88country_tags.EF.BC.89"></span><span class="mw-headline" id="国家代码（country_tags）">国家代码（country_tags）</span></h4>
+<p>给每个单独的国家定义一个独特的、三个字母的代码,或者称之为 "tag"，并指向common\countries内的相关定义文件。在此文件中定义的每一个单独的国家代码在common\countries里必须有一个相对应的文件，否则游戏会在加载的时候崩溃。请检查并确保你将其拼写正确。
+</p>
+<h4><span id=".E6.96.87.E5.8C.96.EF.BC.88cultures.EF.BC.89"></span><span class="mw-headline" id="文化（cultures）">文化（cultures）</span></h4>
+<p>定义<a href="../wiki/文化.html" title="文化"><img alt="Culture icon.png" src="../images/thumb/2/29/Culture_icon.png/28px-Culture_icon.png" decoding="async" width="28" height="28"  " data-file-width="37" data-file-height="37" /></a><a href="../wiki/文化.html" title="文化">文化</a>和<a href="../wiki/文化组.html" class="mw-redirect" title="文化组">文化组</a>。
+</p>
+<h4><span id=".E8.87.AA.E5.AE.9A.E4.B9.89.E5.9B.BD.E5.AE.B6.E9.A2.9C.E8.89.B2.EF.BC.88custom_country_colors.EF.BC.89"></span><span class="mw-headline" id="自定义国家颜色（custom_country_colors）">自定义国家颜色（custom_country_colors）</span></h4>
+<p>定义自定义国家可用的颜色。
+</p>
+<h4><span id=".E8.87.AA.E5.AE.9A.E4.B9.89.E5.9B.BD.E5.AE.B6.E7.90.86.E5.BF.B5.EF.BC.88custom_ideas.EF.BC.89"></span><span class="mw-headline" id="自定义国家理念（custom_ideas）">自定义国家理念（custom_ideas）</span></h4>
+<p>定义被自定义国家使用的理念。（译者注：商业城邦、随机历史或随机新大陆国家也是会使用这些理念）
+</p>
+<h4><span id=".E4.BF.AE.E6.94.B9.E6.9C.BA.E5.88.B6.E4.BB.A3.E7.A0.81"></span><span class="mw-headline" id="修改机制代码">修改机制代码</span></h4>
+<p>定义在不同难度等级下，玩家和AI各自受到的增益和减损。（译者注：英文原文解释略简单，实际该文件中的代码有覆盖defines.lua当中代码的效果）
+</p>
+<h4><span id=".E8.87.AA.E5.AE.9A.E4.B9.89.E5.A4.96.E4.BA.A4.E8.A1.8C.E4.B8.BA.EF.BC.88diplomatic_actions.EF.BC.89"></span><span class="mw-headline" id="自定义外交行为（diplomatic_actions）">自定义外交行为（diplomatic_actions）</span></h4>
+<p>定义外交行动和完成这些行动所需要满足的要求。
+</p>
+<h4><span id=".E7.81.BE.E9.9A.BE.EF.BC.88disasters.EF.BC.89"></span><span class="mw-headline" id="灾难（disasters）">灾难（disasters）</span></h4>
+<p>定义<a href="../wiki/灾难.html" title="灾难">灾难</a>的种类、触发条件和修正效果。
+</p>
+<h4><span id=".E7.8E.8B.E6.9C.9D.E9.A2.9C.E8.89.B2.EF.BC.88dynasty_colors.EF.BC.89"></span><span class="mw-headline" id="王朝颜色（dynasty_colors）">王朝颜色（dynasty_colors）</span></h4>
+<p>定义在王朝地图模式下各个王朝的颜色。
+</p>
+<h4><span id=".E9.98.B6.E5.B1.82.EF.BC.88estates.EF.BC.89"></span><span class="mw-headline" id="阶层（estates）">阶层（estates）</span></h4>
+<p>定义<a href="../wiki/阶层.html" title="阶层">阶层</a>，你可以与他们互动、给予他们省份。
+</p>
+<h4><span id=".E4.BA.8B.E4.BB.B6.E4.BF.AE.E6.AD.A3.EF.BC.88event_modifiers.EF.BC.89"></span><span class="mw-headline" id="事件修正（event_modifiers）">事件修正（event_modifiers）</span></h4>
+<p>定义事件修正，这些修正由事件激活，给予一个国家/省份增益或减成。这些修正可以适用于省份或国家。修正的持续时间不在此处指定，而是在触发它的事件中指定。
+</p>
+<h4><span id=".E6.B4.BE.E7.B3.BB.EF.BC.88factions.EF.BC.89"></span><span class="mw-headline" id="派系（factions）">派系（factions）</span></h4>
+<p>定义<a href="../wiki/派系修改.html" class="mw-redirect" title="财阀共和制">财阀共和制</a>、<a href="/wiki/%E9%9D%A9%E5%91%BD%E5%85%B1%E5%92%8C%E5%88%B6" class="mw-redirect" title="革命共和制">革命共和制</a>以及<span class="flagicon"><img alt="" src="../images/thumb/a/a5/Ming.png/20px-Ming.png" decoding="async" width="20" height="13" class="thumbborder"  , /images/thumb/a/a5/Ming.png/40px-Ming.png 2x" data-file-width="900" data-file-height="600" />&#160;</span><a href="../wiki/大明.html" title="大明">大明</a>的<a href="/wiki/%E5%A4%A9%E6%9C%9D" class="mw-redirect" title="天朝">天朝</a>政府中的派系。其他国家也可以在这里定义新派系，这需要许多其他文件协同工作。更多信息详见<a href="/wiki/%E6%B4%BE%E7%B3%BB%E4%BF%AE%E6%94%B9" title="派系修改">派系修改</a>。
+</p>
+<h4><span id=".E5.AE.97.E6.95.99.E7.83.AD.E6.83.85.EF.BC.88fervor.EF.BC.89"></span><span class="mw-headline" id="宗教热情（fervor）">宗教热情（fervor）</span></h4>
+<p>定义<a href="../wiki/月度狂热.html" title="月度狂热"><img alt="月度狂热" src="../images/thumb/d/d2/Monthly_fervor_increase.png/28px-Monthly_fervor_increase.png" decoding="async" width="28" height="28"  , /images/d/d2/Monthly_fervor_increase.png 2x" data-file-width="48" data-file-height="48" /></a><a href="../wiki/狂热.html" class="mw-redirect" title="狂热">狂热</a>的作用和相关增益。
+</p>
+<h4><span id=".E6.8B.9C.E7.89.A9.E6.95.99.EF.BC.88fetishist_cults.EF.BC.89"></span><span class="mw-headline" id="拜物教（fetishist_cults）">拜物教（fetishist_cults）</span></h4>
+<p>定义<a href="../wiki/拜物教.html" title="拜物教"><img alt="Fetishist" src="../images/thumb/8/8d/Fetishist.png/28px-Fetishist.png" decoding="async" width="28" height="28"  , /images/thumb/8/8d/Fetishist.png/56px-Fetishist.png 2x" data-file-width="64" data-file-height="64" /></a><a href="../wiki/拜物教.html" class="mw-redirect" title="Fetishist">拜物教</a>信仰的国家可以选择崇拜的偶像。
+</p>
+<h4><span id=".E6.94.BF.E4.BD.93.E5.90.8D.E7.A7.B0.EF.BC.88government_names.EF.BC.89"></span><span class="mw-headline" id="政体名称（government_names）">政体名称（government_names）</span></h4>
+<p>定义政体不同类型和等级下的显示名称。
+</p>
+<h4><span id=".E6.94.BF.E5.BA.9C.EF.BC.88governments.EF.BC.89"></span><span class="mw-headline" id="政府（governments）">政府（governments）</span></h4>
+<p>定义不同政府<a href="../wiki/政府.html" class="mw-redirect" title="Government">政府</a>的类型，也制定了玩家与AI在何种情况下可以更改政府类型
+</p>
+<h4><span id=".E4.BC.9F.E5.A4.A7.E5.B7.A5.E7.A8.8B.EF.BC.88great_projects.EF.BC.89"></span><span class="mw-headline" id="伟大工程（great_projects）">伟大工程（great_projects）</span></h4>
+<p>定义伟大工程（运河）及相关的修正效果。
+</p>
+<h4><span id=".E7.A5.9E.E7.BD.97.E6.94.B9.E9.9D.A9.EF.BC.88hre_reforms.EF.BC.89"></span><span class="mw-headline" id="神罗改革（hre_reforms）">神罗改革（hre_reforms）</span></h4>
+<p>定义了神罗皇帝可以通过的改革。
+</p>
+<h4><span id=".E7.90.86.E5.BF.B5.E7.BB.84.EF.BC.88ideas.EF.BC.89"></span><span class="mw-headline" id="理念组（ideas）">理念组（ideas）</span></h4>
+<p>定义了游戏中可选的理念组 <a href="../wiki/解锁新的理念槽.html" title="解锁新的理念槽"><img alt="解锁新的理念槽" src="../images/thumb/5/57/Traditions.png/28px-Traditions.png" decoding="async" width="28" height="28"  " data-file-width="42" data-file-height="42" /></a>，不同国家的理念、传统和野心。
+</p>
+<h4><span id=".E6.80.9D.E6.BD.AE.EF.BC.88institutions.EF.BC.89"></span><span class="mw-headline" id="思潮（institutions）">思潮（institutions）</span></h4>
+<p>定义 <a href="../wiki/思潮.html" title="思潮"><img alt="Institutions.png" src="../images/thumb/4/43/Institutions.png/28px-Institutions.png" decoding="async" width="28" height="22"  , /images/4/43/Institutions.png 2x" data-file-width="45" data-file-height="36" /></a>思潮,，接纳思潮的加成，以及发源省份。
+</p>
+<h4><span id=".E5.B0.86.E9.A2.86.E7.89.B9.E8.B4.A8.EF.BC.88leader_personalities.EF.BC.89"></span><span class="mw-headline" id="将领特质（leader_personalities）">将领特质（leader_personalities）</span></h4>
+<p>定义陆军将领和海军将领在战斗后可能获得的特质及其相关效果。
+</p>
+<h4><span id=".E5.9C.9F.E8.91.97.E6.94.B9.E9.9D.A9.EF.BC.88native_advancement.EF.BC.89"></span><span class="mw-headline" id="土著改革（native_advancement）">土著改革（native_advancement）</span></h4>
+<p>定义 <a href="../wiki/土著理念.html" class="mw-redirect" title="Native ideas">土著理念</a>和其他属性。
+</p>
+<h4><span id=".E5.9C.9F.E8.91.97.E6.B0.91.EF.BC.88natives.EF.BC.89"></span><span class="mw-headline" id="土著民（natives）">土著民（natives）</span></h4>
+<p>Defines what type of natives live in different unoccupied provinces according to region, and their numbers, <a href="../wiki/进攻性.html" title="进攻性"><img alt="进攻性" src="../images/d/d5/Aggressiveness_icon.png" decoding="async" width="28" height="28" data-file-width="18" data-file-height="18" /></a> aggressiveness, and <a href="/wiki/Ferocity" title="残暴性"><img alt="残暴性" src="../images/7/7a/Ferocity_icon.png" decoding="async" width="28" height="28" data-file-width="18" data-file-height="18" /></a> ferocity.
+</p>
+<h4><span id=".E8.A1.8C.E4.B8.BA.E6.8C.87.E4.BB.A4.EF.BC.88on_actions.EF.BC.89"></span><span class="mw-headline" id="行为指令（on_actions）">行为指令（on_actions）</span></h4>
+<p>These are triggers for events which fire when the game engine reaches certain conditions. These conditions do not seem to be documented well anywhere (though see <a href="https://forum.paradoxplaza.com/forum/index.php?threads/366384" class="extiw" title="forum:366384">this forum discussion</a>) Some of these conditions are based on a game event like losing a siege, which can trigger event #9206, an event about tribal armies looting. Others are triggered via "pulses", as in "on_bi_yearly_pulse" which has a chance to trigger one of several events every two years.
+</p>
+<h4><span id=".E5.85.B3.E7.B3.BB.E4.BF.AE.E6.AD.A3.EF.BC.88opinion_modifiers.EF.BC.89"></span><span class="mw-headline" id="关系修正（opinion_modifiers）">关系修正（opinion_modifiers）</span></h4>
+<p>定义各国对彼此观点的修正，以及修正持续的时间。
+</p>
+<h4><span id=".E8.B4.BF.E8.B5.82.E8.AE.AE.E4.BC.9A.EF.BC.88parliament_bribes.EF.BC.89"></span><span class="mw-headline" id="贿赂议会（parliament_bribes）">贿赂议会（parliament_bribes）</span></h4>
+<p>Defines the required bribes for <a href="/wiki/Parliament" class="mw-redirect" title="Parliament">Parliament</a> to increase the chances of passing legislation.
+</p>
+<h4><span id=".E8.AE.AE.E4.BC.9A.E8.AE.AE.E9.A2.98.EF.BC.88parliament_issues.EF.BC.89"></span><span class="mw-headline" id="议会议题（parliament_issues）">议会议题（parliament_issues）</span></h4>
+<p>定义你可以在议会菜单中选择的议题。
+</p>
+<h4><span id=".E4.BA.BA.E6.A0.BC.E7.A5.9E.EF.BC.88personal_deities.EF.BC.89"></span><span class="mw-headline" id="人格神（personal_deities）">人格神（personal_deities）</span></h4>
+<p>定义了 <a href="../wiki/其他宗教.html" title="其他宗教">印度教</a>与 <a href="/wiki/%E5%8E%9F%E5%A7%8B%E5%AE%97%E6%95%99" title="原始宗教">诺斯信仰</a> 中主神/神祇及其相关奖励。
+</p>
+<h4><span id=".E6.94.BF.E7.AD.96.EF.BC.88policies.EF.BC.89"></span><span class="mw-headline" id="政策（policies）">政策（policies）</span></h4>
+<p>定义了 <a href="../wiki/政策.html" title="政策">政策</a> 及其条件、效果。
+</p>
+<h4><span id=".E5.8A.9B.E9.87.8F.E6.8A.95.E5.B0.84.EF.BC.88powerprojection.EF.BC.89"></span><span class="mw-headline" id="力量投射（powerprojection）">力量投射（powerprojection）</span></h4>
+<p>定义了固定和动态的力量投射 <a href="../wiki/力量投射.html" title="力量投射"><img alt="Power Projection.png" src="../images/5/5c/Power_Projection.png" decoding="async" width="11" height="28" data-file-width="11" data-file-height="28" /></a> 修正，它们的年度衰减和最大值。
+</p>
+<h4><span id=".E5.95.86.E5.93.81.E4.BB.B7.E6.A0.BC.EF.BC.88prices.EF.BC.89"></span><span class="mw-headline" id="商品价格（prices）">商品价格（prices）</span></h4>
+<p>定义了商品的基础价格。
+</p>
+<h4><span id=".E7.9C.81.E4.BB.BD.E5.90.8D.E7.A7.B0.EF.BC.88province_names.EF.BC.89"></span><span class="mw-headline" id="省份名称（province_names）">省份名称（province_names）</span></h4>
+<p>定义动态省份名称；可以在游戏开启前设置开关此功能。
+</p>
+<h4><span id=".E5.8F.9B.E5.86.9B.E7.B1.BB.E5.9E.8B.EF.BC.88rebel_types.EF.BC.89"></span><span class="mw-headline" id="叛军类型（rebel_types）">叛军类型（rebel_types）</span></h4>
+<p>指定不同类型的<a href="../wiki/叛军.html" class="mw-redirect" title="Rebels">叛军</a>，他们的要求是什么，他们何时产生，他们的战斗力如何等。
+</p>
+<h4><span id=".E5.9C.B0.E5.8C.BA.E9.A2.9C.E8.89.B2.EF.BC.88region_colors.EF.BC.89"></span><span class="mw-headline" id="地区颜色（region_colors）">地区颜色（region_colors）</span></h4>
+<p>制定“地区”地图模式中每个区域的颜色。
+</p>
+<h4><span id=".E5.AE.97.E6.95.99.E4.B8.8E.E6.95.99.E6.B4.BE.EF.BC.88religions.EF.BC.89"></span><span class="mw-headline" id="宗教与教派（religions）">宗教与教派（religions）</span></h4>
+<p>定义游戏中的不同宗教及其相关异端、省份和国家修正、他们在战争中的称呼等。更多信息请参见<a href="../wiki/宗教修改.html" title="宗教修改">宗教修改</a>。
+</p>
+<h4><span id=".E7.BE.8E.E6.B4.B2.E5.8E.9F.E5.A7.8B.E5.AE.97.E6.95.99.E6.94.B9.E9.9D.A9.EF.BC.88religious_reforms.EF.BC.89"></span><span class="mw-headline" id="美洲原始宗教改革（religious_reforms）">美洲原始宗教改革（religious_reforms）</span></h4>
+<p>Defines religious reforms for the <a href="../wiki/纳瓦特尔神话.html" title="纳瓦特尔神话"><img alt="Nahuatl.png" src="../images/thumb/8/8c/Nahuatl.png/28px-Nahuatl.png" decoding="async" width="28" height="28"  , /images/thumb/8/8c/Nahuatl.png/56px-Nahuatl.png 2x" data-file-width="64" data-file-height="64" /></a> <a href="/wiki/Nahuatl" class="mw-redirect" title="Nahuatl">Nahuatl</a>, <a href="/wiki/Inti" title="因蒂崇拜"><img alt="因蒂崇拜" src="../images/thumb/d/d2/Inti.png/28px-Inti.png" decoding="async" width="28" height="28"  , /images/thumb/d/d2/Inti.png/56px-Inti.png 2x" data-file-width="64" data-file-height="64" /></a> <a href="/wiki/Inti" class="mw-redirect" title="Inti">Inti</a>, and <a href="/wiki/Mayan" title="玛雅宗教"><img alt="玛雅宗教" src="../images/thumb/9/98/Mayan.png/28px-Mayan.png" decoding="async" width="28" height="28"  , /images/thumb/9/98/Mayan.png/56px-Mayan.png 2x" data-file-width="64" data-file-height="64" /></a> <a href="/wiki/Mayan" class="mw-redirect" title="Mayan">Mayan</a> religions.
+</p>
+<h4><span id=".E5.8F.9B.E4.B9.B1.E8.A7.84.E5.88.99.EF.BC.88revolt_triggers.EF.BC.89"></span><span class="mw-headline" id="叛乱规则（revolt_triggers）">叛乱规则（revolt_triggers）</span></h4>
+<p>定义一个国家（TAG）是否会产生独立叛军（从一个国家分裂出来）。
+</p>
+<h4><span id=".E7.BB.9F.E6.B2.BB.E8.80.85.E4.B8.AA.E6.80.A7.EF.BC.88ruler_personalities.EF.BC.89"></span><span class="mw-headline" id="统治者个性（ruler_personalities）">统治者个性（ruler_personalities）</span></h4>
+<p>定义不同的统治者个性，统治者个性的效果修正，以及统治者获得某一个性的权重修正。
+</p>
+<h4><span id=".E6.95.88.E6.9E.9C.E8.84.9A.E6.9C.AC.EF.BC.88scripted_effects.EF.BC.89"></span><span class="mw-headline" id="效果脚本（scripted_effects）">效果脚本（scripted_effects）</span></h4>
+<p>效果脚本。
+</p>
+<h4><span id=".E5.8A.9F.E8.83.BD.E8.84.9A.E6.9C.AC.EF.BC.88scripted_functions.EF.BC.89"></span><span class="mw-headline" id="功能脚本（scripted_functions）">功能脚本（scripted_functions）</span></h4>
+<p>功能脚本。
+</p>
+<h4><span id=".E6.9D.A1.E4.BB.B6.E8.84.9A.E6.9C.AC.EF.BC.88scripted_triggers.EF.BC.89"></span><span class="mw-headline" id="条件脚本（scripted_triggers）">条件脚本（scripted_triggers）</span></h4>
+<p>条件脚本。
+</p>
+<h4><span id=".E9.9D.99.E6.80.81.E4.BF.AE.E6.AD.A3.EF.BC.88static_modifiers.EF.BC.89"></span><span class="mw-headline" id="静态修正（static_modifiers）">静态修正（static_modifiers）</span></h4>
+<p>定义游戏中大部分持续存在的变量的修正效果，例如 <a href="../wiki/威望.html" title="威望"><img alt="Prestige.png" src="../images/thumb/f/f3/Yearly_prestige.png/28px-Yearly_prestige.png" decoding="async" width="28" height="28"  , /images/f/f3/Yearly_prestige.png 2x" data-file-width="48" data-file-height="48" /></a> 威望、<a href="/wiki/%E6%AD%A3%E7%BB%9F%E6%80%A7" title="正统性"><img alt="Legitimacy.png" src="../images/2/25/Legitimacy.png" decoding="async" width="28" height="28" data-file-width="28" data-file-height="28" /></a> 正统和<a href="/wiki/%E5%8E%8C%E6%88%98%E5%BA%A6" title="厌战度"><img alt="War exhaustion.png" src="../images/thumb/8/8c/War_exhaustion.png/28px-War_exhaustion.png" decoding="async" width="28" height="28"  , /images/8/8c/War_exhaustion.png 2x" data-file-width="48" data-file-height="48" /></a> 厌战度。
+</p>
+<h4><span id=".E7.A7.91.E6.8A.80.EF.BC.88technologies.EF.BC.89"></span><span class="mw-headline" id="科技（technologies）">科技（technologies）</span></h4>
+<p>根据君主点数的使用情况，指定不同的科技等级。
+</p>
+<h4><span id=".E8.B4.B8.E6.98.93.E5.85.AC.E5.8F.B8.EF.BC.88trade_companies.EF.BC.89"></span><span class="mw-headline" id="贸易公司（trade_companies）">贸易公司（trade_companies）</span></h4>
+<p>定義<a href="../wiki/贸易公司.html" title="贸易公司">貿易公司</a>所需省份，名稱和顏色。
+</p>
+<h4><span id=".E5.95.86.E5.93.81.EF.BC.88tradegoods.EF.BC.89"></span><span class="mw-headline" id="商品（tradegoods）">商品（tradegoods）</span></h4>
+<p>定義貿易商品以及控制貿易產生的影響。
+</p>
+<h4><span id=".E8.B4.B8.E6.98.93.E8.8A.82.E7.82.B9.EF.BC.88tradenodes.EF.BC.89"></span><span class="mw-headline" id="贸易节点（tradenodes）">贸易节点（tradenodes）</span></h4>
+<p>定義哪些省份位於哪個貿易節點中，以及這些節點之間的連接方式。
+</p>
+<h4><span id=".E5.8F.AF.E8.A7.A6.E5.8F.91.E4.BF.AE.E6.AD.A3.EF.BC.88triggered_modifiers.EF.BC.89"></span><span class="mw-headline" id="可触发修正（triggered_modifiers）">可触发修正（triggered_modifiers）</span></h4>
+<p>定義諸如“征服麥加”修正之類的東西，只要滿足某些條件，這些修正便保持不變。
+</p>
+<h4><span id=".E4.BD.9C.E6.88.98.E5.8D.95.E4.BD.8D.EF.BC.88units.EF.BC.89"></span><span class="mw-headline" id="作战单位（units）">作战单位（units）</span></h4>
+<p>Defines the stats and tech group of land and naval units.
+</p>
+<h4><span id=".E6.88.98.E4.BA.89.E7.9B.AE.E6.A0.87.E7.B1.BB.E5.9E.8B.EF.BC.88wargoal_types.EF.BC.89"></span><span class="mw-headline" id="战争目标类型（wargoal_types）">战争目标类型（wargoal_types）</span></h4>
+<p>為宣戰藉口（Casus Bellis）定義戰爭目標（即和平協議中可以採取的行動以及影響戰爭分數的因素）
+</p>
+<h4><span id=".E6.88.90.E5.B0.B1.EF.BC.88achievements.txt.EF.BC.89"></span><span class="mw-headline" id="成就（achievements.txt）">成就（achievements.txt）</span></h4>
+<p>定義成就。
+</p>
+<h4><span id=".E6.B6.88.E6.81.AF.E6.8F.90.E7.A4.BA.EF.BC.88alerts.txt.EF.BC.89"></span><span class="mw-headline" id="消息提示（alerts.txt）">消息提示（alerts.txt）</span></h4>
+<p>This file holds your message settings.
+</p>
+<h4><span id=".E7.B3.BB.E7.BB.9F.E5.AE.9A.E4.B9.89.EF.BC.88defines.lua.EF.BC.89"></span><span class="mw-headline" id="系统定义（defines.lua）">系统定义（defines.lua）</span></h4>
+<p>一些雜項。搜索該文件對於查找許多設定可能很有用。
+</p>
+<h4><span id=".E6.96.87.E5.8C.96.E5.9B.BE.E5.BD.A2.E7.B1.BB.E5.9E.8B.EF.BC.88graphicalculturetype.txt.EF.BC.89"></span><span class="mw-headline" id="文化图形类型（graphicalculturetype.txt）">文化图形类型（graphicalculturetype.txt）</span></h4>
+<p>Defines graphical culture types.
+</p>
+<h4><span id=".E5.8E.86.E5.8F.B2.E5.B9.B8.E8.BF.90.EF.BC.88historical_lucky.txt.EF.BC.89"></span><span class="mw-headline" id="历史幸运（historical_lucky.txt）">历史幸运（historical_lucky.txt）</span></h4>
+<p>定義幸運國家。
+</p>
+<h4><span id=".E7.A7.91.E6.8A.80.E7.BB.84.EF.BC.88technology.txt.EF.BC.89"></span><span class="mw-headline" id="科技组（technology.txt）">科技组（technology.txt）</span></h4>
+<p>定義科技組。
+</p>
+<h3><span id=".E5.86.B3.E8.AE.AE.EF.BC.88decisions.EF.BC.89"></span><span class="mw-headline" id="决议（decisions）"><b>决议（decisions）</b></span></h3>
+<p>這些.txt文件定義了一個國家可以做出的決議，包括其前提條件，影響以及決定AI是否選擇它的因素。
+</p>
+<h3><span id=".E4.BA.8B.E4.BB.B6.EF.BC.88events.EF.BC.89"></span><span class="mw-headline" id="事件（events）"><b>事件（events）</b></span></h3>
+<p>這些文件定義了玩家或AI國家可能發生的事件：觸發條件，觸發頻率以及事件的選項和效果。
+</p>
+<h3><span class="mw-headline" id="gfx"><b>gfx</b></span></h3>
+<p>包含游戏中使用的美术资源。与模组最密切相关的是flags和event_pictures文件夹。
+</p>
+<h3><span id=".E5.8E.86.E5.8F.B2.EF.BC.88history.EF.BC.89"></span><span class="mw-headline" id="历史（history）"><b>历史（history）</b></span></h3>
+<h4><span id=".E5.8E.86.E5.8F.B2.E9.A1.BE.E9.97.AE.EF.BC.88advisors.EF.BC.89"></span><span class="mw-headline" id="历史顾问（advisors）">历史顾问（advisors）</span></h4>
+<p>定義史實的顧問(像是馬基維利，達文西，牛頓)。
+</p>
+<h4><span id=".E5.9B.BD.E5.AE.B6.E5.8E.86.E5.8F.B2.EF.BC.88countries.EF.BC.89"></span><span class="mw-headline" id="国家历史（countries）">国家历史（countries）</span></h4>
+<p>此處的文件定義了遊戲中每個國家的歷史。 文件名必須以國家的tag開頭。 它們至少必須包含首選的政體，科技組，宗教，文化和首選的首都。 可選地，他們可以指定歷任君主，政權更迭，改信其他宗教等。
+</p>
+<h4><span id=".E5.8E.86.E5.8F.B2.E5.A4.96.E4.BA.A4.E6.83.85.E5.86.B5.EF.BC.88diplomacy.EF.BC.89"></span><span class="mw-headline" id="历史外交情况（diplomacy）">历史外交情况（diplomacy）</span></h4>
+<p>定義歷史聯盟，王室聯姻，附庸等。
+</p>
+<h4><span id=".E7.9C.81.E4.BB.BD.E5.8E.86.E5.8F.B2.EF.BC.88provinces.EF.BC.89"></span><span class="mw-headline" id="省份历史（provinces）">省份历史（provinces）</span></h4>
+<p>游戏中每个省的历史都在这里详细说明。谁拥有它，基税，谁发现它，宗教，贸易商品等。
+</p>
+<h4><span id=".E5.8E.86.E5.8F.B2.E6.88.98.E4.BA.89.EF.BC.88wars.EF.BC.89"></span><span class="mw-headline" id="历史战争（wars）">历史战争（wars）</span></h4>
+<p>历史上的战争事件。
+</p>
+<h3><span id=".E7.95.8C.E9.9D.A2.EF.BC.88interface.EF.BC.89"></span><span class="mw-headline" id="界面（interface）"><b>界面（interface）</b></span></h3>
+<p>这些 .gfx和 .gui文件定义了界面和菜单的结构以及美术资源的展示方式。
+</p>
+<h3><span id=".E6.9C.AC.E5.9C.B0.E5.8C.96.EF.BC.88localisation.EF.BC.89"></span><span class="mw-headline" id="本地化（localisation）"><b>本地化（localisation）</b></span></h3>
+<p>包含.yml文件，這些文件指定在遊戲中顯示哪些文本，可以選擇將其翻譯成其他語言。
+</p>
+<h3><span id=".E5.9C.B0.E5.9B.BE.EF.BC.88map.EF.BC.89"></span><span class="mw-headline" id="地图（map）"><b>地图（map）</b></span></h3>
+<h4><span id=".E6.B9.96.E6.B3.8A.EF.BC.88lakes.EF.BC.89"></span><span class="mw-headline" id="湖泊（lakes）">湖泊（lakes）</span></h4>
+<p>它包括了湖泊的位置与海拔高度。
+</p>
+<h4><span id=".E9.9A.8F.E6.9C.BA.E5.9C.B0.E5.9B.BE.EF.BC.88random.EF.BC.89"></span><span class="mw-headline" id="随机地图（random）">随机地图（random）</span></h4>
+<p>用于生成<a href="../wiki/随机新世界.html" title="随机新世界">随机新世界</a> 的文件。
+</p>
+<h5><span id=".E7.BB.84.E6.88.90.E6.9D.90.E6.96.99.EF.BC.88tiles.EF.BC.89"></span><span class="mw-headline" id="组成材料（tiles）">组成材料（tiles）</span></h5>
+<p>Files and images relating to new random new world tiles
+</p>
+<h4><span id=".E5.9C.B0.E5.BD.A2.EF.BC.88terrain.EF.BC.89"></span><span class="mw-headline" id="地形（terrain）">地形（terrain）</span></h4>
+<p>Contains small image files specifying how things like the fog of war, border lines and so on look.
+</p>
+<h4><span id=".E7.9B.B8.E9.82.BB.E7.9C.81.E4.BB.BD.EF.BC.88adjacencies.csv.EF.BC.89"></span><span class="mw-headline" id="相邻省份（adjacencies.csv）">相邻省份（adjacencies.csv）</span></h4>
+<p>定义哪些省份会经过狭窄的海峡连接到其他省份。除非被敌人所封锁，部队可以直接走过这些狭窄的海峡。
+</p>
+<h4><span id=".E5.9C.B0.E5.9B.BE.E9.A5.B0.E5.93.81.E4.BD.8D.E7.BD.AE.EF.BC.88ambient_object.txt.EF.BC.89"></span><span class="mw-headline" id="地图饰品位置（ambient_object.txt）">地图饰品位置（ambient_object.txt）</span></h4>
+<p>告诉游戏在地图上的何处展示特殊物体，例如熊、鹰、风车等。
+</p>
+<h4><span id=".E5.9C.B0.E5.8C.BA.E3.80.81.E5.8C.BA.E5.9F.9F.E5.92.8C.E6.AC.A1.E5.A4.A7.E9.99.86.EF.BC.88area.txt.2Fregion.txt.2Fsuperregion.EF.BC.89"></span><span class="mw-headline" id="地区、区域和次大陆（area.txt/region.txt/superregion）">地区、区域和次大陆（area.txt/region.txt/superregion）</span></h4>
+<p>定义省份属于哪个地区（area），地区属于哪个区域（region），以及区域属于哪个次大陆（superregion）。
+</p>
+<h4><span id=".E6.B0.94.E5.80.99.EF.BC.88climate.txt.EF.BC.89"></span><span class="mw-headline" id="气候（climate.txt）">气候（climate.txt）</span></h4>
+<p>定义省份的气候，例如哪些省份在冬季获得损耗修正。
+</p>
+<h4><span id=".E5.A4.A7.E9.99.86.EF.BC.88continent.txt.EF.BC.89"></span><span class="mw-headline" id="大陆（continent.txt）">大陆（continent.txt）</span></h4>
+<p>它定义了每一省份在哪一块大陆。
+</p>
+<h4><span id=".E7.9C.81.E4.BB.BDRGB.E5.80.BC.EF.BC.88definition.csv.EF.BC.89"></span><span class="mw-headline" id="省份RGB值（definition.csv）">省份RGB值（definition.csv）</span></h4>
+<p>定义每个省份的省份ID，以及省份的RGB值。RGB值要和provinces.bmp内地块的RGB值相一致。
+</p>
+<h4><span id=".E9.AB.98.E5.BA.A6.E5.9C.B0.E5.9B.BE.EF.BC.88heightmap.bmp.EF.BC.89"></span><span class="mw-headline" id="高度地图（heightmap.bmp）">高度地图（heightmap.bmp）</span></h4>
+<p>Grayscale image telling the engine how high each bit of the map should be elevated. Light is high, dark is low. Altering this does NOT alter whether provinces have terrain penalties during combat; that is specified in terrain.bmp.
+</p>
+<h4><span id=".E5.B0.8F.E5.9C.B0.E5.9B.BE.EF.BC.88minimap.base.EF.BC.89"></span><span class="mw-headline" id="小地图（minimap.base）">小地图（minimap.base）</span></h4>
+<p>小地图的背景。
+</p>
+<h4><span id=".E5.9F.8E.E5.B8.82.E4.BD.8D.E7.BD.AE.EF.BC.88positions.txt.EF.BC.89"></span><span class="mw-headline" id="城市位置（positions.txt）">城市位置（positions.txt）</span></h4>
+<p>一个省份中城市与兵模显示的位置。
+</p>
+<h4><span id=".E7.9C.81.E4.BB.BD.E5.9C.B0.E5.9B.BE.EF.BC.88provinces.bmp.EF.BC.89"></span><span class="mw-headline" id="省份地图（provinces.bmp）">省份地图（provinces.bmp）</span></h4>
+<p>所有省份（包括海洋省份和陆地省份）的布局。每个省份对应唯一的，在definition.csv中指定的rgb值。编辑时，请确认没有开启反锯齿或模糊画笔边缘。
+</p>
+<h4><span id=".E5.8C.BA.E5.9F.9F.EF.BC.88region.txt.EF.BC.89"></span><span class="mw-headline" id="区域（region.txt）">区域（region.txt）</span></h4>
+<p>它定义了省份属于哪一个区域。
+</p>
+<h4><span id=".E6.B2.B3.E6.B5.81.E5.9C.B0.E5.9B.BE.EF.BC.88rivers.bmp.EF.BC.89"></span><span class="mw-headline" id="河流地图（rivers.bmp）">河流地图（rivers.bmp）</span></h4>
+<p>它规定了游戏中河流的位置。
+</p>
+<h4><span id=".E5.AD.A3.E8.8A.82.EF.BC.88seasons.txt.EF.BC.89"></span><span class="mw-headline" id="季节（seasons.txt）">季节（seasons.txt）</span></h4>
+<p>Defines the start and end of the seasons and how the color filter on the map changes.
+</p>
+<h4><span id=".E5.9C.B0.E5.BD.A2.E5.9B.BE.EF.BC.88terrain.bmp.EF.BC.89"></span><span class="mw-headline" id="地形图（terrain.bmp）">地形图（terrain.bmp）</span></h4>
+<p>Specifies which areas of the map are mountainous, forest, etc. by color.
+</p>
+<h4><span id=".E5.9C.B0.E5.BD.A2.EF.BC.88terrain.txt.EF.BC.89"></span><span class="mw-headline" id="地形（terrain.txt）">地形（terrain.txt）</span></h4>
+<p>定义与地形相关的修正，以及它们如何对应terrain.bmp中的颜色。
+</p>
+<h4><span id=".E4.BF.A1.E9.A3.8E.EF.BC.88trade_winds.txt.EF.BC.89"></span><span class="mw-headline" id="信风（trade_winds.txt）">信风（trade_winds.txt）</span></h4>
+<p>Defines the trade winds for oceanic crossings
+</p>
+<h4><span id=".E6.A0.91.E6.9C.A8.EF.BC.88trees.bmp.EF.BC.89"></span><span class="mw-headline" id="树木（trees.bmp）">树木（trees.bmp）</span></h4>
+<p>不同种类树木的位置。
+</p>
+<h4><span id=".E6.B3.95.E7.BA.BF.E8.B4.B4.E5.9B.BE.EF.BC.88world_normal.bmp.EF.BC.89"></span><span class="mw-headline" id="法线贴图（world_normal.bmp）">法线贴图（world_normal.bmp）</span></h4>
+<p>It's a normalmap for the engine to handle lighting and speculars and stuff.
+</p>
+<h4><span id=".E8.BF.90.E6.B2.B3.EF.BC.88_canal_river.bmp.EF.BC.89"></span><span class="mw-headline" id="运河（_canal_river.bmp）">运河（_canal_river.bmp）</span></h4>
+<p>展示运河的位置，运河名字在文件开头。
+</p>
+<h3><span id=".E4.BB.BB.E5.8A.A1.EF.BC.88missions.EF.BC.89"></span><span class="mw-headline" id="任务（missions）"><b>任务（missions）</b></span></h3>
+<p>定義玩家和AI可以嘗試的任務，包括要求，成功和失敗的條件以及獎勵。
+</p>
+<h2><span id=".E5.8F.82.E8.80.83"></span><span class="mw-headline" id="参考">参考</span></h2>
+<p><br />
+</p>
+<div style="clear: both;"></div>
+<div style="height: auto; text-align: center; border-collapse: collapse; font-size: 105%;">
+<div class="roundytop-6 mw-collapsible" style="font-weight: bold; font-size: 105%; background-color: #444;"><b><span style="color:#FFFFFF">模组制作</span></b>&#160;
+<div class="roundybottom-6 mw-collapsible-content" style="background-color: #f8f9fa; font-weight: normal;"><table style="font-size: 11px; width: 100%;">
+<tbody><tr>
+<td class="" style="background-color:#858585; width: 15%; font-weight: bold; text-align: right;"><span style="color:#FFFFFF">文档</span>
+</td>
+<td class="" style="text-align: left; padding: 2px 5px;"><a href="../wiki/指令.html" title="指令"><span class="explain" title="Commands">效果指令</span></a> • <a href="/wiki/%E6%9D%A1%E4%BB%B6" title="条件"><span class="explain" title="Conditions">触发条件</span></a> • <a href="/wiki/%E4%BF%AE%E6%AD%A3%E5%88%97%E8%A1%A8" title="修正列表">修正</a> • <a href="/wiki/%E4%BD%9C%E7%94%A8%E5%9F%9F" title="作用域"><span class="explain" title="Scopes">作用域</span></a> • <a href="/wiki/%E5%8F%98%E9%87%8F" title="变量"><span class="explain" title="Variables">变量</span></a> • <a href="/wiki/%E6%9C%AC%E5%9C%B0%E5%8C%96" title="本地化">本地化</a> • <a href="/wiki/%E5%8F%AF%E5%AE%9A%E5%88%B6%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%8C%96" title="可定制的本地化">可定制的本地化</a>
+</td></tr></tbody></table>
+<table style="font-size: 11px; width: 100%;">
+<tbody><tr>
+<td class="" style="background-color:#858585; width: 15%; font-weight: bold; text-align: right;"><span style="color:#FFFFFF">脚本</span>
+</td>
+<td class="bgl-银" style="text-align: left; padding: 2px 5px;"><a href="../wiki/顾问修改.html" title="顾问修改">顾问</a> • <a href="/wiki/%E6%97%B6%E4%BB%A3%E4%BF%AE%E6%94%B9" title="时代修改">时代</a> • <a href="/wiki/%E4%B9%A6%E7%AD%BE%E4%BF%AE%E6%94%B9" title="书签修改">书签</a> • <a href="/wiki/%E5%BB%BA%E7%AD%91%E4%BF%AE%E6%94%B9" title="建筑修改">建筑</a> • <a href="/wiki/%E5%AE%A3%E6%88%98%E7%90%86%E7%94%B1%E4%BF%AE%E6%94%B9" title="宣战理由修改">宣战理由</a>  • <a href="/wiki/%E6%AE%96%E6%B0%91%E5%8C%BA%E5%9F%9F%E4%BF%AE%E6%94%B9" title="殖民区域修改">殖民区域</a> • <a href="/wiki/%E6%96%B0%E5%BB%BA%E5%9B%BD%E5%AE%B6" title="新建国家">新建国家</a> • <a href="/wiki/%E6%96%87%E5%8C%96%E4%BF%AE%E6%94%B9" title="文化修改">文化</a> • <a href="/wiki/%E5%86%B3%E8%AE%AE%E4%BF%AE%E6%94%B9" title="决议修改">决议</a> • <a href="/wiki/Defines" title="Defines"><span class="explain" title="Defines">定义</span></a> • <a href="/wiki/%E5%A4%96%E4%BA%A4%E8%A1%8C%E5%8A%A8%E4%BF%AE%E6%94%B9" title="外交行动修改">外交行动</a> • <a href="/wiki/%E7%81%BE%E9%9A%BE%E4%BF%AE%E6%94%B9" title="灾难修改">灾难</a> • <a href="/wiki/%E9%98%B6%E5%B1%82%E4%BF%AE%E6%94%B9" title="阶层修改">阶层</a>• <a href="/wiki/%E4%BA%8B%E4%BB%B6%E4%BF%AE%E6%94%B9" title="事件修改">事件</a> • <a href="/wiki/%E6%B4%BE%E7%B3%BB%E4%BF%AE%E6%94%B9" title="派系修改">派系</a>  • <a href="/wiki/%E6%94%BF%E5%BA%9C%E4%BF%AE%E6%94%B9" title="政府修改">政府</a> • <a href="/wiki/%E6%94%BF%E5%BA%9C%E4%BA%92%E5%8A%A8%E4%BF%AE%E6%94%B9" title="政府互动修改">政府互动（1.35）</a> • <a href="/wiki/%E4%BC%9F%E5%A4%A7%E5%B7%A5%E7%A8%8B%E4%BF%AE%E6%94%B9" title="伟大工程修改">伟大工程</a> • <a href="/wiki/%E5%8E%86%E5%8F%B2%E4%BF%AE%E6%94%B9" title="历史修改">历史</a> • <a href="/wiki/%E7%90%86%E5%BF%B5%E7%BB%84%E4%BF%AE%E6%94%B9" title="理念组修改">理念组</a> • <a href="/wiki/%E6%80%9D%E6%BD%AE%E4%BF%AE%E6%94%B9" title="思潮修改">思潮</a> • <a href="/wiki/%E4%BB%BB%E5%8A%A1%E6%A0%91%E4%BF%AE%E6%94%B9" title="任务树修改">任务树</a> • <a href="../wiki/旗舰修改.html" class="mw-redirect" title="修正类型及修改">修正</a> • <a href="/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BD%E5%AE%B6%E4%BF%AE%E6%94%B9" title="自定义国家修改">自定义国家</a> • <a href="/wiki/%E6%94%BF%E7%AD%96%E4%BF%AE%E6%94%B9" title="政策修改">政策</a> • <a href="../wiki/宗教修改.html" title="宗教修改">宗教</a> • &#160;<a href="/wiki/%E5%8F%9B%E5%86%9B%E4%BF%AE%E6%94%B9" title="叛军修改">叛军</a> • <a href="/wiki/%E9%99%84%E5%B1%9E%E5%9B%BD%E7%B1%BB%E5%9E%8B%E4%BF%AE%E6%94%B9" title="附属国类型修改">附属国类型</a> • <a href="/wiki/%E7%A7%91%E6%8A%80%E4%BF%AE%E6%94%B9" title="科技修改">科技</a> • <a href="/wiki/%E8%B4%B8%E6%98%93%E5%85%AC%E5%8F%B8%E4%BF%AE%E6%94%B9" title="贸易公司修改">贸易公司</a> • <a href="/wiki/%E5%95%86%E5%93%81%E4%BF%AE%E6%94%B9" title="商品修改">商品</a> • <a href="/wiki/%E5%8D%95%E4%BD%8D%E4%BF%AE%E6%94%B9" title="单位修改">单位</a> • <a href="/wiki/%E6%97%97%E8%88%B0%E4%BF%AE%E6%94%B9" title="旗舰修改">旗舰</a>
+</td></tr></tbody></table>
+<table style="font-size: 11px; width: 100%;">
+<tbody><tr>
+<td class="" style="background-color:#858585; width: 15%; font-weight: bold; text-align: right;"><span style="color:#FFFFFF">地图</span>
+</td>
+<td class="bgl-银" style="text-align: left; padding: 2px 5px;"><a href="../wiki/地图修改.html" title="地图修改">地图</a> • <a href="/wiki/%E9%9A%8F%E6%9C%BA%E6%96%B0%E4%B8%96%E7%95%8C%E4%BF%AE%E6%94%B9" title="随机新世界修改">随机新世界</a> • <a href="/wiki/%E8%B4%B8%E6%98%93%E8%8A%82%E7%82%B9%E4%BF%AE%E6%94%B9" title="贸易节点修改">贸易节点</a>
+</td></tr></tbody></table>
+<table style="font-size: 11px; width: 100%;">
+<tbody><tr>
+<td class="" style="background-color:#858585; width: 15%; font-weight: bold; text-align: right;"><span style="color:#FFFFFF">图形</span>
+</td>
+<td class="" style="text-align: left; padding: 2px 5px;"><a href="../wiki/模型修改.html" title="模型修改">3D模型</a> • <a href="/wiki/%E7%95%8C%E9%9D%A2%E4%BF%AE%E6%94%B9" title="界面修改">界面</a> • <a href="/wiki/%E8%B4%B4%E5%9B%BE%E5%BA%93%E4%BF%AE%E6%94%B9" title="贴图库修改">贴图库</a> • <a href="/wiki/%E5%AD%97%E4%BD%93%E4%BF%AE%E6%94%B9" title="字体修改">字体</a> • <a href="../wiki/兵模.html" class="new" title="Particle modding（页面不存在）">粒子特效</a> • <a href="/index.php?title=Shader_modding&amp;action=edit&amp;redlink=1" class="new" title="Shader modding（页面不存在）">着色器</a> • <a href="/wiki/%E5%85%B5%E6%A8%A1" title="兵模">兵模</a>
+</td></tr></tbody></table>
+<table style="font-size: 11px; width: 100%;">
+<tbody><tr>
+<td class="" style="background-color:#858585; width: 15%; font-weight: bold; text-align: right;"><span style="color:#FFFFFF">音频</span>
+</td>
+<td class="bgl-银" style="text-align: left; padding: 2px 5px;"><a href="../wiki/音乐修改.html" title="音乐修改">音乐</a> • <a href="/wiki/%E9%9F%B3%E6%95%88%E4%BF%AE%E6%94%B9" title="音效修改">音效</a>
+</td></tr></tbody></table>
+<table style="font-size: 11px; width: 100%;">
+<tbody><tr>
+<td class="" style="background-color:#858585; width: 15%; font-weight: bold; text-align: right;"><span style="color:#FFFFFF">其它</span>
+</td>
+<td class="" style="text-align: left; padding: 2px 5px;"><a href="../wiki/控制台指令.html" title="控制台指令">控制台指令</a> • <a href="/wiki/%E6%A0%A1%E9%AA%8C%E7%A0%81" title="校验码">校验码</a> • <a href="/wiki/JoroDox_mod_making_tool" title="JoroDox mod making tool">JoroDox模组制作工具</a> • <a class="mw-selflink selflink">Mod文件结构</a> • <a href="/wiki/Mod_troubleshooting" title="Mod troubleshooting">Mod错误调试</a> • <a href="/wiki/The_Validator" title="The Validator"><span class="explain" title="Validator">验证器</span></a> • <a href="/index.php?title=Run_files&amp;action=edit&amp;redlink=1" class="new" title="Run files（页面不存在）"><span class="explain" title="Run files">运行文件</span></a>
+</td></tr></tbody></table>
+<table style="font-size: 11px; width: 100%;">
+<tbody><tr>
+<td class="roundybl-6" style="background-color:#858585; width: 15%; font-weight: bold; text-align: right;"><span style="color:#FFFFFF">教程</span>
+</td>
+<td class="bgl-银 roundybr-6" style="text-align: left; padding: 2px 5px;"><a href="../wiki/省份修改.html" title="省份修改">添加省份</a> • <a href="/wiki/%E6%88%90%E5%B0%B1%E4%BF%AE%E6%94%B9" title="成就修改">成就修改</a> • <a href="/wiki/On_actions" title="On actions">On actions</a> • <a href="/wiki/%E6%A8%A1%E7%BB%84%E5%88%B6%E4%BD%9C" title="模组制作">模组制作</a>
+</td></tr></tbody></table></div></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20241023025952
+Cache expiry: 86400
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.649 seconds
+Real time usage: 0.794 seconds
+Preprocessor visited node count: 2075/1000000
+Post‐expand include size: 19734/2097152 bytes
+Template argument size: 8196/2097152 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 102/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  588.176      1 -total
+ 75.54%  444.307      1 Template:Version
+ 12.98%   76.321     16 Template:Icon
+  5.71%   33.611      1 Template:Modding_navbox
+  4.81%   28.285      1 Template:Navbox
+  2.92%   17.167      7 Template:Navboxgroup
+  2.12%   12.484      2 Template:Icon/c
+  1.73%   10.180      1 Template:Flag
+  1.51%    8.864      3 Template:Icon/p
+  1.41%    8.307      2 Template:Icon/m
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:5315-0!canonical!zh and timestamp 20241023025952 and revision id 102290.
+ -->
+</div></div>						</div>
+				</div>
+				<footer>
+				<div class="liberty-footer">
+											<div id="p-lang" class="catlinks">
+							其他语言							<div style="display:inline;">
+								<ul>
+														<li class="interlanguage-link interwiki-en"><a href="https://eu4.paradoxwikis.com/Mod_structure">English</a></li>
+													</ul>
+							</div>
+						</div>
+										<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../wiki/Special:页面分类.html" title="Special:页面分类">分类</a>：​<ul><li><a href="/wiki/Category:%E9%95%BF%E6%9C%9F%E6%9C%89%E6%95%88" title="Category:长期有效">长期有效</a></li><li><a href="/wiki/Category:%E9%9C%80%E8%A6%81%E7%BF%BB%E8%AF%91" title="Category:需要翻译">需要翻译</a></li><li><a href="/wiki/Category:%E6%A8%A1%E7%BB%84%E5%88%B6%E4%BD%9C" title="Category:模组制作">模组制作</a></li></ul></div></div>					<div class="bottom-ads mobile-ab">
+						
+						<!-- 移动端底部 -->
+						<ins class="adsbygoogle mobile-ab"
+						     style="display:block"
+						     data-ad-client="ca-pub-1612414434963106"
+						     data-ad-slot="3303553671"
+						     data-ad-format="auto"
+						     data-full-width-responsive="true"></ins>
+						<script>
+						     (adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
+								<ul class="footer-info">
+									<li class="footer-info-lastmod">
+						 此页面最后编辑于2024年2月20日 (星期二) 19:46。					</li>
+									<li class="footer-info-copyright">
+						除非另有声明，本网站内容采用<a class="external" rel="nofollow" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享</a>授权。					</li>
+							</ul>
+					<ul class="footer-places">
+									<li class="footer-places-privacy">
+						<a href="/wiki/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96">隐私政策</a>					</li>
+									<li class="footer-places-about">
+						<a href="/wiki/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E5%85%B3%E4%BA%8E">关于欧陆风云4百科</a>					</li>
+									<li class="footer-places-disclaimer">
+						<a href="/wiki/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E">免责声明</a>					</li>
+							</ul>
+					<ul class="footer-icons">
+									<li class="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/resources/assets/licenses/cc-by-nc-sa.png" alt="知识共享署名-非商业性使用-相同方式共享" width="88" height="31" loading="lazy"/></a>					</li>
+										<li class="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki"  , /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a><a href="https://www.eu4cn.com/"><img src="https://www.eu4cn.com/images/footerlogo.png" width="88" height="31" loading="lazy"/></a>					</li>
+								</ul>
+						</div>
+				</footer>
+			</div>
+		</div>
+		</section>
+				<div class="modal fade login-modal" id="login-modal" tabindex="-1"
+			 role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title">登录</h4>
+					</div>
+					<div class="modal-body">
+						<div id="modal-login-alert" class="alert alert-hidden alert-danger" role="alert">
+						</div>
+						<form id="modal-loginform" name="userlogin" class="modal-loginform"
+							  method="post">
+							<input class="loginText form-control" id="wpName1" tabindex="1"
+								   placeholder="请输入您的用户名" value="" name="lgname">
+							<label for="inputPassword" class="sr-only">密码</label>
+							<input class="loginPassword form-control" id="wpPassword1" tabindex="2"
+								   placeholder="请输入您的密码" type="password" name="lgpassword">
+							<div class="modal-checkbox">
+								<input name="lgremember" type="checkbox" value="1" id="lgremember" tabindex="3">
+								<label for="lgremember">记住登录</label>
+							</div>
+							<input class="btn btn-success btn-block" type="submit" value="登录" tabindex="4">
+							<a href="/index.php?title=Special:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;type=signup&amp;returnto=Mod%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84" class="btn btn-primary btn-block" title="Special:用户登录" tabindex="5" type="submit">加入欧陆风云4百科</a>							<a href="../wiki/Special:重置密码.html" title="Special:重置密码">忘记密码？</a>                            <br>
+							<a href="../wiki/Special:用户登录.html" title="Special:用户登录">其他方式登录</a>							<input type="hidden" name="action" value="login" />
+							<input type="hidden" name="format" value="json" />
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">⧼liberty-btn-close⧽</button>
+						<button type="button" class="btn btn-primary">⧼liberty-btn-save-changes⧽</button>
+					</div>
+				</div>
+			</div>
+		</div>
+			</body></html>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8b9cdb5f260cf613f39a508fbf9dd707";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.649","walltime":"0.794","ppvisitednodes":{"value":2075,"limit":1000000},"postexpandincludesize":{"value":19734,"limit":2097152},"templateargumentsize":{"value":8196,"limit":2097152},"expansiondepth":{"value":9,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":102,"limit":5000000},"timingprofile":["100.00%  588.176      1 -total"," 75.54%  444.307      1 Template:Version"," 12.98%   76.321     16 Template:Icon","  5.71%   33.611      1 Template:Modding_navbox","  4.81%   28.285      1 Template:Navbox","  2.92%   17.167      7 Template:Navboxgroup","  2.12%   12.484      2 Template:Icon/c","  1.73%   10.180      1 Template:Flag","  1.51%    8.864      3 Template:Icon/p","  1.41%    8.307      2 Template:Icon/m"]},"cachereport":{"timestamp":"20241023025952","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1765});});</script>
+</body>
+</html>

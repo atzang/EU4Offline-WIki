@@ -1,0 +1,1242 @@
+ <!DOCTYPE html>
+<html class="client-nojs" lang="zh" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>欧陆风云4百科:魔术字/解析器函数 - 欧陆风云4百科，人人可以编辑的欧陆风云4中文百科全书</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"zh","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRequestId":"652630c9eae7029c10d8cc1f","wgCSPNonce":false,"wgCanonicalNamespace":"Project","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":4,"wgPageName":"欧陆风云4百科:魔术字/解析器函数","wgTitle":"魔术字/解析器函数","wgCurRevisionId":2948,"wgRevisionId":2948,"wgArticleId":1993,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["含有非数字formatnum参数的页面","百科"],"wgPageContentLanguage":"zh","wgPageContentModel":"wikitext","wgRelevantPageName":"欧陆风云4百科:魔术字/解析器函数","wgRelevantArticleId":1993,"wgUserVariant":"zh","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":
+false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCargoDefaultQueryLimit":100,"wgCargoMapClusteringMinimum":80,"wgCargoMonthNames":["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgCargoMonthNamesShort":["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgCargoWeekDays":["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],"wgCargoWeekDaysShort":["日","一","二","三","四","五","六"],"wgPageFormsTargetName":null,"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":false,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsCalendarValues":[],"wgPageFormsCalendarParams":[],"wgPageFormsCalendarHTML":null,"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsContLangYes":null,"wgPageFormsContLangNo":null,"wgPageFormsContLangMonths":[],"wgPageFormsHeightForMinimizingInstances":800,
+"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/extensions/PageForms","edgValues":null,"wgPageFormsEDSettings":null,"wgAmericanDates":false,"wgVisualEditor":{"pageLanguageCode":"zh","pageLanguageDir":"ltr","pageVariantFallbacks":["zh-hans","zh-hant","zh-cn","zh-tw","zh-hk","zh-sg","zh-mo","zh-my"]},"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgSmjUseCdn":false,"wgSmjUseChem":true,"wgSmjDisplayMath":[],"wgSmjExtraInlineMath":[],"wgSmjScale":1,"wgSmjEnableMenu":true,"wgSmjDisplayAlign":"left","wgEditSubmitButtonLabelPublish":false};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.liberty.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready"};RLPAGEMODULES=["ext.SimpleMathJax","site","mediawiki.page.ready","mmv.head","mmv.bootstrap.autostart","ext.HighlightjsIntegration","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.gadget.UserLinkAvatar",
+"ext.gadget.notifyConversion","ext.gadget.notifyAdsense","ext.gadget.Edittools-vector","skins.liberty.bootstrap","skins.liberty.layoutjs","skins.liberty.liverc","skins.liberty.loginjs"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});});});</script>
+<link rel="stylesheet" href="../liberty.css"/>
+<script async="" src="../liberty.js"></script>
+<style>.Liberty .nav-wrapper,
+		.Liberty .nav-wrapper .navbar .form-inline .btn:hover,
+		.Liberty .nav-wrapper .navbar .form-inline .btn:focus,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link.active::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:hover::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:focus::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:active::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-footer .label,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .contributioncredits-footer .label,
+		.Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:hover,
+		.Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:focus,
+		.Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:active,
+		.btn-primary,
+		.header-template, .section-template {
+			background-color: #103D8F;
+		}
+
+		.btn-primary,
+		.section-template-border {
+			border-color: #103D8F;
+		}
+
+		.Liberty .nav-wrapper .navbar .form-inline .btn:hover,
+		.Liberty .nav-wrapper .navbar .form-inline .btn:focus {
+			border-color: #002E7D;
+		}
+
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link.active::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:hover::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:focus::before,
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link:active::before {
+			border-bottom: 2px solid #103D8F;
+		}
+
+		.Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-footer .label:hover,
+		.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .nav-link:hover,
+		.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .nav-link:focus,
+		.dropdown-menu .dropdown-item:hover,
+		.btn-primary:hover,
+		.btn-primary:focus {
+			background-color: #002E7D;
+		}
+
+
+		.Liberty .content-wrapper #liberty-bottombtn,
+		.Liberty .content-wrapper #liberty-bottombtn:hover {
+			background-color: #103D8F;
+		}</style><style>@media (prefers-color-scheme: dark) { body, .Liberty, .dropdown-menu, .dropdown-item, .Liberty .nav-wrapper .navbar .form-inline .btn, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item .nav-link.active, .Liberty .content-wrapper .liberty-content .liberty-content-main table.wikitable tr > th, .Liberty .content-wrapper .liberty-content .liberty-content-main table.wikitable tr > td, table.mw_metadata th, .Liberty .content-wrapper .liberty-content .liberty-content-main table.infobox th, #preferences fieldset:not(.prefsection), #preferences div.mw-prefs-buttons, .navbox, .navbox-subgroup, .navbox > tbody > tr:nth-child(even) > .navbox-list, .Liberty .nav-wrapper .navbar .form-inline .form-control {
+			background-color: #000;
+			color: #DDD;
+		}
+
+		.liberty-content-header, .liberty-footer, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-footer, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item, .Liberty .content-wrapper .liberty-content .liberty-content-header, .Liberty .content-wrapper .liberty-footer, .editOptions, html .wikiEditor-ui-toolbar, #pagehistory li.selected, .mw-datatable td, .Liberty .content-wrapper .liberty-content .liberty-content-main table.wikitable tr > td, table.mw_metadata td, .Liberty .content-wrapper .liberty-content .liberty-content-main table.wikitable, .Liberty .content-wrapper .liberty-content .liberty-content-main table.infobox, #preferences, .navbox-list, .dropdown-divider, .Liberty .content-wrapper .liberty-content .bottom-ads {
+			background-color: #1F2023;
+			color: #DDD;
+		}
+
+		.Liberty .content-wrapper .liberty-content .liberty-content-main, .mw-datatable th, .mw-datatable tr:hover td, textarea, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-content, div.mw-warning-with-logexcerpt, div.mw-lag-warn-high, div.mw-cascadeprotectedwarning, div#mw-protect-cascadeon, .mildtable th {
+			background-color: #000 !important;
+		}
+
+		.Liberty .content-wrapper .liberty-content .liberty-content-header .title>h1, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-content .live-recent-list .recent-item, caption { color: #DDD; }
+
+		.btn-secondary, .Liberty .content-wrapper .liberty-footer .catlinks, .rcpages-btn { background: transparent; color: #DDD; }
+
+
+		#pagehistory li { border: 0; }
+
+		.Liberty .content-wrapper .liberty-footer, .Liberty .content-wrapper .liberty-content .liberty-content-header, .Liberty .content-wrapper .liberty-content .liberty-content-main, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-footer, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-content, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-header .nav .nav-item + .nav-item, .Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:hover, .Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:focus, .Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn, .dropdown-menu, .dropdown-divider, .Liberty .content-wrapper .liberty-content .liberty-content-main fieldset, hr, .Liberty .content-wrapper .liberty-sidebar .live-recent-wrapper .live-recent .live-recent-content .live-recent-list li, .mw-changeslist-legend, .Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools { border-color: #555; }
+
+		.flow-post, .Liberty .content-wrapper .liberty-content .liberty-content-main .toc .toctext { color: #DDD; }
+		.flow-topic-titlebar { color: #000; }
+		.flow-ui-navigationWidget { color: #FFF; }
+		.Liberty .content-wrapper .liberty-content .liberty-content-main .toccolours, .Liberty .content-wrapper .liberty-content .liberty-content-main .toc ul, .Liberty .content-wrapper .liberty-content .liberty-content-main .toc li { background-color: #000; }
+		.Liberty .content-wrapper .liberty-content .liberty-content-main .toc .toctitle { background-color: #1F2023; } }</style>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../liberty.css"/>
+<meta name="generator" content="MediaWiki 1.39.3"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="description" content="&#10;&#10;&#10;总览&#10;&#10;编辑指南&#10;&#10;&#10;编辑规范&#10;&#10;条目命名&#10;&#10;条目编写&#10;&#10;模板规范&#10;&#10;字词转换&#10;&#10;魔术字&#10;&#10;解析器函数与系统变量非常相似，但与后者相比，前者全部要求至少传入一个参数，所有的参数1与函数名之间均用:而不是|分割。&#10;解析器函数有时会在函数名前加上#用以与模板区分。&#10;&#10;列表&#10;以下表格详细说明了欧陆风云4百科可用的解析器函数，部分术语未作解释。&#10;{{#Widget:Heading}}&#10;&#10;&#10;注意：&#10;&#10;&#10;round运算对运算数正负，位数正负有不同表现：&#10;{{#expr: 999 * 999 round -2}} → 998000&#10;{{#expr: 999 * 999 round -20}} → 0&#10;{{#expr: 999 * 999 round -2.9}} → 998000（这是十分危险的作法，不推荐使用）&#10;&#10;逻辑运算符把假映射为0，把真映射为非0，且返回值只有0（假）或1（真）。&#10;同一表达式中先计算高优先级运算。括号优先级高于一切。&#10;浮点误差有可能造成某些运算的不可预料的结果，特别是最后几位数字的不精确。因此在使用此函数进行非整数运算时，注意不要进行比较运算。&#10;表达式的返回值可能是无法再计算的值（比如用科学计数法表示的数：{{#expr: 100000000000000000}} → 1.0E+17），或者有一部分有效数字没有显示出来。此时该值相当可能难以运算，因此在使用此函数进行运算时，须注意这些问题。&#10;&#10;&#10;当表达式有误时函数会返回一个错误信息，此时无法再继续计算，请注意。&#10;&#10;&#10;&#10;{{#if: X | A | B }}&#10;&#10;{{#if: X | A | B }} → A&lt;br /&gt;{{#if: | A | B }} → B&lt;br /&gt;{{#if: | A }} →&#10;&#10;该函数用于条件逻辑判断：&#10;如果X处为非空字符串（忽略前导后缀的空格）那么执行A（以wikitext格式解析）；&#10;如果X处为空或只有空格那么执行B（以wikitext格式解析）；&#10;如果B被省略则输出为空。&#10;&#10;&#10;{{#ifeq: X | Y | A | B }}&#10;&#10;{{#ifeq: 1 | 0 | A | B }} → B&lt;br /&gt;{{#ifeq: 1 | 1 | A | B }} → A&#10;&#10;该函数用于条件逻辑判断：&#10;如果X == Y（忽略前导后缀的空格）那么执行A（以wikitext格式解析）；&#10;否则执行B（以wikitext格式解析）；&#10;如果B被省略则输出为空。&#10;注：{{#if: X | A | B }} == {{#ifeq: X | | A | B }}&#10;&#10;&#10;&#10;{{#ifexist: 《页面标题》 | A | B }}&#10;&#10;{{#ifexist: Main Page | A | B }} → A&lt;br /&gt;{{#ifexist: 肯定不存在的标题 | A | B }} → B&lt;br /&gt;{{#ifexist: 肯定不存在的标题 | A }} →&#10;&#10;该函数用于条件逻辑判断：&#10;如果《页面标题》对应的页面存在，那么执行A（以wikitext格式解析）；&#10;否则执行B（以wikitext格式解析）；&#10;如果B被省略则输出为空。&#10;&#10;&#10;{{#ifexpr: Fx（表达式） | A | B }}&#10;&#10;{{#ifexpr: 1+1 | A | B }} → A&lt;br /&gt;{{#ifexpr: 1-1 | A | B }} → B&lt;br /&gt;{{#ifexpr: 1-1 | A }} →&#10;&#10;该函数用于条件逻辑判断：&#10;如果Fx&amp;#160;!= 0，那么执行A（以wikitext格式解析）；&#10;否则执行B（以wikitext格式解析）；&#10;如果B被省略则输出为空。&#10;注：{{#ifexpr: Fx（表达式） | A | B }} == {{#ifeq: {{#expr: Fx（表达式）}} | 0 | B | A }}&#10;&#10;&#10;&#10;{{#switch: X | Y = A | #default = B}}&#10;&#10;{{#switch: 1&#10;| 0 = A&#10;| 1 = B&#10;| #default = C&#10;}}&#10;&#10;→ B&#10;&#10;&#10;该函数用于条件逻辑判断：&#10;对于输入值X，函数会与每一个预设值Y做比较，如果相同（不考虑前导后缀空格）则执行对应结果（以wikitext格式解析）；&#10;预设值与结果以=连接，作为参数提交给函数；&#10;如果预设值没有对应的结果则会将后面的第一个结果加以执行（例如：{{#switch: X | Y | Z = 1}}当X == Y时输出1）；&#10;如果没有任何一个预设值与输入值相同，则执行#default给出的默认结果；&#10;可以不设定默认结果；&#10;可以省略#default=，即用最后一个没有等号的参数作为默认值。&#10;注意：&#10;当一个参数没有带有=时，该参数会依照下列逻辑被分类：&#10;&#10;如果该参数不是最后一个没有等号的参数，那么它将被作为预设值考虑；&#10;否则它将被作为默认结果考虑。&#10;&#10;&#10;{{#time: 格式参数 }}&lt;br /&gt;{{#time: 格式参数 | 时间参数 }}&#10;&#10;{{#time: Y/m/d}} → 2024/10/22&lt;br /&gt;{{#time: Y/m/d|2017-01-04}} → 2017/01/04&lt;br /&gt;{{#time: Y/m/d H:i:s|+1 second}} → 2024/10/22 23:56:01&#10;&#10;该函数用来输出时间：&#10;&#10;格式函数用于指定输出的时间的格式，下表以样例时间为例说明各格式参数的作用。&#10;&#10;&#10;时间参数可以使用绝对时间，如“2008-12-31 23:59:59”，也可以使用相对时间，如“+7 days”或者“-5 hours”得到默认时间7日之后或默认时间5小时之前的时间。也可以二者混合使用，比如{{#time:Y-m-d H:i:s|2001-2-3 04:05:06 +1 year +2 months +3 days +4 hours +5 minutes +6 seconds}} → 2002-04-06 08:10:12&#10;系统默认的时间参数为当前UTC+0时间，可以使用{{#time:参数|+8 hours}}得到当前北京时间（UTC+8时间）。&#10;如果想要输出字母本身，而该字母又是属于格式参数的一种时，可以用英文双引号包裹：{{#time: &quot;Y/m/d&quot; == Y/m/d}} → Y/m/d == 2024/10/22&#10;&#10;&#10;&#10;&#10;&#10;杂项&#10;&#10;&#10;{{#language:语言代码}}&lt;br /&gt;{{#language:语言代码|目标语言代码}}&#10;&#10;{{#language:zh-cn}} → 中文（中国大陆）&lt;br /&gt;{{#language:zh-cn|en-us}} → 中文（中国大陆）&#10;&#10;以参数2的语言代码指定的语言（没有则以参数1的）输出参数1的语言代码对应的语言全名&#10;&#10;&#10;{{#special:特殊页面名}}&#10;&#10;{{#special:watchlist}} → Special:监视列表&#10;&#10;输出指定标准名称的特殊页面的本地化名。&#10;可以在函数名后加e以输出经MediaWiki URL编码规则编码后的页面名：&#10;&#10;{{#speciale:watchlist}} → Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8&#10;&#10;&#10;{{#tag:标签名称|内容|属性1=属性值1|属性2=属性值2|……}}&#10;&#10;{{#tag:div|右浮动|style=&quot;float: right; clear: both; padding: 1em;&quot;}} → 右浮动&#10;&#10;输出一个元素的HTML源码，参数1为其标签名，参数2为其内容，参数3及之后为其属性值对。请不要向参数1传入自闭合标签名，如br、img、hr等。&#10;内容中的wikitext会在tag函数渲染之前完成渲染，并与往常一样阻止不受信任的代码渲染。如果内容需要为空，则参数2必须为空，而不是省略。&#10;&#10;&#10;&#10;{{#invoke:模块名|函数名|参数1|参数2|……}}&#10;&#10;（根据指定模块输出）&#10;&#10;Lua模块的调用方法&#10;&#10;&#10;{{DISPLAYTITLE:标题}}&lt;br /&gt;{{DISPLAYTITLE:标题|noerror}}&lt;br /&gt;{{DISPLAYTITLE:标题|noreplace}}&#10;&#10;-&#10;&#10;本函数用以改变当前页面的标题的格式做出变换，该函数无法做出修改标题的行为，只能做出例如改变大小写、下划线替代空格等的修改。&#10;参数1为“noerror”或“noreplace”时，会阻止由于使用多个该函数而导致的错误抛出。&#10;&#10;&#10;&#10;{{DEFAULTSORT:分类索引}}&lt;br /&gt;{{DEFAULTSORTKEY:分类索引}}&lt;br /&gt;{{DEFAULTCATEGORYSORT:分类索引}}&lt;br /&gt;{{DEFAULTSORT:分类索引|noerror}}&lt;br /&gt;{{DEFAULTSORT:分类索引|noreplace}}&#10;&#10;-&#10;&#10;本函数用以改变当前页面在分类中的索引，比如{{DEFAULTSORT:A}}会把页面分到A部分下。&#10;参数1为“noerror”或“noreplace”时，会阻止由于使用多个该函数而导致的错误抛出。&#10;&#10;&#10;参见&#10;mw:Help:Extension:ParserFunctions/zh&#10;&#10;&#10;&#10;&#10;"/>
+<meta name="keywords" content="欧陆风云4百科,欧陆风云4百科:魔术字/解析器函数"/>
+<meta name="apple-mobile-web-app-capable" content="Yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="mobile-web-app-capable" content="Yes"/>
+<meta name="theme-color" content="#103D8F"/>
+<meta name="msapplication-navbutton-color" content="#103D8F"/>
+<meta name="twitter:card" content="summary"/>
+<link rel="icon" href="https://www.eu4cn.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.eu4cn.com/opensearch_desc.php" title="欧陆风云4百科 (zh)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://www.eu4cn.com/api.php?action=rsd"/>
+<link rel="alternate" hreflang="zh" href="https://www.eu4cn.com/zh/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0"/>
+<link rel="alternate" hreflang="zh-Hans-CN" href="https://www.eu4cn.com/zh-cn/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0"/>
+<link rel="alternate" hreflang="zh-Hant-HK" href="https://www.eu4cn.com/zh-hk/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0"/>
+<link rel="alternate" hreflang="zh-Hant-TW" href="https://www.eu4cn.com/zh-tw/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0"/>
+<link rel="alternate" hreflang="x-default" href="解析器函数.html"/>
+<link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="欧陆风云4百科的Atom feed" href="https://www.eu4cn.com/index.php?title=Special:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9&amp;feed=atom"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114739240-1');
+</script>
+<meta property="og:title" content="欧陆风云4百科:魔术字/解析器函数"/>
+<meta property="og:site_name" content="欧陆风云4百科"/>
+<meta property="og:url" content="https://www.eu4cn.com/wiki/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0"/>
+<meta property="og:image" content="https://www.eu4cn.com/images/logo/logo.png"/>
+<meta property="article:modified_time" content="2017-06-03T08:28:07Z"/>
+<meta property="article:published_time" content="2017-06-03T08:28:07Z"/>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","name":"\u6b27\u9646\u98ce\u4e914\u767e\u79d1:\u9b54\u672f\u5b57\/\u89e3\u6790\u5668\u51fd\u6570 - \u6b27\u9646\u98ce\u4e914\u767e\u79d1\uff0c\u4eba\u4eba\u53ef\u4ee5\u7f16\u8f91\u7684\u6b27\u9646\u98ce\u4e914\u4e2d\u6587\u767e\u79d1\u5168\u4e66","headline":"\u6b27\u9646\u98ce\u4e914\u767e\u79d1:\u9b54\u672f\u5b57\/\u89e3\u6790\u5668\u51fd\u6570 - \u6b27\u9646\u98ce\u4e914\u767e\u79d1\uff0c\u4eba\u4eba\u53ef\u4ee5\u7f16\u8f91\u7684\u6b27\u9646\u98ce\u4e914\u4e2d\u6587\u767e\u79d1\u5168\u4e66","mainEntityOfPage":"<span class=\"mw-page-title-namespace\">\u6b27\u9646\u98ce\u4e914\u767e\u79d1<\/span><span class=\"mw-page-title-separator\">:<\/span><span class=\"mw-page-title-main\">\u9b54\u672f\u5b57\/\u89e3\u6790\u5668\u51fd\u6570<\/span>","identifier":"https:\/\/www.eu4cn.com\/wiki\/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97\/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0","url":"https:\/\/www.eu4cn.com\/wiki\/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97\/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0","dateModified":"2017-06-03T08:28:07Z","datePublished":"2017-06-03T08:28:07Z","image":{"@type":"ImageObject","url":"https:\/\/www.eu4cn.com\/images\/logo\/logo.png"},"author":{"@type":"Organization","name":"\u6b27\u9646\u98ce\u4e914\u767e\u79d1","url":"https:\/\/www.eu4cn.com","logo":{"@type":"ImageObject","url":"https:\/\/www.eu4cn.com\/images\/logo\/logo.png","caption":"\u6b27\u9646\u98ce\u4e914\u767e\u79d1"}},"publisher":{"@type":"Organization","name":"\u6b27\u9646\u98ce\u4e914\u767e\u79d1","url":"https:\/\/www.eu4cn.com","logo":{"@type":"ImageObject","url":"https:\/\/www.eu4cn.com\/images\/logo\/logo.png","caption":"\u6b27\u9646\u98ce\u4e914\u767e\u79d1"}},"potentialAction":{"@type":"SearchAction","target":"https:\/\/www.eu4cn.com\/index.php?title=Special:Search&search={search_term}","query-input":"required name=search_term"}}</script>
+<link rel="stylesheet" href="../all.css" />
+<link rel="stylesheet" href="../v4-shims.css" />
+
+</head>
+<body class="Liberty width-size mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-4 ns-subject page-欧陆风云4百科_魔术字_解析器函数 rootpage-欧陆风云4百科_魔术字 skin-liberty action-view skin--responsive">		<header>
+			<div class="nav-wrapper navbar-fixed-top">
+						<nav class="navbar navbar-dark yamm">
+			<a class="navbar-brand" href="../wiki/../../images/4/4d/萬方logo1.png%3F20220611124730.html"></a>
+			<ul class="nav navbar-nav">
+				<li class="dropdown nav-item">
+					<a class="nav-link navbar-right" href="解析器函数.html#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div class="navbar-brand-subtitle">欧陆风云4</div>
+						<div class="navbar-family">ParaWikis</div>
+					</a>
+				<ul class="dropdown-menu" aria-labelledby="dLabel">
+					<li>
+		                  <div class="yamm-content">
+		                    <div class="row">
+						<br />
+<b>Notice</b>:  Undefined index: HTTP_ACCEPT_LANGUAGE in <b>/www/sites/eu4cn.com/index/skins/Liberty/LibertyTemplate.php</b> on line <b>186</b><br />
+ 							<ul class="col-sm-4 list-unstyled">
+							<li><p class="meganav-item"><strong>最新百科</strong></p></li>
+								<a href="https://cs2.parawikis.com/" class="dropdown-item meganav-item">都市天际线2百科</a>
+								<a href="https://h3.parawikis.com/" class="dropdown-item meganav-item">英雄无敌3百科</a>
+								<a href="https://vic3.parawikis.com/" class="dropdown-item meganav-item">维多利亚3百科</a>
+								<a href="https://ce2.parawikis.com/" class="dropdown-item meganav-item">奇妙探险队2百科</a>
+								<a href="https://eos.parawikis.com/" class="dropdown-item meganav-item">罪恶帝国百科</a>
+								<a href="https://ir.parawikis.com/" class="dropdown-item meganav-item">英白拉多：罗马百科</a>
+							</ul>
+							<ul class="col-sm-4 list-unstyled">
+								<li><p class="meganav-item"><strong>热门百科</strong></p></li>
+								<a href="https://stellaris.parawikis.com/" class="dropdown-item meganav-item">群星百科</a>
+								<a href="https://www.eu4cn.com/" class="dropdown-item meganav-item">欧陆风云4百科</a>
+								<a href="https://ck2.parawikis.com/" class="dropdown-item meganav-item">十字军之王2百科</a>
+								<a href="https://ck3.parawikis.com/" class="dropdown-item meganav-item">十字军之王3百科</a>
+								<a href="https://hoi4.parawikis.com/" class="dropdown-item meganav-item">钢铁雄心4百科</a>
+								<a href="https://vic2.parawikis.com/" class="dropdown-item meganav-item">维多利亚2百科</a>
+							</ul>
+							<ul class="col-sm-4 list-unstyled">
+								<li><p class="meganav-item"><strong>ParaWikis</strong></p></li>
+								<a href="https://www.parawikis.com/wiki/ParaWikis:%E7%94%B3%E8%AF%B7%E5%BB%BA%E7%AB%99" class="dropdown-item meganav-item">申请建站</a>
+								<a href="https://www.parawikis.com/" class="dropdown-item meganav-item">ParaWikis</a>
+								<a href="https://commons.parawikis.com/" class="dropdown-item meganav-item">ParaCommons</a>
+							</ul>		                    </div>
+		                  </div>
+		                </li>
+				</ul>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="../wiki/../Special:最近更改.html" class="nav-link" title="本wiki的最近更改列表[r]" accesskey="r"><span class="fas fa-sync"></span><span class="hide-title">最近更改</span></a>				</li>
+				<li class="nav-item">
+					<a href="../Special:随机页面.html" class="nav-link" title="加载一个随机页面[x]" accesskey="x"><span class="fa fa-random"></span><span class="hide-title">随机页面</span></a>				</li>
+				<li class="nav-item">
+					<a href="https://shang.qq.com/wpa/qunwpa?idkey=3bb76f6a58594b18c2defdc03af7ec2703fb2e2cc8fef6dadd1dcb896c0ede1a" target="_blank" class="nav-link" title="加入QQ群">
+						<span class="fa fa-qq"></span><span class="hide-title">加入QQ群</span>
+					</a>
+				</li>
+				<li class="dropdown nav-item">
+					<a class="dropdown-toggle nav-link" href="解析器函数.html#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<span class="fa fa-wrench"></span><span class="hide-title">工具</span>
+					</a>
+				<ul class="dropdown-menu" aria-labelledby="dLabel">
+					<li id="t-whatlinkshere" class="mw-list-item"><a href="../Special:链入页面/欧陆风云4百科:魔术字/解析器函数.html" title="所有链接至本页面的wiki页面列表[j]" accesskey="j" class="dropdown-item">链入页面</a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://www.eu4cn.com/wiki/Special:%E9%93%BE%E5%87%BA%E6%9B%B4%E6%94%B9/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0" rel="nofollow" title="链自本页的页面的最近更改[k]" accesskey="k" class="dropdown-item">相关更改</a></li><li id="t-specialpages" class="mw-list-item"><a href="../Special:特殊页面.html" title="所有特殊页面的列表[q]" accesskey="q" class="dropdown-item">特殊页面</a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="本页面的可打印版本[p]" accesskey="p" class="dropdown-item">可打印版本</a></li><li id="t-permalink" class="mw-list-item"><a href="https://www.eu4cn.com/index.php?title=%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0&amp;oldid=2948" title="此页面该修订版本的固定链接" class="dropdown-item">固定链接</a></li><li id="t-info" class="mw-list-item"><a href="https://www.eu4cn.com/index.php?title=%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0&amp;action=info" title="关于此页面的更多信息" class="dropdown-item">页面信息</a></li><li id="t-cargopagevalueslink" class="mw-list-item"><a href="https://www.eu4cn.com/index.php?title=%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0&amp;action=pagevalues" rel="cargo-pagevalues" class="dropdown-item">页面值</a></li>				</ul>
+				</li>
+				<li class="dropdown nav-item"><a class="nav-link dropdown-toggle dropdown-toggle-fix" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" title="帮助"><span class="fa fa-question"></span><span class="hide-title">帮助</span></a><div class="dropdown-menu" role="menu"><a class="dropdown-item" href="../Project:译名手册.html" title="譯名手冊"><span class="fa fa-book"></span>譯名手冊</a><a class="dropdown-item" href="../wiki/../Project:字词转换.html" title="字詞轉換"><span class="fa fa-language"></span>字詞轉換</a><a class="dropdown-item" href="../wiki/../Project:编辑指南.html" title="編輯指南"><span class="fa fa-graduation-cap"></span>編輯指南</a><a class="dropdown-item" href="../wiki/../Project:编辑规范.html" title="編輯規範"><span class="fa fa-lightbulb"></span>編輯規範</a><a class="dropdown-item" href="../Project:练手沙盒.html" title="Project:练手沙盒"><span class="fa fa-leaf"></span>練手沙盒</a></div></li><li class="dropdown nav-item"><a class="hidden-xs-down nav-link" data-toggle="" role="button" aria-haspopup="true" aria-expanded="true" title="ParaTranz" href="https://paratranz.cn/"><span class="fa fa-language"></span><span class="hide-title">ParaTranz</span></a></li><li class="dropdown nav-item"><a class="hidden-xs-down nav-link" data-toggle="" role="button" aria-haspopup="true" aria-expanded="true" title="52PCGame" href="http://bbs.52pcgame.net/"><span class="fa fa-comments"></span><span class="hide-title">52PCGame</span></a></li><li class="dropdown nav-item"><a class="hidden-xs-down nav-link" data-toggle="" role="button" aria-haspopup="true" aria-expanded="true" title="Project:捐款" href="../wiki/../Project:捐款.html"><span class="fa fa-heart"></span><span class="hide-title">资助我们</span></a></li>			</ul>
+					<div class="navbar-login">
+							<a href="解析器函数.html#" class="none-outline" data-toggle="modal" data-target="#login-modal">
+					<span class="fa fa-sign-in"></span>
+				</a>
+					</div>
+									<form action="https://www.eu4cn.com/index.php" id="searchform" class="form-inline">
+			<input type="hidden" name="title" value="Special:搜索"/>
+			<div class="input-group">
+				<input type="search" name="search" placeholder="在欧陆风云4百科搜索" aria-label="在欧陆风云4百科搜索" autocapitalize="sentences" title="在欧陆风云4百科搜索[f]" accesskey="f" class="form-control" id="searchInput"/>				<span class="input-group-btn">
+					<button type="submit" name="go"
+						value="前往" id="searchGoButton"
+							class="btn btn-secondary" type="button"><span class="fa fa-eye"></span></button>
+					<button type="submit" name="fulltext"
+						value="搜索"
+						id="mw-searchButton" class="btn btn-secondary" type="button">
+						<span class="fa fa-search"></span></button>
+				</span>
+			</div>
+		</form>
+			</nav>
+				</div>
+		</header>
+		<section>
+			<div class="content-wrapper">
+							<aside>
+			<div class="liberty-sidebar">
+				<div class="live-recent-wrapper">
+					<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+												<div
+			class="live-recent"
+			data-article-ns="0|4|10|12|14"
+			data-talk-ns="1|5|7|9|11|13|15"
+		>
+			<div class="live-recent-header">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a href="javascript:" class="nav-link active" id="liberty-recent-tab1">
+						最近更改					</a>
+				</li>
+				<li class="nav-item">
+					<a href="javascript:" class="nav-link" id="liberty-recent-tab2">
+						最近讨论					</a>
+				</li>
+			</ul>
+			</div>
+			<div class="live-recent-content">
+				<ul class="live-recent-list" id="live-recent-list">
+					<li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li><li><span class="recent-item">&nbsp;</span></li>				</ul>
+			</div>
+			<div class="live-recent-footer">
+				<a href="../wiki/../Special:最近更改.html" title="Special:最近更改"><span class="label label-info">查看更多</span></a>			</div>
+		</div>
+						
+<!-- 侧栏 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1612414434963106"
+     data-ad-slot="1728061201"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- Google tag (gtag.js) -->
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K4RD1C6KBW');
+</script>
+				</div>
+										</div>
+			</aside>
+								<div class="container-fluid liberty-content">
+					<div class="liberty-content-header">
+													<div class="alert alert-dismissible fade in alert-info liberty-notice" role="alert">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<div id="localNotice"><div class="sitenotice" lang="zh" dir="ltr"><div style="text-align:center; font-size:125%; line-height: 1; padding: 10px;"><b>欢迎访问欧陆风云4百科！<a href="../wiki/../Special:用户登录.html" title="Special:用户登录"><span class="alert-link">注册一个账号</span></a>，一起参与编写吧！这里是<a href="../wiki/../欧陆风云4百科:当前任务.html#页面" title="欧陆风云4百科:当前任务"><span class="alert-link">当前的工程</span></a>。</b></div>
+<div style="text-align: center;">如果您想帮助本站建设，欢迎点击<a href="../wiki/../Project:捐款.html" title="欧陆风云4百科:捐款"><b>这里</b></a>捐款！欢迎所有对百科感兴趣的同学加入QQ群：<b>497888338</b>。</div></div></div>							</div>
+															<div class="content-tools">
+				<div class="btn-group" role="group" aria-label="content-tools">
+					<div id="ca-view" class="selected mw-list-item"><a href="解析器函数.html" class="btn btn-secondary tools-btn">阅读</a></div><div id="ca-viewsource" class="mw-list-item"><a href="https://www.eu4cn.com/index.php?title=%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0&amp;action=edit" title="本页面受到保护。&#10;您可以查看其源代码[e]" accesskey="e" class="btn btn-secondary tools-btn">查看源代码</a></div><div id="ca-history" class="mw-list-item"><a href="https://www.eu4cn.com/index.php?title=%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0&amp;action=history" title="本页面过去的版本[h]" accesskey="h" class="btn btn-secondary tools-btn">查看历史</a></div>					<a href="https://www.eu4cn.com/wiki/%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91_talk:%E9%AD%94%E6%9C%AF%E5%AD%97/%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0" class="btn btn-secondary tools-btn" title="关于内容页面的讨论[t]" accesskey="t" id="ca-talk">讨论</a>				</div>
+			</div>
+							<div class="title">
+						<h1>
+							<span class="mw-page-title-namespace">欧陆风云4百科</span><span class="mw-page-title-separator">:</span><span class="mw-page-title-main">魔术字/解析器函数</span>						</h1>
+						<div class="mw-indicators">
+</div>
+						</div>
+						<div class="contentSub" >
+							<span class="subpages">&lt; <a href="../wiki/../欧陆风云4百科:魔术字.html" title="欧陆风云4百科:魔术字">欧陆风云4百科:魔术字</a></span>						</div>
+				</div>
+					<div class="liberty-content-main" id="content">
+											<div class="mw-body-content" id="mw-content-text">
+							<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="zh" dir="ltr"><div class="mw-parser-output"><div style="width:260px; height:auto; float:right; margin-top: 62px;; clear:right" class="eu4box">
+<div class="heading"><div id="navui" style="margin: -70px -25px; position: absolute;"><img alt="Dlc top curly.png" src="../../images/d/de/Dlc_top_curly.png" decoding="async" width="300" height="102" data-file-width="300" data-file-height="102" /></div>
+<div style="text-align: center; font-size: 15px; top: -20px; position: relative;">
+<div style="color: #350000; text-shadow: 0px 1px rgb(153, 63, 63); font-weight: bold; text-transform: uppercase; font-size: 15px; padding-top: 1px;">总览</div></div>
+<div style="top: -13px; position: relative;">
+<div style="text-align: center; font-size: 16px; font-weight: bold;"><a href="../wiki/../Project:编辑指南.html" title="欧陆风云4百科:编辑指南"><span style="color: white;">编辑指南</span></a></div></div>
+</div><div style="columns:100px 1; column-gap: 10px;-webkit-columns:100px 1; -webkit-column-gap: 10px;-moz-columns:100px 1; -moz-column-gap: 10px;">
+<div class="infobox-row" style="text-align: center;">
+<div class="infobox-row-single" style="border-top: 1px solid #2C2C2C;"><a href="../wiki/../Project:编辑规范.html" title="欧陆风云4百科:编辑规范">编辑规范</a></div></div>
+<div class="infobox-row" style="text-align: center;">
+<div class="infobox-row-single" style="border-top: 1px solid #2C2C2C;"><a href="../wiki/../欧陆风云4百科:条目命名.html" title="欧陆风云4百科:条目命名">条目命名</a></div></div>
+<div class="infobox-row" style="text-align: center;">
+<div class="infobox-row-single" style="border-top: 1px solid #2C2C2C;"><a href="../wiki/../欧陆风云4百科:条目编写.html" title="欧陆风云4百科:条目编写">条目编写</a></div></div>
+<div class="infobox-row" style="text-align: center;">
+<div class="infobox-row-single" style="border-top: 1px solid #2C2C2C;"><a href="../wiki/../欧陆风云4百科:模板规范.html" title="欧陆风云4百科:模板规范">模板规范</a></div></div>
+<div class="infobox-row" style="text-align: center;">
+<div class="infobox-row-single" style="border-top: 1px solid #2C2C2C;"><a href="../wiki/../Project:字词转换.html" title="欧陆风云4百科:字词转换">字词转换</a></div></div>
+<div class="infobox-row" style="text-align: center;">
+<div class="infobox-row-single" style="border-top: 1px solid #2C2C2C;"><a href="../wiki/../欧陆风云4百科:魔术字.html" title="欧陆风云4百科:魔术字">魔术字</a></div></div>
+</div></div>
+<p><b>解析器函数</b>与系统变量非常相似，但与后者相比，前者<b>全部</b>要求<b>至少传入</b>一个参数，所有的参数1与函数名之间均用<code>:</code>而不是<code>|</code>分割。
+</p><p>解析器函数有时会在函数名前加上<code>#</code>用以与模板区分。
+</p>
+<h2><span id=".E5.88.97.E8.A1.A8"></span><span class="mw-headline" id="列表">列表</span></h2>
+<p>以下表格详细说明了欧陆风云4百科可用的解析器函数，部分术语未作解释。
+{{#Widget:Heading}}
+</p>
+<table class="wikitable" style="width: 100%;">
+
+<tbody><tr>
+<th>解析器函数
+</th>
+<th>输入 → 输出
+</th>
+<th>描述
+</th></tr>
+<tr>
+<th colspan="3" style="background-color: #DDDDDD;" class="heading">URL与标题的数据和解析
+</th></tr>
+<tr>
+<td><code>{{localurl:页面名称}}</code><br /><code>{{localurl:页面名称|查询字符串}}</code>
+</td>
+<td><code>{{localurl:Mainpage}}</code> → /wiki/Mainpage<br /><code>{{localurl:Mainpage|printable=yes}}</code> → /index.php?title=Mainpage&amp;printable=yes
+</td>
+<td>指定页面的相对路径
+</td></tr>
+<tr>
+<td><code>{{fullurl:页面名称}}</code><br /><code>{{fullurl:页面名称|查询字符串}}</code><br /><code>{{fullurl:跨wiki前缀:远程页面名称|查询字符串}}</code>
+</td>
+<td><code>{{fullurl:Category:帮助}}</code> → <a rel="nofollow" class="external free" href="https://www.eu4cn.com/wiki/Category:%E5%B8%AE%E5%8A%A9">https://www.eu4cn.com/wiki/Category:%E5%B8%AE%E5%8A%A9</a><br /><code>{{fullurl:Category:帮助|action=edit}}</code> → <a rel="nofollow" class="external free" href="https://www.eu4cn.com/index.php?title=Category:%E5%B8%AE%E5%8A%A9&amp;action=edit">https://www.eu4cn.com/index.php?title=Category:%E5%B8%AE%E5%8A%A9&amp;action=edit</a><br /><code>{{fullurl:mw:MediaWiki/zh|action=edit}}</code> → <a class="external free" href="http://www.mediawiki.org/wiki/MediaWiki/zh?action=edit">http://www.mediawiki.org/wiki/MediaWiki/zh?action=edit</a><br /><code>{{fullurl:mw:Help:Magic words|action=edit}}</code> → <a class="external free" href="http://www.mediawiki.org/wiki/Help:Magic_words?action=edit">http://www.mediawiki.org/wiki/Help:Magic_words?action=edit</a>
+</td>
+<td>指定页面的相对协议路径，该解析器函数也能识别跨wiki前缀。<br />注意：未被方括号包裹起来的相对协议路径不会自动生成为链接
+</td></tr>
+<tr>
+<td><code>{{canonicalurl:页面名称}}</code><br /><code>{{canonicalurl:页面名称|查询字符串}}</code><br /><code>{{canonicalurl:interwiki:远程页面名称|查询字符串}}</code>
+</td>
+<td><code>{{canonicalurl:Category:帮助}}</code> → <a rel="nofollow" class="external free" href="https://www.eu4cn.com/wiki/Category:%E5%B8%AE%E5%8A%A9">https://www.eu4cn.com/wiki/Category:%E5%B8%AE%E5%8A%A9</a><br /><code>{{canonicalurl:Category:帮助|action=edit}}</code> → <a rel="nofollow" class="external free" href="https://www.eu4cn.com/index.php?title=Category:%E5%B8%AE%E5%8A%A9&amp;action=edit">https://www.eu4cn.com/index.php?title=Category:%E5%B8%AE%E5%8A%A9&amp;action=edit</a><br /><code>{{canonicalurl:mw:Help:Magic words|action=edit}}</code> → <a class="external free" href="http://www.mediawiki.org/wiki/Help:Magic_words?action=edit">http://www.mediawiki.org/wiki/Help:Magic_words?action=edit</a>
+</td>
+<td>指定页面的绝对协议路径，该解析器函数也能识别跨wiki前缀。
+</td></tr>
+<tr>
+<td><code>{{filepath:文件名称}}</code><br /><code>{{filepath:文件名称|nowiki}}</code><br /><code>{{filepath:文件名称|缩略图大小}}</code>
+</td>
+<td><code>{{filepath:Box-1.png}}</code> → <br /><code>{{filepath:Box-1.png|120}}</code> → <br /><code>{{filepath:Box-1.png|nowiki}}</code> →
+</td>
+<td>指定文件的绝对协议路径，可以指定缩略图大小（仅能指定宽度大小，单位为px），也可以指定是否被直接渲染为图片
+</td></tr>
+<tr>
+<td><code>{{urlencode:字符串}}</code><br /><code>{{urlencode:字符串|QUERY}}</code>、<code>{{urlencode:字符串|WIKI}}</code>、<code>{{urlencode:字符串|PATH}}</code>
+</td>
+<td><code>{{urlencode:a/b c}}</code>、<code>{{urlencode:a/b c|QUERY}}</code> → a%2Fb+c<br /><code>{{urlencode:a/b c|WIKI}}</code> → a/b_c<br /><code>{{urlencode:a/b c|PATH}}</code> → a%2Fb%20c
+</td>
+<td>输出指定字符串经编码后的结果。不同的参数指定不同的编码规则，用于解析页面标题到MediaWiki类站点链接时建议使用WIKI，解析字符串到文件名时建议使用PATH，解析字符串到搜索引擎链接时建议使用（空）、QUERY；如果你不清楚如何选择时，你可以到<a href="https://www.eu4cn.com/index.php?title=Talk:%E6%8F%90%E9%97%AE%E6%B1%82%E5%8A%A9%E5%8C%BA&amp;action=edit&amp;redlink=1" class="new" title="Talk:提问求助区（页面不存在）">Talk:提问求助区</a>求助
+</td></tr>
+<tr>
+<td><code>{{anchorencode:字符串}}</code>
+</td>
+<td><code>{{anchorencode:a/b c}}</code> → a/b_c
+</td>
+<td>输出指定字符串经MediaWiki页内标题链接编码规则编码后的结果，可用于指定内容的标题的页内导航
+</td></tr>
+<tr>
+<td><code>{{#rel2abs: 路径}}</code><br /><code>{{#rel2abs: 路径 | 基础路径}}</code>
+</td>
+<td><code>{{#rel2abs: /quok | Help:Foo/bar/baz}}</code> → Help:Foo/bar/baz/quok<br /><code>{{#rel2abs: ../../../../quok | Help:Foo/bar/baz}}</code> → <strong class="error">错误：无效路径深度：“Help:Foo/bar/baz/../../../../quok”（尝试访问根节点以上节点）</strong>
+</td>
+<td>本函数用于以通用的命令行目录变换格式来变换页面路径：
+<ul><li>如果没有给定参数2，基础路径为当前页面路径；</li>
+<li>参数1中可以使用以下格式来变换路径：
+<ul><li><code>.</code>指定基础路径；</li>
+<li><code>..</code>使基础路径上移一层</li>
+<li><code>/path</code>使基础路径移动到下一层名为path的页面</li></ul></li></ul>
+<p>对于不合法的参数1，函数并不会直接抛出错误，而是尝试剔除错误部分继续工作：
+</p>
+<ul><li><code>{{#rel2abs: ../quok/. | Help:Foo/bar/baz}}</code> → Help:Foo/bar/quok</li>
+<li><code>{{#rel2abs: ../../../quok | Help:Foo/bar/baz}}</code> → quok</li></ul>
+</td></tr>
+<tr>
+<td><code>{{#titleparts: 要解析的标题 | 要返回的层数 | 返回部分的起始点}}</code>
+</td>
+<td><code>{{#titleparts: Talk:Foo/bar/baz/quok | 2}}</code> → Talk:Foo/bar<br /><code>{{#titleparts: Talk:Foo/bar/baz/quok | 2 | 2}}</code> → bar/baz<br /><code>{{#titleparts: Talk:Foo/bar/baz/quok | -2}}</code> → Talk:Foo/bar<br /><code>{{#titleparts: Talk:Foo/bar/baz/quok | -1 | -2}}</code> → baz
+</td>
+<td>该函数用于输出给定标题的一部分：
+<ol><li>参数1指定要解析的标题；</li>
+<li>参数2指定返回的部分的层数，默认接受正整数向后计数，本参数也可以接受一个负整数，用以从最后一层向前计数舍去被计入的部分；</li>
+<li>参数3指定从何处开始返回，默认接受正整数从根路径向后计数，本参数也可以接受一个负整数，用以从最后一层向前计数。</li></ol>
+<p>注意：
+</p>
+<ul>
+<li>本函数会对参数1先进行url解码再进行解析；</li>
+<li>本函数返回被解析后的部分；</li>
+<li>本函数返回的部分受MediaWiki标题限制：
+<ol>
+<li>所有下划线会被替换成空格：<code>{{#titleparts: Talk:Foo/bah_boo|1|2}}</code> → <code>{{#titleparts: Talk:Foo/bah_boo|1|2}}</code></li>
+<li>只对前25层做划分，即第25层和第25层以下的内容会合并为1个第25层：<code>{{#titleparts: 1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17/18/19/20/21/22/23/24/25/26/27/28 | 2 | 24}}</code> → 24/25/26/27/28<br />为了避免这个缺陷，你可以用嵌套的方式：<code>{{#titleparts: {{#titleparts: 1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17/18/19/20/21/22/23/24/25/26/27/28 | 2 | 24}} | 1 | 2}}</code> → 25</li>
+<li>上一个函数提到的命令行目录变换格式不被接受；</li>
+<li>参数1的首字母会变为大写：<code>{{#titleparts: talk:a/b/c}}</code> → Talk:A/b/c</li>
+<li>若参数1不合法则会被直接输出<code>{{#titleparts: [[首页]]/123 | 1 | 2}}</code> → <a href="../wiki/../../images/4/4d/萬方logo1.png%3F20220611124730.html" title="首页">首页</a>/123</li>
+</ol></li>
+</ul>
+</td></tr>
+<tr>
+<th colspan="3" style="background-color: #DDDDDD;" class="heading">名字空间
+</th></tr>
+<tr>
+<td colspan="3">名字空间解析器函数<code>{{ns:}}</code>返回标准名字空间的本地化名称（<u>萌百使用标准名称作为本地化名称</u>）或自定义名字空间的名称，参数1可以指定名字空间的ID，标准名字空间的MediaWiki标准名称、本地（语言变种）化名，自定义名字空间的名称：
+<ul><li><code>{{ns:2}}</code> = <code>{{ns:User}}</code> = <code>{{ns:用户}}</code> = <code>{{ns:用戶}}</code> = <code>{{ns:使用者}}</code> → User</li>
+<li><code>{{ns:5}}</code> = <code>{{ns:Project Talk}}</code> = <code>{{ns:欧陆风云4百科讨论}}</code> = <code>{{ns:欧陆风云4百科討論}}</code> = <code>{{ns:欧陆风云4百科 talk}}</code> → 欧陆风云4百科 talk</li></ul>
+<p>需要注意的是：
+</p>
+<ol><li>该解析器函数的参数1可以使用Image，效果与File一致；</li>
+<li>在解析器函数名后加一个<code>e</code>可以得到经MediaWiki URL编码规则编码后的标准名字空间的本地化名称或自定义名字空间的名称，很适合用于外链中：
+<ul><li><code>{{nse:5}}</code> → %E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91_talk</li></ul></li></ol>
+</td></tr>
+<tr>
+<th colspan="3" style="background-color: #DDDDDD;" class="heading">格式化函数
+</th></tr>
+<tr>
+<td><code>{{formatnum:未格式化的数字}}</code><br /><code>{{formatnum:已格式化的数字|R}}</code><br /><code>{{formatnum:未格式化的数字|NOSEP}}</code>
+</td>
+<td>简单例子：
+<ul><li><code>{{formatnum:987654321.654321}}</code> → 987,654,321.654321</li>
+<li><code>{{formatnum:987,654,321.654321|R}}</code> → 987654321.654321</li></ul>
+<p>高级例子：
+</p>
+<ul><li><code>{{formatnum:{{formatnum:987654321.654321}}|R}}</code> → 987654321.654321（任何情况下）</li>
+<li><code>{{formatnum:00001}}</code> → 00,001</li>
+<li><code>{{formatnum:987654321.654321 |NOSEP}}</code> → 987654321.654321</li></ul>
+<hr />
+<p>错误的输入会导致无法预测的输出，不论是否有参数2<code>|R</code>：
+</p>
+<ul><li><code>{{formatnum:987.654,321}}</code> → 987.654,321</li>
+<li><code>{{formatnum:987.654,321|R}}</code> → 987.654321</li></ul>
+</td>
+<td>参数1接受任何阿拉伯数字，按照站点默认区域数字格式用分位符号分组，将其本地化后输出。
+<p>参数2有两个可接受字符串：
+</p>
+<ol><li><code>|R</code>可以使函数的行为倒转，即输入已格式化的数字输出完全无格式数字（只有小数点<code>.</code>，没有其他的格式），可以用在数学计算中。但请注意只有在输入的数字是完全格式化后它的输出才符合预期；</li>
+<li><code>|NOSEP</code>会使函数不对数字做任何分组，仅保留小数点。</li></ol>
+<p><b>注意</b>：
+</p>
+<ol><li>开头的前导零不会被去除，如果你要去除请使用<code>{{#expr:00001}}</code>；</li>
+<li>如果输入的数字格式有误，那么输出的数字无法保证格式正确。</li></ol>
+<hr />
+<p>如果你<b>真的</b>需要输入一个<b>无法保证格式正确的数字</b>的话，你可以使用<code>{{formatnum:}}</code>两次，但请不要在输入数字可能有数位分组格式的情况下使用这种变通方式，否则分隔符可能会消失或数字无法被格式化。请注意这种方法是非常取巧的，因此它的输出结果可能不可靠。
+</p>
+</td></tr>
+<tr>
+<td><code>{{#dateformat:日期}}</code><br /><code>{{#formatdate:日期}}</code><br /><code>{{#dateformat:日期|格式规则}}</code><br /><code>{{#formatdate:日期|格式规则}}</code>
+</td>
+<td><code>{{#dateformat:25 dec 2009}}</code> → 25 dec 2009<br /><code>{{#formatdate:dec 25,2009|dmy}}</code> → dec 25,2009<br /><code>{{#dateformat:2009-12-25|mdy}}</code> → <span class="mw-formatted-date" title="2009-12-25">12月 25, 2009</span><br /><code>{{#formatdate:2009 dec 25|ISO 8601}}</code> → 2009 dec 25
+</td>
+<td>参数1接受一个未格式化的日期，按照<a href="../wiki/../Special:参数设置.html#mw-prefsection-rendering" title="Special:参数设置">设置#显示</a>里的“日期格式”设置将其格式化。对于未登陆的读者和未设置日期格式的用户，可以通过参数2指定格式：<code>mdy</code>、<code>dmy</code>、<code>ymd</code>（输出的字母全小写）。如果参数1只给出月日，那么只有<code>mdy</code>和<code>dmy</code>才是有效的格式。如果未指定格式或者格式无效，那么参数1的格式将被指定为输出格式。如果参数1的日期格式无效，那么函数输出参数1的原样。
+<p><b>警告</b>：即使ISO 8601格式要求参数1的日期是公历日期，若参数2指定ISO 8601，函数也能对那些超出通常公历范围的日期进行格式化。同样，函数无法正确转换ISO 9601格式负数年份和公园前的年份。
+</p>
+</td></tr>
+<tr>
+<td><code>{{lc:字符串}}</code>
+</td>
+<td><code>{{lc:DATA CENTER}}</code> → data center
+</td>
+<td>将字符串完全小写化
+</td></tr>
+<tr>
+<td><code>{{lcfirst:字符串}}</code>
+</td>
+<td><code>{{lcfirst:DATA center}}</code> → dATA center
+</td>
+<td>将字符串首字母小写化
+</td></tr>
+<tr>
+<td><code>{{uc:字符串}}</code>
+</td>
+<td><code>{{uc:text transform}}</code> → TEXT TRANSFORM
+</td>
+<td>将字符串完全大写化
+</td></tr>
+<tr>
+<td><code>{{ucfirst:字符串}}</code>
+</td>
+<td><code>{{ucfirst:text TRANSFORM}}</code> → Text TRANSFORM
+</td>
+<td>将字符串首字母大写化
+</td></tr>
+<tr>
+<td><code>{{padleft:原字符串|补足后的字符串长度}}</code><br /><code>{{padleft:原字符串|补足后的字符串长度|补足用的字符串}}</code>
+</td>
+<td><code>{{padleft:xyz|5}}</code> → 00xyz<br /><code>{{padleft:xyz|5|_}}</code> → __xyz<br /><code>{{padleft:xyz|5|abc}}</code> → abxyz<br /><code>{{padleft:xyz|7|abc}}</code> → abcaxyz<br /><code>{{padleft:xyz|2}}</code> → xyz<br /><code>{{padleft:|4|xyz}}</code> → xyzx
+</td>
+<td>将参数1通过在左侧补上参数3指定的字符串（默认为0）补足到参数2指定的长度，参数3指定的字符串可能被截断以保证补足后的字符串长度满足要求
+</td></tr>
+<tr>
+<td><code>{{padright:原字符串|补足后的字符串长度}}</code><br /><code>{{padright:原字符串|补足后的字符串长度|补足用的字符串}}</code>
+</td>
+<td><code>{{padright:xyz|5}}</code> → xyz00<br /><code>{{padright:xyz|5|_}}</code> → xyz__<br /><code>{{padright:xyz|5|abc}}</code> → xyzab<br /><code>{{padright:xyz|7|abc}}</code> → xyzabca<br /><code>{{padright:xyz|2}}</code> → xyz<br /><code>{{padright:|4|xyz}}</code> → xyzx
+</td>
+<td>与<code>{{padleft:}}</code>近乎一样，只是在右边补足
+</td></tr>
+<tr>
+<th colspan="3" style="background-color: #DDDDDD;" class="heading">本地化函数
+</th></tr>
+<tr>
+<td><code>{{plural:数字|单数形式|复数形式}}</code>
+</td>
+<td><code>{{plural:0|is|are}}</code> → are<br /><code>{{plural:1*1|is|are}}</code> → is<br /><code>{{plural:21 mod 10|is|are}}</code> → are<br /><code>{{plural:{{#expr:21 mod 10}}|is|are}}</code> → is
+</td>
+<td>根据参数1是单数还是复数，输出不同的字符串：单数输出参数2，复数输出参数3。判断是否单复数的标准是<code>{{#switch: 1 | {{{1}}} | {{#expr: {{{1}}} }} = true | #defualt = false}}</code>。
+</td></tr>
+<tr>
+<td><code>{{gender:指定用户名|男性时的文本|女性时的文本|未选择性别时的文本}}</code><br /><code>{{gender:|男性时的文本|女性时的文本|未选择性别时的文本}}</code><br /><code>{{gender:.|男性时的文本|女性时的文本|未选择性别时的文本}}</code>
+</td>
+<td><i>（根据指定用户的设置而定）</i>
+</td>
+<td>根据指定的用户的<a href="../wiki/../Special:参数设置.html#mw-prefsection-personal" title="Special:参数设置">设置#用户资料</a>的“语言”设置中的性别部分，返回该性别对应的文本。
+<p><b>注意</b>：
+</p>
+<ol><li>如果参数4未给出，那么当用户设置为“中性”时使用男性文本；</li>
+<li>如果参数3未给出，那么当用户设置为“女性”时使用男性文本；</li>
+<li>如果参数1为空，则指定当前用户（未登陆读者使用站点默认设置），但这种方式只能在MediaWiki名字空间下的页面使用；</li>
+<li>如果参数1为<code>.</code>，则使用站点默认设置。</li></ol>
+</td></tr>
+<tr>
+<td><code>{{int:信息名称}}</code>
+</td>
+<td><code>{{int:edit}}</code> → 编辑<br /><code>{{int:editsectionhint|MediaWiki}}</code> → 编辑章节：MediaWiki
+</td>
+<td>返回指定信息的<b>界面语言变种</b>翻译。可以在<code>MediaWiki:信息标准名（en-US）/界面语言变种</code>里找到，亦可以修改。
+<p>对于部分信息，可以提供参数给它们，它们可以通过$1、$2……获取这些参数，在第二个例子里，MediaWiki替换了$1。
+</p><p>这种用法相较于<code>{{MediaWiki:信息名称}}</code>好处是可以根据用户的界面语言变种的变化而变化，也比模板更快加载，但它不会在编辑框下方的“本页使用的模板：”中出现。如果对应信息不存在的话，会以⧼unexist⧽出现.
+</p>
+</td></tr>
+<tr>
+<th colspan="3" style="background-color: #DDDDDD;" class="heading">特殊嵌入
+</th></tr>
+<tr>
+<td><code>{{:（主）名字空间页面名}}</code>
+</td>
+<td>（主名字空间页面）
+</td>
+<td>通过<code>:</code>将名字空间强制指定为（主），从而嵌入（主）名字空间的页面
+</td></tr>
+<tr>
+<td><code>{{msg:与某一魔术字重名的模板名}}</code><br /><code>{{raw:与某一魔术字重名的模板名}}</code>
+</td>
+<td>（模板正常渲染内容）
+</td>
+<td>与<code>{{Tempate:与某一魔术字重名的模板名}}</code>一样可以避免魔术字与模板名冲突，而直接嵌入模板
+</td></tr>
+<tr>
+<td><code>{{msgnw:模板名}}</code>
+</td>
+<td><code>{{msgnw:tl}}</code> → &#60;includeonly&#62;&#60;!--
+<p>&#32;   --&#62;&#60;code&#62;&#60;!--
+&#32;       --&#62;&#60;nowiki&#62;&#123;&#123;&#60;/nowiki&#62;&#123;&#123;#if:&#123;&#123;&#123;subst&#124;&#125;&#125;&#125; &#124;&#91;&#91;Wikipedia:zh:Help:替换引用&#124;替换引用&#93;&#93;:&#125;&#125;&#60;!--
+&#32;                    --&#62;&#91;&#91;&#123;&#123;&#123;LANG&#124;&#125;&#125;&#125;&#123;&#123;&#123;SISTER&#124;&#125;&#125;&#125;&#123;&#123;ns:Template&#125;&#125;:&#123;&#123;&#123;1&#124;&#125;&#125;&#125;&#124;&#123;&#123;&#123;1&#124;&#125;&#125;&#125;&#93;&#93;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;2&#124;&#125;&#125;&#125;  &#124;&#38;#124&#59;&#123;&#123;&#123;2&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;3&#124;&#125;&#125;&#125;  &#124;&#38;#124&#59;&#123;&#123;&#123;3&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;4&#124;&#125;&#125;&#125;  &#124;&#38;#124&#59;&#123;&#123;&#123;4&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;5&#124;&#125;&#125;&#125;  &#124;&#38;#124&#59;&#123;&#123;&#123;5&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;6&#124;&#125;&#125;&#125;  &#124;&#38;#124&#59;&#123;&#123;&#123;6&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;7&#124;&#125;&#125;&#125;  &#124;&#38;#124&#59;&#123;&#123;&#123;7&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;8&#124;&#125;&#125;&#125;  &#124;&#38;#124&#59;&#123;&#123;&#123;8&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;9&#124;&#125;&#125;&#125;  &#124;&#38;#124&#59;&#123;&#123;&#123;9&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;10&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#123;&#123;&#123;10&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;11&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#123;&#123;&#123;11&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;12&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#123;&#123;&#123;12&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;13&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#123;&#123;&#123;13&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;14&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#123;&#123;&#123;14&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;15&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#123;&#123;&#123;15&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;16&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#123;&#123;&#123;16&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;17&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#123;&#123;&#123;17&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;18&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#123;&#123;&#123;18&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;19&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#123;&#123;&#123;19&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;20&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#123;&#123;&#123;20&#125;&#125;&#125;&#125;&#125;&#60;!--
+&#32;                         --&#62;&#123;&#123;#if:&#123;&#123;&#123;21&#124;&#125;&#125;&#125; &#124;&#38;#124&#59;&#39;&#39;...&#39;&#39;&#125;&#125;&#60;!--
+&#32;       --&#62;&#60;nowiki&#62;&#125;&#125;&#60;/nowiki&#62;&#60;!--
+&#32;   --&#62;&#60;/code&#62;&#60;!--
+--&#62;&#60;/includeonly&#62;&#60;noinclude&#62;
+&#60;!-- &#123;&#123;documentation&#125;&#125; --&#62;&#123;&#123;template doc&#125;&#125;&#91;&#91;Category:模板&#93;&#93;
+&#60;!-- Categories go on the /doc subpage and interwikis go on Wikidata. --&#62;
+&#60;/noinclude&#62;
+</p>
+</td>
+<td>把模板的源码以纯文本形式输出，自带nowiki效果
+</td></tr>
+<tr>
+<td><code>{{subst:模板名}}</code>
+</td>
+<td>（模板的正常渲染内容，而模板源码在替换完参数，删去<code>&lt;noinclude/&gt;</code>内容后嵌入到页面源码中）
+</td>
+<td>把模板的源码嵌入到页面源码中，参见<a href="https://www.eu4cn.com/index.php?title=Help:%E6%A8%A1%E6%9D%BF&amp;action=edit&amp;redlink=1" class="new" title="Help:模板（页面不存在）">Help:模板#subst</a>
+</td></tr>
+<tr>
+<th colspan="3" style="background-color: #DDDDDD;" class="heading">运算与逻辑判断
+</th></tr>
+<tr>
+<td><code>{{#expr: 数学表达式 }}</code>
+</td>
+<td><code>{{#expr: 1 and -1 }}</code> → 1
+<hr />
+<p><code>{{#expr: ---...---1}}（95个“-”）</code> = -1
+</p>
+</td>
+<td>本函数计算并返回数学表达式的结果，你可以使用<code>+、-、*、/</code>来进行计算。本函数将<code>e</code>（自然对数的底数）、<code>pi</code>（π）作为常数使用。本函数支持的运算符如下所示：
+<table class="wikitable" style="width: 100%;margin: 0;">
+<tbody><tr>
+<th>运算符</th>
+<th>名称</th>
+<th>优先级</th>
+<th>元数</th>
+<th>结合性</th>
+<th>样例
+</th></tr>
+<tr>
+<td>+</td>
+<td>正</td>
+<td>9</td>
+<td>1</td>
+<td>右</td>
+<td>{{#expr: + 7}} = 7
+</td></tr>
+<tr>
+<td>-</td>
+<td>负</td>
+<td>9</td>
+<td>1</td>
+<td>右</td>
+<td>{{#expr: - 7}} = -7
+</td></tr>
+<tr>
+<td>not</td>
+<td>逻辑非</td>
+<td>9</td>
+<td>1</td>
+<td>右</td>
+<td>{{#expr: not 7}} = 0
+</td></tr>
+<tr>
+<td>*</td>
+<td>乘</td>
+<td>8</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 * 7}} = 210
+</td></tr>
+<tr>
+<td>/</td>
+<td>除</td>
+<td>8</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 / 7}} = 4.2857142857143
+</td></tr>
+<tr>
+<td>div</td>
+<td>除</td>
+<td>8</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 div 7}} = 4.2857142857143
+</td></tr>
+<tr>
+<td>mod</td>
+<td>模</td>
+<td>8</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 mod 7}} = 2
+</td></tr>
+<tr>
+<td>+</td>
+<td>加</td>
+<td>6</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 + 7}} = 37
+</td></tr>
+<tr>
+<td>-</td>
+<td>减</td>
+<td>6</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 - 7}} = 23
+</td></tr>
+<tr>
+<td>round</td>
+<td>舍入</td>
+<td>5</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 / 7 round 7}} = 4.2857143
+</td></tr>
+<tr>
+<td>=</td>
+<td>等于</td>
+<td>4</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 = 7}} = 0
+</td></tr>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+<td>4</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 &lt; 7}} = 0
+</td></tr>
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+<td>4</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 &gt; 7}} = 1
+</td></tr>
+<tr>
+<td>&lt;=</td>
+<td>小于等于</td>
+<td>4</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 &lt;= 7}} = 0
+</td></tr>
+<tr>
+<td>&gt;=</td>
+<td>大于等于</td>
+<td>4</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 &gt;= 7}} = 1
+</td></tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>不等于</td>
+<td>4</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 &lt;&gt; 7}} = 1
+</td></tr>
+<tr>
+<td>!=</td>
+<td>不等于</td>
+<td>4</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30&#160;!= 7}} = 1
+</td></tr>
+<tr>
+<td>and</td>
+<td>逻辑与</td>
+<td>3</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 and 7}} = 1
+</td></tr>
+<tr>
+<td>or</td>
+<td>逻辑或</td>
+<td>2</td>
+<td>2</td>
+<td>左</td>
+<td>{{#expr: 30 or 7}} = 1
+</td></tr></tbody></table>
+<p>注意：
+</p>
+<ol>
+<li>round运算对运算数正负，位数正负有不同表现：
+<ul><li><code>{{#expr: 999 * 999 round -2}}</code> → 998000</li>
+<li><code>{{#expr: 999 * 999 round -20}}</code> → 0</li>
+<li><code>{{#expr: 999 * 999 round -2.9}}</code> → 998000（这是十分危险的作法，不推荐使用）</li></ul>
+</li>
+<li>逻辑运算符把假映射为0，把真映射为非0，且返回值只有0（假）或1（真）。</li>
+<li>同一表达式中先计算高优先级运算。括号优先级高于一切。</li>
+<li>浮点误差有可能造成某些运算的不可预料的结果，特别是最后几位数字的不精确。因此在使用此函数进行非整数运算时，注意不要进行比较运算。</li>
+<li>表达式的返回值可能是无法再计算的值（比如用科学计数法表示的数：<code>{{#expr: 100000000000000000}}</code> → 1.0E+17），或者有一部分有效数字没有显示出来。此时该值相当可能难以运算，因此在使用此函数进行运算时，须注意这些问题。</li>
+</ol>
+<hr />
+<p>当表达式有误时函数会返回一个错误信息，此时无法再继续计算，请注意。
+</p>
+</td></tr>
+<tr>
+<td><code>{{#if: X | A | B }}</code>
+</td>
+<td><code>{{#if: X | A | B }}</code> → A<br /><code>{{#if: | A | B }}</code> → B<br /><code>{{#if: | A }}</code> →
+</td>
+<td>该函数用于条件逻辑判断：
+<ul><li>如果X处为非空字符串（忽略前导后缀的空格）那么执行A（以wikitext格式解析）；</li>
+<li>如果X处为空或只有空格那么执行B（以wikitext格式解析）；
+<ul><li>如果B被省略则输出为空。</li></ul></li></ul>
+</td></tr>
+<tr>
+<td><code>{{#ifeq: X | Y | A | B }}</code>
+</td>
+<td><code>{{#ifeq: 1 | 0 | A | B }}</code> → B<br /><code>{{#ifeq: 1 | 1 | A | B }}</code> → A
+</td>
+<td>该函数用于条件逻辑判断：
+<ul><li>如果<code>X == Y</code>（忽略前导后缀的空格）那么执行A（以wikitext格式解析）；</li>
+<li>否则执行B（以wikitext格式解析）；
+<ul><li>如果B被省略则输出为空。</li></ul></li></ul>
+<p>注：<code>{{#if: X | A | B }} == {{#ifeq: X | | A | B }}</code>
+</p>
+</td></tr>
+<tr>
+<td><code>{{#ifexist: 《页面标题》 | A | B }}</code>
+</td>
+<td><code>{{#ifexist: Main Page | A | B }}</code> → A<br /><code>{{#ifexist: 肯定不存在的标题 | A | B }}</code> → B<br /><code>{{#ifexist: 肯定不存在的标题 | A }}</code> →
+</td>
+<td>该函数用于条件逻辑判断：
+<ul><li>如果《页面标题》对应的页面存在，那么执行A（以wikitext格式解析）；</li>
+<li>否则执行B（以wikitext格式解析）；
+<ul><li>如果B被省略则输出为空。</li></ul></li></ul>
+</td></tr>
+<tr>
+<td><code>{{#ifexpr: Fx（表达式） | A | B }}</code>
+</td>
+<td><code>{{#ifexpr: 1+1 | A | B }}</code> → A<br /><code>{{#ifexpr: 1-1 | A | B }}</code> → B<br /><code>{{#ifexpr: 1-1 | A }}</code> →
+</td>
+<td>该函数用于条件逻辑判断：
+<ul><li>如果<code>Fx&#160;!= 0</code>，那么执行A（以wikitext格式解析）；</li>
+<li>否则执行B（以wikitext格式解析）；
+<ul><li>如果B被省略则输出为空。</li></ul></li></ul>
+<p>注：<code>{{#ifexpr: Fx（表达式） | A | B }} == {{#ifeq: {{#expr: Fx（表达式）}} | 0 | B | A }}</code>
+</p>
+</td></tr>
+<tr>
+<td><code>{{#switch: X | Y = A | #default = B}}</code>
+</td>
+<td><pre>{{#switch: 1
+| 0 = A
+| 1 = B
+| #default = C
+}}
+</pre>
+<p>→ B
+</p>
+</td>
+<td>该函数用于条件逻辑判断：
+<ul><li>对于输入值X，函数会与每一个预设值Y做比较，如果相同（不考虑前导后缀空格）则执行对应结果（以wikitext格式解析）；
+<ul><li>预设值与结果以<code>=</code>连接，作为参数提交给函数；</li>
+<li>如果预设值没有对应的结果则会将后面的第一个结果加以执行（例如：<code>{{#switch: X | Y | Z = 1}}</code>当<code>X == Y</code>时输出1）；</li></ul></li>
+<li>如果没有任何一个预设值与输入值相同，则执行<code>#default</code>给出的默认结果；
+<ul><li>可以不设定默认结果；</li>
+<li>可以省略<code>#default=</code>，即用<b>最后一个没有等号</b>的参数作为默认值。</li></ul></li></ul>
+<p><b>注意</b>：
+当一个参数没有带有<code>=</code>时，该参数会依照下列逻辑被分类：
+</p>
+<ul><li>如果该参数不是<b>最后一个没有等号</b>的参数，那么它将被作为预设值考虑；</li>
+<li>否则它将被作为默认结果考虑。</li></ul>
+</td></tr>
+<tr>
+<td><code>{{#time: 格式参数 }}</code><br /><code>{{#time: 格式参数 | 时间参数 }}</code>
+</td>
+<td><code>{{#time: Y/m/d}}</code> → 2024/10/22<br /><code>{{#time: Y/m/d|2017-01-04}}</code> → 2017/01/04<br /><code>{{#time: Y/m/d H:i:s|+1 second}}</code> → 2024/10/22 23:56:01
+</td>
+<td>该函数用来输出时间：
+<ul>
+<li>格式函数用于指定输出的时间的格式，下表以样例时间为例说明各格式参数的作用。
+<table class="wikitable" style="width: 100%;margin: 0">
+<tbody><tr>
+<th>样例时间<br />
+</th>
+<td colspan="2">国际协调时　（UTC）2024年10月22日（星期二）23时56分00秒<br />北京标准时间（CST）2024年10月23日（星期三）07时56分00秒
+</td></tr>
+<tr>
+<th>格式参数
+</th>
+<th>说明
+</th>
+<th>显示结果
+</th></tr>
+<tr>
+<td>A
+</td>
+<td>根据时间是上午还是下午，输出AM或PM
+</td>
+<td>PM
+</td></tr>
+<tr>
+<td>a
+</td>
+<td>根据时间是上午还是下午，输出am或pm
+</td>
+<td>pm
+</td></tr>
+<tr>
+<td>c
+</td>
+<td>输出长日期
+</td>
+<td>2024-10-22T23:56:00+00:00
+</td></tr>
+<tr>
+<td>D
+</td>
+<td>星期数，以一个汉字显示
+</td>
+<td>二
+</td></tr>
+<tr>
+<td>d
+</td>
+<td>日期日数，补足前导0
+</td>
+<td>22
+</td></tr>
+<tr>
+<td>F或M
+</td>
+<td>月份，以当前语言输出
+</td>
+<td>10月
+</td></tr>
+<tr>
+<td>G或g
+</td>
+<td>当前UTC时间小时数
+</td>
+<td>23
+</td></tr>
+<tr>
+<td>H或h
+</td>
+<td>小时数，补足前导0
+</td>
+<td>23
+</td></tr>
+<tr>
+<td>i
+</td>
+<td>分钟数，补足前导0
+</td>
+<td>56
+</td></tr>
+<tr>
+<td>j
+</td>
+<td>日期日数
+</td>
+<td>22
+</td></tr>
+<tr>
+<td>L
+</td>
+<td>日期星期数，1位数字，星期日为1，星期六为7
+</td>
+<td>1
+</td></tr>
+<tr>
+<td>l
+</td>
+<td>日期星期数，3位汉字
+</td>
+<td>星期二
+</td></tr>
+<tr>
+<td>m
+</td>
+<td>月份数，补足前导0
+</td>
+<td>10
+</td></tr>
+<tr>
+<td>N
+</td>
+<td>星期数，星期一为1，星期日为7
+</td>
+<td>2
+</td></tr>
+<tr>
+<td>n
+</td>
+<td>月份数
+</td>
+<td>10
+</td></tr>
+<tr>
+<td>r
+</td>
+<td>英文长日期格式
+</td>
+<td>Tue, 22 Oct 2024 23:56:00 +0000
+</td></tr>
+<tr>
+<td>s
+</td>
+<td>秒数
+</td>
+<td>00
+</td></tr>
+<tr>
+<td>t
+</td>
+<td>该月天数
+</td>
+<td>31
+</td></tr>
+<tr>
+<td>U
+</td>
+<td>UNIX时间戳
+</td>
+<td>1729641360
+</td></tr>
+<tr>
+<td>W
+</td>
+<td>日期周数，显示日期为当年第几周，补足前导0
+</td>
+<td>43
+</td></tr>
+<tr>
+<td>w
+</td>
+<td>星期数，星期日为0，星期六为6
+</td>
+<td>2
+</td></tr>
+<tr>
+<td>Y
+</td>
+<td>日期年份，4位数字
+</td>
+<td>2024
+</td></tr>
+<tr>
+<td>y
+</td>
+<td>日期年份，2位数字
+</td>
+<td>24
+</td></tr>
+<tr>
+<td>z
+</td>
+<td>显示日期为当年第几日
+</td>
+<td>295
+</td></tr>
+</tbody></table>
+</li>
+<li>时间参数可以使用绝对时间，如“2008-12-31 23:59:59”，也可以使用相对时间，如“+7 days”或者“-5 hours”得到默认时间7日之后或默认时间5小时之前的时间。也可以二者混合使用，比如<code>{{#time:Y-m-d H:i:s|2001-2-3 04:05:06 +1 year +2 months +3 days +4 hours +5 minutes +6 seconds}}</code> → 2002-04-06 08:10:12</li>
+<li>系统默认的时间参数为当前UTC+0时间，可以使用<code>{{#time:参数|+8 hours}}</code>得到当前北京时间（UTC+8时间）。</li>
+<li>如果想要输出字母本身，而该字母又是属于格式参数的一种时，可以用英文双引号包裹：<code>{{#time: "Y/m/d" == Y/m/d}}</code> → Y/m/d == 2024/10/22</li>
+</ul>
+</td>
+<td>
+</td></tr>
+<tr>
+<th colspan="3" style="background-color: #DDDDDD;" class="heading">杂项
+</th></tr>
+<tr>
+<td><code>{{#language:语言代码}}</code><br /><code>{{#language:语言代码|目标语言代码}}</code>
+</td>
+<td><code>{{#language:zh-cn}}</code> → 中文（中国大陆）<br /><code>{{#language:zh-cn|en-us}}</code> → 中文（中国大陆）
+</td>
+<td>以参数2的语言代码指定的语言（没有则以参数1的）输出参数1的语言代码对应的语言全名
+</td></tr>
+<tr>
+<td><code>{{#special:特殊页面名}}</code>
+</td>
+<td><code>{{#special:watchlist}}</code> → Special:监视列表
+</td>
+<td>输出指定标准名称的特殊页面的本地化名。
+<p>可以在函数名后加e以输出经MediaWiki URL编码规则编码后的页面名：
+</p>
+<ul><li><code>{{#speciale:watchlist}}</code> → Special:%E7%9B%91%E8%A7%86%E5%88%97%E8%A1%A8</li></ul>
+</td></tr>
+<tr>
+<td><code>{{#tag:标签名称|内容|属性1=属性值1|属性2=属性值2|……}}</code>
+</td>
+<td><code>{{#tag:div|右浮动|style="float: right; clear: both; padding: 1em;"}}</code> → <div style="float: right; clear: both; padding: 1em;">右浮动</div>
+</td>
+<td>输出一个元素的<a href="https://www.eu4cn.com/index.php?title=Help:HTML&amp;action=edit&amp;redlink=1" class="new" title="Help:HTML（页面不存在）">HTML</a>源码，参数1为其标签名，参数2为其内容，参数3及之后为其属性值对。请不要向参数1传入自闭合标签名，如br、img、hr等。
+<p>内容中的wikitext会在tag函数渲染之前完成渲染，并与往常一样阻止不受信任的代码渲染。如果内容需要为空，则参数2<b>必须为空，而不是省略</b>。
+</p>
+</td></tr>
+<tr>
+<td><code>{{#invoke:模块名|函数名|参数1|参数2|……}}</code>
+</td>
+<td>（根据指定模块输出）
+</td>
+<td>Lua模块的调用方法
+</td></tr>
+<tr>
+<td><code>{{DISPLAYTITLE:标题}}</code><br /><code>{{DISPLAYTITLE:标题|noerror}}</code><br /><code>{{DISPLAYTITLE:标题|noreplace}}</code>
+</td>
+<td>-
+</td>
+<td>本函数用以改变当前页面的标题的格式做出变换，该函数无法做出修改标题的行为，只能做出例如改变大小写、下划线替代空格等的修改。
+<p>参数1为“noerror”或“noreplace”时，会阻止由于使用多个该函数而导致的错误抛出。
+</p>
+</td></tr>
+<tr>
+<td><code>{{DEFAULTSORT:分类索引}}</code><br /><code>{{DEFAULTSORTKEY:分类索引}}</code><br /><code>{{DEFAULTCATEGORYSORT:分类索引}}</code><br /><code>{{DEFAULTSORT:分类索引|noerror}}</code><br /><code>{{DEFAULTSORT:分类索引|noreplace}}</code>
+</td>
+<td>-
+</td>
+<td>本函数用以改变当前页面在分类中的索引，比如<code>{{DEFAULTSORT:A}}</code>会把页面分到A部分下。
+<p>参数1为“noerror”或“noreplace”时，会阻止由于使用多个该函数而导致的错误抛出。
+</p>
+</td></tr></tbody></table>
+<h2><span id=".E5.8F.82.E8.A7.81"></span><span class="mw-headline" id="参见">参见</span></h2>
+<ul><li><a href="http://www.mediawiki.org/wiki/Help:Extension:ParserFunctions/zh" class="extiw" title="mw:Help:Extension:ParserFunctions/zh">mw:Help:Extension:ParserFunctions/zh</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20241022235600
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.240 seconds
+Real time usage: 0.269 seconds
+Preprocessor visited node count: 1885/1000000
+Post‐expand include size: 15454/2097152 bytes
+Template argument size: 4278/2097152 bytes
+Highest expansion depth: 11/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6515/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   68.723      1 -total
+ 29.75%   20.446      1 Template:Wikinav
+ 23.55%   16.182      1 Template:Nav_column
+ 17.75%   12.198      1 Template:Infobox
+ 11.79%    8.100      1 Template:MultiColumn
+ 10.63%    7.308      1 Template:Tl
+  4.83%    3.320      6 Template:Infobox/row
+-->
+
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:1993-0!dateformat=default!zh and timestamp 20241022235600 and revision id 2948.
+ -->
+</div></div>						</div>
+				</div>
+				<footer>
+				<div class="liberty-footer">
+										<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../wiki/../Special:页面分类.html" title="Special:页面分类">分类</a>：​<ul><li><a href="../wiki/百科.html" class="new" title="Category:含有非数字formatnum参数的页面（页面不存在）">含有非数字formatnum参数的页面</a></li><li><a href="../wiki/../Category:百科.html" title="Category:百科">百科</a></li></ul></div></div>					<div class="bottom-ads mobile-ab">
+						
+						<!-- 移动端底部 -->
+						<ins class="adsbygoogle mobile-ab"
+						     style="display:block"
+						     data-ad-client="ca-pub-1612414434963106"
+						     data-ad-slot="3303553671"
+						     data-ad-format="auto"
+						     data-full-width-responsive="true"></ins>
+						<script>
+						     (adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
+								<ul class="footer-info">
+									<li class="footer-info-lastmod">
+						 此页面最后编辑于2017年6月3日 (星期六) 16:28。					</li>
+									<li class="footer-info-copyright">
+						除非另有声明，本网站内容采用<a class="external" rel="nofollow" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享</a>授权。					</li>
+							</ul>
+					<ul class="footer-places">
+									<li class="footer-places-privacy">
+						<a href="../欧陆风云4百科:隐私政策.html">隐私政策</a>					</li>
+									<li class="footer-places-about">
+						<a href="../欧陆风云4百科:关于.html">关于欧陆风云4百科</a>					</li>
+									<li class="footer-places-disclaimer">
+						<a href="../欧陆风云4百科:免责声明.html">免责声明</a>					</li>
+							</ul>
+					<ul class="footer-icons">
+									<li class="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="../../resources/assets/licenses/cc-by-nc-sa.png" alt="知识共享署名-非商业性使用-相同方式共享" width="88" height="31" loading="lazy"/></a>					</li>
+										<li class="footer-poweredbyico">
+						<a href="https://www.mediawiki.org/"><img src="../../resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki"  , /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a><a href="https://www.eu4cn.com/"><img src="../../images/footerlogo.png" width="88" height="31" loading="lazy"/></a>					</li>
+								</ul>
+						</div>
+				</footer>
+			</div>
+		</div>
+		</section>
+				<div class="modal fade login-modal" id="login-modal" tabindex="-1"
+			 role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title">登录</h4>
+					</div>
+					<div class="modal-body">
+						<div id="modal-login-alert" class="alert alert-hidden alert-danger" role="alert">
+						</div>
+						<form id="modal-loginform" name="userlogin" class="modal-loginform"
+							  method="post">
+							<input class="loginText form-control" id="wpName1" tabindex="1"
+								   placeholder="请输入您的用户名" value="" name="lgname">
+							<label for="inputPassword" class="sr-only">密码</label>
+							<input class="loginPassword form-control" id="wpPassword1" tabindex="2"
+								   placeholder="请输入您的密码" type="password" name="lgpassword">
+							<div class="modal-checkbox">
+								<input name="lgremember" type="checkbox" value="1" id="lgremember" tabindex="3">
+								<label for="lgremember">记住登录</label>
+							</div>
+							<input class="btn btn-success btn-block" type="submit" value="登录" tabindex="4">
+							<a href="https://www.eu4cn.com/index.php?title=Special:%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95&amp;type=signup&amp;returnto=%E6%AC%A7%E9%99%86%E9%A3%8E%E4%BA%914%E7%99%BE%E7%A7%91%3A%E9%AD%94%E6%9C%AF%E5%AD%97%2F%E8%A7%A3%E6%9E%90%E5%99%A8%E5%87%BD%E6%95%B0" class="btn btn-primary btn-block" title="Special:用户登录" tabindex="5" type="submit">加入欧陆风云4百科</a>							<a href="../wiki/../Special:重置密码.html" title="Special:重置密码">忘记密码？</a>                            <br>
+							<a href="../wiki/../Special:用户登录.html" title="Special:用户登录">其他方式登录</a>							<input type="hidden" name="action" value="login" />
+							<input type="hidden" name="format" value="json" />
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">⧼liberty-btn-close⧽</button>
+						<button type="button" class="btn btn-primary">⧼liberty-btn-save-changes⧽</button>
+					</div>
+				</div>
+			</div>
+		</div>
+			</body></html>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8b9cdb5f260cf613f39a508fbf9dd707";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.240","walltime":"0.269","ppvisitednodes":{"value":1885,"limit":1000000},"postexpandincludesize":{"value":15454,"limit":2097152},"templateargumentsize":{"value":4278,"limit":2097152},"expansiondepth":{"value":11,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6515,"limit":5000000},"timingprofile":["100.00%   68.723      1 -total"," 29.75%   20.446      1 Template:Wikinav"," 23.55%   16.182      1 Template:Nav_column"," 17.75%   12.198      1 Template:Infobox"," 11.79%    8.100      1 Template:MultiColumn"," 10.63%    7.308      1 Template:Tl","  4.83%    3.320      6 Template:Infobox/row"]},"cachereport":{"timestamp":"20241022235600","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":1740});});</script>
+</body>
+</html>
