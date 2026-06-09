@@ -248,9 +248,8 @@ false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"卢旺�
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/省份.html" title="省份">省份</a></span></li>
 			</ul>
 		</div>
-		<div class="live-recent-footer" style="display:flex;flex-direction:column;gap:6px;padding:6px 8px;">
-			<a href="../wiki/可成立国家.html" title="可成立国家" style="display:block;"><span class="label label-info" style="display:block;text-align:center;">查看可成立国家</span></a>
-			<a href="../index.html" title="返回首页" style="display:block;"><span class="label label-info" style="display:block;text-align:center;font-weight:bold;">&#8962; 返回首页</span></a>
+		<div class="live-recent-footer">
+			<a href="../index.html" title="返回首页"><span class="label label-info" style="font-weight:bold;">&#8962; 返回首页</span></a>
 		</div>
 	</div>
 						
@@ -2034,7 +2033,15 @@ Transclusion expansion time report (%,ms,calls,template)
 })();
 </script>
 
-</body></html>
+<style>
+/* 常用页面随页面滚动 */
+.live-recent-wrapper {
+    position: static !important;
+}
+.liberty-sidebar .live-recent-wrapper .live-recent {
+    position: static !important;
+}
+</style></body></html>
 <script>
 var _hmt = _hmt || [];
 (function() {
