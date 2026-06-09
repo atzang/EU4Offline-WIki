@@ -232,15 +232,15 @@
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/成就.html" title="成就">成就</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/任务.html" title="任务">任务</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/入门指南.html" title="入门指南">入门指南</a></span></li>
-				<li style="padding:4px 8px;"><span class="recent-item"><a href="../index.html" title="首页">返回首页</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/控制台指令.html" title="控制台指令">控制台指令</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/理念组.html" title="理念组">理念组</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/DLC.html" title="DLC">DLC 列表</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/省份.html" title="省份">省份</a></span></li>
 			</ul>
 		</div>
-		<div class="live-recent-footer">
-			<a href="../wiki/可成立国家.html" title="可成立国家"><span class="label label-info">查看可成立国家</span></a>
+		<div class="live-recent-footer" style="display:flex;flex-direction:column;gap:6px;padding:6px 8px;">
+			<a href="../wiki/可成立国家.html" title="可成立国家" style="display:block;"><span class="label label-info" style="display:block;text-align:center;">查看可成立国家</span></a>
+			<a href="../index.html" title="返回首页" style="display:block;"><span class="label label-info" style="display:block;text-align:center;font-weight:bold;">&#8962; 返回首页</span></a>
 		</div>
 	</div>
 						
@@ -411,7 +411,53 @@ Transclusion expansion time report (%,ms,calls,template)
 				</div>
 			</div>
 		</div>
-			</body></html>
+			
+<!-- 返回顶部按钮 -->
+<div id="back-to-top" title="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</div>
+<style>
+#back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 60px;
+    width: 44px;
+    height: 44px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    background: #103D8F;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.28);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 9999;
+    user-select: none;
+}
+#back-to-top:hover {
+    background: #1a56c4;
+}
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+</style>
+<script>
+(function(){
+    var btn = document.getElementById('back-to-top');
+    if(!btn) return;
+    window.addEventListener('scroll', function(){
+        if(window.scrollY > 200){
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }, {passive: true});
+})();
+</script>
+
+</body></html>
 <script>
 var _hmt = _hmt || [];
 (function() {

@@ -233,15 +233,15 @@ false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Rekindli
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/成就.html" title="成就">成就</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/任务.html" title="任务">任务</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/入门指南.html" title="入门指南">入门指南</a></span></li>
-				<li style="padding:4px 8px;"><span class="recent-item"><a href="../index.html" title="首页">返回首页</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/控制台指令.html" title="控制台指令">控制台指令</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/理念组.html" title="理念组">理念组</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/DLC.html" title="DLC">DLC 列表</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/省份.html" title="省份">省份</a></span></li>
 			</ul>
 		</div>
-		<div class="live-recent-footer">
-			<a href="../wiki/可成立国家.html" title="可成立国家"><span class="label label-info">查看可成立国家</span></a>
+		<div class="live-recent-footer" style="display:flex;flex-direction:column;gap:6px;padding:6px 8px;">
+			<a href="../wiki/可成立国家.html" title="可成立国家" style="display:block;"><span class="label label-info" style="display:block;text-align:center;">查看可成立国家</span></a>
+			<a href="../index.html" title="返回首页" style="display:block;"><span class="label label-info" style="display:block;text-align:center;font-weight:bold;">&#8962; 返回首页</span></a>
 		</div>
 	</div>
 						
@@ -761,7 +761,7 @@ false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Rekindli
 <li><span class="flagicon"><img alt="" src="../images/thumb/8/8f/Romania.png/20px-Romania.png" decoding="async" width="20" height="13" class="thumbborder"" data-file-width="800" data-file-height="533" />&#160;</span><a href="../wiki/罗马尼亚.html" title="罗马尼亚">罗马尼亚</a></li>
 <li><span class="flagicon"><img alt="" src="../images/thumb/4/4e/Roman_Empire.png/20px-Roman_Empire.png" decoding="async" width="20" height="13" class="thumbborder"" data-file-width="800" data-file-height="533" />&#160;</span><a href="../wiki/罗马帝国.html" title="罗马帝国">罗马帝国</a></li>
 <li><span class="flagicon"><img alt="" src="../images/thumb/a/a4/Rozwi_Empire.png/20px-Rozwi_Empire.png" decoding="async" width="20" height="13" class="thumbborder"" data-file-width="192" data-file-height="128" />&#160;</span><a href="../wiki/罗兹维帝国.html" title="罗兹维帝国">罗兹维帝国</a></li>
-<li><span class="flagicon"><div class="MediaTransformError" style="width: 20px; height: 13px; display:inline-block;">创建缩略图出错：文件丢失</div>&#160;</span><a href="../wiki/罗姆.html" title="罗姆">罗姆</a></li>
+<li><span class="flagicon"><img alt="旗帜图标" src="../images/flag_placeholder.svg" width="20" height="13" style="border:1px solid #ccc;background:#d8dde6;display:inline-block;" title="旗帜图片缺失"/>&#160;</span><a href="../wiki/罗姆.html" title="罗姆">罗姆</a></li>
 <li><span class="flagicon"><img alt="" src="../images/thumb/e/ee/Russia.png/20px-Russia.png" decoding="async" width="20" height="13" class="thumbborder"" data-file-width="420" data-file-height="280" />&#160;</span><a href="../wiki/俄罗斯.html" title="俄罗斯">俄罗斯</a></li>
 <li><span class="flagicon"><img alt="" src="../images/thumb/e/e2/Ruthenia.png/20px-Ruthenia.png" decoding="async" width="20" height="13" class="thumbborder"" data-file-width="800" data-file-height="533" />&#160;</span><a href="../wiki/鲁塞尼亚.html" title="鲁塞尼亚">鲁塞尼亚</a></li>
 <li><span class="flagicon"><img alt="" src="../images/thumb/2/22/Sardinia-Piedmont.png/20px-Sardinia-Piedmont.png" decoding="async" width="20" height="13" class="thumbborder"" data-file-width="800" data-file-height="533" />&#160;</span><a href="../wiki/撒丁-皮埃蒙特.html" title="撒丁-皮埃蒙特">撒丁-皮埃蒙特</a></li>
@@ -10805,7 +10805,53 @@ Transclusion expansion time report (%,ms,calls,template)
 				</div>
 			</div>
 		</div>
-			</body></html>
+			
+<!-- 返回顶部按钮 -->
+<div id="back-to-top" title="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</div>
+<style>
+#back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 60px;
+    width: 44px;
+    height: 44px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    background: #103D8F;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.28);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 9999;
+    user-select: none;
+}
+#back-to-top:hover {
+    background: #1a56c4;
+}
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+</style>
+<script>
+(function(){
+    var btn = document.getElementById('back-to-top');
+    if(!btn) return;
+    window.addEventListener('scroll', function(){
+        if(window.scrollY > 200){
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }, {passive: true});
+})();
+</script>
+
+</body></html>
 <script>
 var _hmt = _hmt || [];
 (function() {

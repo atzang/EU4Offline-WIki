@@ -232,15 +232,15 @@
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/成就.html" title="成就">成就</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/任务.html" title="任务">任务</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/入门指南.html" title="入门指南">入门指南</a></span></li>
-				<li style="padding:4px 8px;"><span class="recent-item"><a href="../index.html" title="首页">返回首页</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/控制台指令.html" title="控制台指令">控制台指令</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/理念组.html" title="理念组">理念组</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/DLC.html" title="DLC">DLC 列表</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/省份.html" title="省份">省份</a></span></li>
 			</ul>
 		</div>
-		<div class="live-recent-footer">
-			<a href="../wiki/可成立国家.html" title="可成立国家"><span class="label label-info">查看可成立国家</span></a>
+		<div class="live-recent-footer" style="display:flex;flex-direction:column;gap:6px;padding:6px 8px;">
+			<a href="../wiki/可成立国家.html" title="可成立国家" style="display:block;"><span class="label label-info" style="display:block;text-align:center;">查看可成立国家</span></a>
+			<a href="../index.html" title="返回首页" style="display:block;"><span class="label label-info" style="display:block;text-align:center;font-weight:bold;">&#8962; 返回首页</span></a>
 		</div>
 	</div>
 						
@@ -611,7 +611,7 @@
 </p><p><a href="../wiki/生产.html" title="生产"><img alt="Production.png" src="../images/thumb/a/ad/Production.png/28px-Production.png" decoding="async" width="28" height="28"" data-file-width="48" data-file-height="48" /></a><span style="opacity:.5">[math]\displaystyle{ \text{生产收入} =\text{贸易价值}\, \cdot\, \left(100\% +\, \text{总生产效率修正}\right)\,\cdot\,(100\% -\, \text{本地自治度}) }[/math]</span>
 </p>
 <h3><span id=".E8.88.89.E4.BE.8B"></span><span class="mw-headline" id="舉例">舉例</span></h3>
-<div class="MediaTransformError" style="width: 950px; height: 428px; display:inline-block;">创建缩略图出错：文件丢失</div>
+<img alt="旗帜图标" src="../images/flag_placeholder.svg" width="950" height="428" style="border:1px solid #ccc;background:#d8dde6;display:inline-block;" title="旗帜图片缺失"/>
 <p>我们以 <span class="flagicon"><img alt="" src="../images/thumb/c/c7/Mamluks.png/20px-Mamluks.png" decoding="async" width="20" height="13" class="thumbborder"" data-file-width="900" data-file-height="600" />&#160;</span><a href="../wiki/马穆鲁克.html" title="马穆鲁克">马穆鲁克</a>的省份<span class="explain" title=""><b>阿古隆</b></span>为例（如上所示），根据图中信息将各项数据代入上述公式：
 </p><p><span style="opacity:.5">[math]\displaystyle{ \text{商品产出（红框）} = 2.1 \, \cdot\, (100\% +\, 40\%) = 2.94  }[/math]</span>
 </p><p><span style="opacity:.5">[math]\displaystyle{ \text{贸易价值（蓝框）} = 2.94\, \cdot\, 2.00\, = 5.88  }[/math]</span>
@@ -785,7 +785,53 @@ Transclusion expansion time report (%,ms,calls,template)
 				</div>
 			</div>
 		</div>
-			</body></html>
+			
+<!-- 返回顶部按钮 -->
+<div id="back-to-top" title="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</div>
+<style>
+#back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 60px;
+    width: 44px;
+    height: 44px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    background: #103D8F;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.28);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 9999;
+    user-select: none;
+}
+#back-to-top:hover {
+    background: #1a56c4;
+}
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+</style>
+<script>
+(function(){
+    var btn = document.getElementById('back-to-top');
+    if(!btn) return;
+    window.addEventListener('scroll', function(){
+        if(window.scrollY > 200){
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }, {passive: true});
+})();
+</script>
+
+</body></html>
 <script>
 var _hmt = _hmt || [];
 (function() {

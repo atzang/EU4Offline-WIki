@@ -231,15 +231,15 @@
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/成就.html" title="成就">成就</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/任务.html" title="任务">任务</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/入门指南.html" title="入门指南">入门指南</a></span></li>
-				<li style="padding:4px 8px;"><span class="recent-item"><a href="../index.html" title="首页">返回首页</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/控制台指令.html" title="控制台指令">控制台指令</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/理念组.html" title="理念组">理念组</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/DLC.html" title="DLC">DLC 列表</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/省份.html" title="省份">省份</a></span></li>
 			</ul>
 		</div>
-		<div class="live-recent-footer">
-			<a href="../wiki/可成立国家.html" title="可成立国家"><span class="label label-info">查看可成立国家</span></a>
+		<div class="live-recent-footer" style="display:flex;flex-direction:column;gap:6px;padding:6px 8px;">
+			<a href="../wiki/可成立国家.html" title="可成立国家" style="display:block;"><span class="label label-info" style="display:block;text-align:center;">查看可成立国家</span></a>
+			<a href="../index.html" title="返回首页" style="display:block;"><span class="label label-info" style="display:block;text-align:center;font-weight:bold;">&#8962; 返回首页</span></a>
 		</div>
 	</div>
 						
@@ -305,7 +305,7 @@
 <p>wiki的翻译工作并不是不允许机翻，但机翻过后还是尽量把他说成人话。--<a href="User:SovietWatcher_丨苏维埃守望者.html" title="User:SovietWatcher 丨苏维埃守望者">SovietWatcher</a>（<a href="User_talk:SovietWatcher_丨苏维埃守望者.html" title="User talk:SovietWatcher 丨苏维埃守望者">讨论</a>） 2020年10月2日 (五) 20:46 (CST)
 对于换行的话，直接打回车键是不能换行的，你可以用下面这个
 </p>
-<div class="thumb tright"><div class="thumbinner" style="width:302px;"><div class="MediaTransformError" style="width: 300px; height: 136px; display:inline-block;">创建缩略图出错：文件丢失</div>  <div class="thumbcaption"><div class="magnify"><a href="File:换行教程.png.html" class="internal" title="放大"></a></div>编辑wiki文本的换行教程</div></div></div><p>东西来帮助你换行。<br />
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><img alt="旗帜图标" src="../images/flag_placeholder.svg" width="300" height="136" style="border:1px solid #ccc;background:#d8dde6;display:inline-block;" title="旗帜图片缺失"/>  <div class="thumbcaption"><div class="magnify"><a href="File:换行教程.png.html" class="internal" title="放大"></a></div>编辑wiki文本的换行教程</div></div></div><p>东西来帮助你换行。<br />
 </p><p>另外你可以用顶上的“帮助”页面中获得更多编辑工具，你也可以在那里的Paratranz获得标准译名，这是机翻之后必须要做的事情，不过Wiki，Paratranz和游戏内的译名或许有所差异，你可以加入Wiki的工作群657766965获得一些帮助。--<a href="User:SovietWatcher_丨苏维埃守望者.html" title="User:SovietWatcher 丨苏维埃守望者">SovietWatcher</a>（<a href="User_talk:SovietWatcher_丨苏维埃守望者.html" title="User talk:SovietWatcher 丨苏维埃守望者">讨论</a>） 2020年10月2日 (五) 20:57 (CST)
 </p>
 <dl><dd>补充一下，wiki的格式是通过额外空出一行即可换行。一般情况应该避免使用HTML硬标签换行。 <span style="border: solid 2px #E60000; font:14px 微软雅黑"> <a href="../wiki/User:Pokewiz.html" title="User:Pokewiz"><span style="background:#E60000;padding:0 25px;color:#fff">Pokewiz</span></a><a href="User_talk:Pokewiz.html" title="User talk:Pokewiz"><span class="roundy-6" style="padding:0 10px;color:#E60000">批判一番</span></a></span> 2020年10月3日 (六) 04:09 (CST)</dd></dl>
@@ -412,7 +412,53 @@ Transclusion expansion time report (%,ms,calls,template)
 				</div>
 			</div>
 		</div>
-			</body></html>
+			
+<!-- 返回顶部按钮 -->
+<div id="back-to-top" title="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</div>
+<style>
+#back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 60px;
+    width: 44px;
+    height: 44px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    background: #103D8F;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.28);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 9999;
+    user-select: none;
+}
+#back-to-top:hover {
+    background: #1a56c4;
+}
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+</style>
+<script>
+(function(){
+    var btn = document.getElementById('back-to-top');
+    if(!btn) return;
+    window.addEventListener('scroll', function(){
+        if(window.scrollY > 200){
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }, {passive: true});
+})();
+</script>
+
+</body></html>
 <script>
 var _hmt = _hmt || [];
 (function() {

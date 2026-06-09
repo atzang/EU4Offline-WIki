@@ -239,15 +239,15 @@ null,"wgAmericanDates":false,"wgVisualEditor":{"pageLanguageCode":"zh","pageLang
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/成就.html" title="成就">成就</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/任务.html" title="任务">任务</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/入门指南.html" title="入门指南">入门指南</a></span></li>
-				<li style="padding:4px 8px;"><span class="recent-item"><a href="../index.html" title="首页">返回首页</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/控制台指令.html" title="控制台指令">控制台指令</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/理念组.html" title="理念组">理念组</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/DLC.html" title="DLC">DLC 列表</a></span></li>
 				<li style="padding:4px 8px;"><span class="recent-item"><a href="../wiki/省份.html" title="省份">省份</a></span></li>
 			</ul>
 		</div>
-		<div class="live-recent-footer">
-			<a href="../wiki/可成立国家.html" title="可成立国家"><span class="label label-info">查看可成立国家</span></a>
+		<div class="live-recent-footer" style="display:flex;flex-direction:column;gap:6px;padding:6px 8px;">
+			<a href="../wiki/可成立国家.html" title="可成立国家" style="display:block;"><span class="label label-info" style="display:block;text-align:center;">查看可成立国家</span></a>
+			<a href="../index.html" title="返回首页" style="display:block;"><span class="label label-info" style="display:block;text-align:center;font-weight:bold;">&#8962; 返回首页</span></a>
 		</div>
 	</div>
 						
@@ -284,7 +284,7 @@ null,"wgAmericanDates":false,"wgVisualEditor":{"pageLanguageCode":"zh","pageLang
 					<div class="liberty-content-main" id="content">
 											<div class="mw-body-content" id="mw-content-text">
 							<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="zh" dir="ltr"><div class="mw-parser-output"><div class="thumb tright"><div class="thumbinner" style="width:194px;"><a href="File:Rûm.png.html" class="image"><img alt="" src="../images/8/85/Rûm.png.html" decoding="async" width="192" height="128" class="thumbimage" data-file-width="192" data-file-height="128" /></a>  <div class="thumbcaption"><div class="magnify"><a href="File:Rûm.png.html" class="internal" title="放大"></a></div>罗姆的国旗</div></div></div><p>
-以下是 </p><span class="flagicon"><div class="MediaTransformError" style="width: 20px; height: 13px; display:inline-block;">创建缩略图出错：文件丢失</div>&#160;</span><p><a href="../wiki/罗姆.html" title="罗姆">罗姆</a>可用的事件列表。罗姆没有独立的趣味事件，以下事件是由“<a href="../wiki/奥斯曼.html" class="mw-redirect" title="奥斯曼政府">奥斯曼政府</a>”政府改革触发的；<span class="flagicon"><img alt="" src="../images/thumb/8/89/Ottomans.png/20px-Ottomans.png" decoding="async" width="20" height="13" class="thumbborder"" data-file-width="900" data-file-height="600" />&#160;</span><a href="../wiki/奥斯曼.html" title="奥斯曼">奥斯曼</a>也能触发这些事件。
+以下是 </p><span class="flagicon"><img alt="旗帜图标" src="../images/flag_placeholder.svg" width="20" height="13" style="border:1px solid #ccc;background:#d8dde6;display:inline-block;" title="旗帜图片缺失"/>&#160;</span><p><a href="../wiki/罗姆.html" title="罗姆">罗姆</a>可用的事件列表。罗姆没有独立的趣味事件，以下事件是由“<a href="../wiki/奥斯曼.html" class="mw-redirect" title="奥斯曼政府">奥斯曼政府</a>”政府改革触发的；<span class="flagicon"><img alt="" src="../images/thumb/8/89/Ottomans.png/20px-Ottomans.png" decoding="async" width="20" height="13" class="thumbborder"" data-file-width="900" data-file-height="600" />&#160;</span><a href="../wiki/奥斯曼.html" title="奥斯曼">奥斯曼</a>也能触发这些事件。
 </p><h2><span id=".E8.80.B6.E5.B0.BC.E5.88.87.E9.87.8C"></span><span class="mw-headline" id="耶尼切里">耶尼切里</span></h2>
 <div style="display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:flex-start;">
 </div>
@@ -409,7 +409,53 @@ Transclusion expansion time report (%,ms,calls,template)
 				</div>
 			</div>
 		</div>
-			</body></html>
+			
+<!-- 返回顶部按钮 -->
+<div id="back-to-top" title="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</div>
+<style>
+#back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 60px;
+    width: 44px;
+    height: 44px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 26px;
+    background: #103D8F;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.28);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 9999;
+    user-select: none;
+}
+#back-to-top:hover {
+    background: #1a56c4;
+}
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+</style>
+<script>
+(function(){
+    var btn = document.getElementById('back-to-top');
+    if(!btn) return;
+    window.addEventListener('scroll', function(){
+        if(window.scrollY > 200){
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    }, {passive: true});
+})();
+</script>
+
+</body></html>
 <script>
 var _hmt = _hmt || [];
 (function() {
